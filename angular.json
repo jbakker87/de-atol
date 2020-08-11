@@ -24,7 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bulma/css/bulma.css",
+              "src/styles.css",
+              "src/extracss.css"
+
             ],
             "scripts": []
           },
@@ -119,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "de-atol"
+    }
+  },
+  "defaultProject": "de-atol",
+  "cli": {
+    "analytics": "7c32fcd1-15be-48e0-b651-344bc98691c4"
+  }
 }

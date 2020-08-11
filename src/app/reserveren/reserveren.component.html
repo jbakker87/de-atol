@@ -1,0 +1,83 @@
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Reserveren</h1>
+        </div>
+    </div>
+</section>
+{{reserverenForm.valid}}
+<div class="section">
+    <div class="container">
+        <form (ngSubmit)='submitForm()' #reserverenForm='ngForm'>
+            <div class="field">
+                <label class="label">Naam: </label>
+                <input type='text' name='name' class='input' [(ngModel)]="name" #ctrl="ngModel" #nameInput="ngModel" required>
+                <div class="help is-error" *ngIf='nameInput.invalid && nameInput.dirty'>
+                    Your name is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Adres: </label>
+                <input type='text' name='address' class='input' [(ngModel)]="address" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Postcode: </label>
+                <input type='text' name='postalcode' class='input'[(ngModel)]="postalcode" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Woonplaats: </label>
+                <input type='text' name='city' class='input'[(ngModel)]="city" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Tel./ Mobiel: </label>
+                <input type='text' name='phone' class='input'[(ngModel)]="phone" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Volwassenen: </label>
+                <input type='text' name='adults' class='input'[(ngModel)]="adults" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Kinderen (3 t/m 11 jaar): </label>
+                <input type='text' name='childs' class='input'[(ngModel)]="childs" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Email: </label>
+                <input type='text' name='email' class='input'[(ngModel)]="email" #ctrl="ngModel" #emailInput="ngModel" required email>
+                <div class="help is-error" *ngIf='emailInput.invalid && emailInput.dirty'>
+                    Your name is required
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">1e datum vaartocht: </label>
+                <input type='date' name='date1' class='input'[(ngModel)]="date1" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">2e datum vaartocht: </label>
+                <input type='date' name='date2' class='input'[(ngModel)]="date2" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">3e datum vaartocht: </label>
+                <input type='date' name='date3' class='input'[(ngModel)]="date3" #ctrl="ngModel">
+            </div>
+            <div class="field">
+                <label class="label">Opgeven vaartocht: </label>
+                <label class="checkbox">
+                    <input type="checkbox" name='zeehond' [(ngModel)]="zeehond" #ctrl="ngModel"> Zeehonden
+                    <input type="checkbox" name='rondvaart' [(ngModel)]="rondvaart" #ctrl="ngModel"> Rondvaart
+                    <input type="checkbox" name='sportvissen' [(ngModel)]="sportvissen" #ctrl="ngModel"> Sportvissen
+                  </label>
+            </div>
+            <div class="field">
+                <label class="label">Uw reactie, vraag of opmerking: </label>
+                <textarea name='message' class='textarea'></textarea>
+            </div>
+            <button 
+                type='submit' 
+                class='button is-large is-warning'
+                [disabled]='reserverenForm.invalid'>
+                
+                Verzenden
+            </button>                                                           
+        </form>
+    </div>
+</div>
