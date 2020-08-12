@@ -1,0 +1,25 @@
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar {
+    background-color: #222;
+    color: white;
+}
+
+.mat-toolbar-row {
+    padding: 0px 5px;
+}
+
+.menuitem:hover {
+    background-color: darkgray;
+}
+
+.atol-logo {
+    margin-right: 5px;
+    width: 100px;
+}
+
+.mat-drawer:not(.mat-drawer-side) {
+    height: 300px !important;
+}
