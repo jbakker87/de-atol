@@ -24,10 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bulma/css/bulma.css",
-              "src/styles.css",
-              "src/extracss.css"
-
+              "node_modules/bulma/css/bulma.css"
             ],
             "scripts": []
           },
