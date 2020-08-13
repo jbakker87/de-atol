@@ -1,80 +1,46 @@
-<!-- <mat-toolbar color="warn">
-    <mat-toolbar-row>
-    <img src='assets/images/atol-logo.png' class='atol-logo'/>
-    <span>De-Atol</span>
-    <span class="menu-spacer"></span>
-    <div fxShow="true" fxHide.lt-md>
-        <a href="#" mat-button class='menuitem'>Home</a>
-        <a href="#" mat-button class='menuitem'>Over ons</a>
-        <a href="#" mat-button class='menuitem' routerLink="veerdienst" routerLinkActive="active">Diensten</a>
-        <a href="#" mat-button class='menuitem'>Media</a>
-        <a href="#" mat-button class='menuitem'>Nieuws</a>
-        <a href="#" mat-button class='menuitem'>Menukaart</a>
-        <a href="#" mat-button class='menuitem'>Reserveren boottochten</a>
-        <a href="#" mat-button class='menuitem'>Contact en informatie aanvraag</a>
+<nav class="navbar is-dark">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" routerLink='' style="font-weight:bold;">
+        <img src='assets/images/atol-logo.png' class='atol-logo'/>
+        De Atol
+      </a>
+      <span class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </div>
-    <button mat-icon-button class='menuButton' (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-    </button>        
-    </mat-toolbar-row>
-</mat-toolbar>
-    <mat-sidenav #sidenav mode='push'>
-    <mat-nav-list>
-        <a (click)="sidenav.toggle()" mat-list-item><mat-icon>close</mat-icon>Close</a>
-        <p><a href="#" mat-button>Home</a></p>
-        <p><a href="#" mat-button>Over ons</a></p>
-        <p><a href="#" mat-button>Diensten</a></p>
-        <p><a href="#" mat-button>Media</a></p>
-        <p><a href="#" mat-button>Nieuws</a></p>
-        <p><a href="#" mat-button>Menukaart</a></p>
-        <p><a href="#" mat-button>Reserveren boottochten</a></p>
-        <p><a href="#" mat-button>Contact en informatie aanvraag</a></p>
-    </mat-nav-list>
-    </mat-sidenav> -->
-
-    <nav class="navbar is-dark">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" routerLink='' style="font-weight:bold;">
-              <img src='assets/images/atol-logo.png' class='atol-logo'/>
-              De Atol
-            </a>
-            <span class="navbar-burger burger" data-target="navMenu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-          <div id="navMenu" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item">Home</a>
-              <a class="navbar-item" href='#'>Over ons</a>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Diensten
-                </a>
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">Veerdienst</a>
-                  <a class="navbar-item" routerLink='/reserveren'>Zeehondensafari</a>
-                  <a class="navbar-item">Rondvaart</a>
-                  <a class="navbar-item">Feesten en partijen</a>
-                  <a class="navbar-item">Sportvissen</a>
-                </div>
-              </div>
-              <a href="#" class="navbar-item">Ligplaats</a>
-              <a href="#" class="navbar-item">Contact</a>
-            </div>
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" routerLink=''>Home</a>
+        <a class="navbar-item" routerLink='about'>Over ons</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Diensten
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Veerdienst</a>
+            <a class="navbar-item" routerLink='/reserveren'>Zeehondensafari</a>
+            <a class="navbar-item">Rondvaart</a>
+            <a class="navbar-item">Feesten en partijen</a>
+            <a class="navbar-item">Sportvissen</a>
           </div>
         </div>
-      </nav>
-      <script type="text/javascript">
-        (function() {
-          var burger = document.querySelector('.burger');
-          var nav = document.querySelector('#'+burger.dataset.target);
-  
-          burger.addEventListener('click', function(){
-            burger.classList.toggle('is-active');
-            nav.classList.toggle('is-active');
-          });
-        })();
-      </script>
+        <a href="#" class="navbar-item">Ligplaats</a>
+        <a href="#" class="navbar-item" routerLink='/contact'>Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+  (function() {
+    var burger = document.querySelector('.burger');
+    var nav = document.querySelector('#'+burger.dataset.target);
+
+    burger.addEventListener('click', function(){
+      burger.classList.toggle('is-active');
+      nav.classList.toggle('is-active');
+    });
+  })();
+</script>
