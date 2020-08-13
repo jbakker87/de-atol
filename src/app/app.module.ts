@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from "@angular/material/icon";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ContactComponent } from './contact/contact.component';
+import { LigplaatsenComponent } from './ligplaatsen/ligplaatsen.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ContactComponent } from './contact/contact.component';
     ReserverenComponent,
     SidenavComponent,
     ContactComponent,
+    LigplaatsenComponent,
   ],
   imports: [
     BrowserModule,
