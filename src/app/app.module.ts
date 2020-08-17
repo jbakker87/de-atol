@@ -20,6 +20,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
 import { SafariComponent } from './diensten/safari/safari.component';
+import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SafariComponent } from './diensten/safari/safari.component';
     ContactComponent,
     VeerdienstComponent,
     SafariComponent,
+    RondvaartComponent,
   ],
   imports: [
     BrowserModule,

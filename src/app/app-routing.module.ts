@@ -5,6 +5,8 @@ import { ReserverenComponent } from './reserveren/reserveren.component';
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
 import { SafariComponent } from './diensten/safari/safari.component';
+import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
+
 
 const routes: Routes = [
   {
@@ -15,6 +17,10 @@ const routes: Routes = [
     path: 'diensten/veerdienst',
     component: VeerdienstComponent
   },  
+  {
+    path: 'diensten/rondvaart',
+    component: RondvaartComponent
+  },    
   {
     path: 'diensten/safari',
     component: SafariComponent
