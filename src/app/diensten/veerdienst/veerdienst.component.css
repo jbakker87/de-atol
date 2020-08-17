@@ -1,0 +1,5 @@
+.hero {
+    background-image: url('/assets/images/atol-wallpaper.png') !important;
+    background-size: cover;
+    background-position: center;
+}

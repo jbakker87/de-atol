@@ -1,60 +1,68 @@
-<section class = "section">
-    <div class = "container">
-       <div class = "tile is-ancestor">
-            <div class = "tile">
-                <div class = "tile">
-                    <a class = "tile is-parent" routerLink='/diensten/veerdienst'>
-                        <article class = "tile is-child notification is-primary">
-                            <p class="title">Veerdienst</p>
-                            <p class="subtitle">Veerdienst van en naar Hansweert en Perkpolder.</p>
-                            <div class="notification is-danger has-text-centered">
-                                Reserveren is <strong>niet nodig!</strong>
-                            </div>
-                        </article>
-                    </a>
-                    <a class = "tile is-parent" routerLink='/diensten/safari'>
-                        <article class = "tile is-child notification is-warning">
-                            <p class="title">Zeehondensafari</p>
-                            <p class="subtitle">Ga mee op avontuur.</p>
-                        <br>
-                        </article>
-                    </a>
-                    <div class = "tile is-parent">
-                        <article class = "tile is-child notification is-danger">
-                            <p class="title">Rondvaart</p>
-                            <p class="subtitle">Over bijvoorbeeld de Ooster - of Westerschelde.</p>
-                        <br>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class = "tile is-ancestor">
-            <div class = "tile">
-                <div class = "tile">
-                    <div class = "tile is-parent">
-                    <article class = "tile is-child notification is-dark">
-                        <p class="title">Feesten en partijen</p>
-                        <p class="subtitle">Partyboot max. 75 personen.</p>
-                        <br>
-                    </article>
-                    </div>
-                    <div class = "tile is-parent">
-                        <article class = "tile is-child notification is-gray">
-                            <p class="title">Sportvissen</p>
-                            <p class="subtitle">Sportvissen op de Ooster- of Westerschelde.</p>
-                        <br>
-                        </article>
-                    </div>
-                    <a class = "tile is-parent" routerLink='contact'>
-                        <article class = "tile is-child notification is-success">
-                            <p class="title">Contact</p>
-                            <p class="subtitle">Waar moet ik opstappen?</p>
-                        <br>
-                        </article>
-                    </a>
-                </div>
-            </div>
+<section class="hero is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">Home</h1>
         </div>
     </div>
- </section>
+</section>
+<div class="container section">
+    <div *ngIf='msgIsShown' class="notification is-danger is-light">
+        <button class="delete" (click)='toggleCorona()'></button>
+        <p class='subtitle'>
+            Corona update
+        </p>
+        <p class="content">
+            Let op! Mondkapje verplicht. Reserveren voor de veerdienst is niet nodig.
+        </p>
+    </div>
+    <div class="tile is-ancestor">
+        <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-light box">
+                <p class="title">Veerdienst</p>
+                <p class="subtitle">Veerdienst van en naar Hansweert en Perkpolder.</p>
+                <button class="button is-fullwidth is-warning" disabled>Reserveren niet nodig!</button>
+                <br>
+                <button class="button is-fullwidth is-warning" routerLink='/diensten/veerdienst'>Meer info</button>
+            </article>
+            <article class="tile is-child notification is-light box">
+                <p class="title">Feesten en partijen</p>
+                <p class="subtitle">Partyboot max. 75 personen.</p>
+                <br>
+                <button class="button is-fullwidth is-warning">Reserveren</button>
+                <br>
+                <button class="button is-fullwidth is-warning" routerLink=''>Meer info</button>
+            </article>
+        </div>
+        <div class="tile is-parent is-vertical">
+            <article class = "tile is-child notification is-light box">
+                <p class="title">Zeehondensafari</p>
+                <p class="subtitle">Ga mee op avontuur.</p>
+                <br>
+                <button class="button is-fullwidth is-warning">Reserveren</button>
+                <br>
+                <button class="button is-fullwidth is-warning" routerLink='/diensten/safari'>Meer info</button>
+            </article>
+            <article class = "tile is-child notification is-light box">
+                <p class="title">Sportvissen</p>
+                <p class="subtitle">Sportvissen op de Ooster- of Westerschelde.</p>
+                <button class="button is-fullwidth is-warning">Reserveren</button>
+                <br>
+                <button class="button is-fullwidth is-warning">Meer info</button>
+            </article>
+        </div>
+        <div class="tile is-parent is-vertical">
+            <article class = "tile is-child notification is-light box">
+                <p class="title">Rondvaart</p>
+                <p class="subtitle">Over bijvoorbeeld de Ooster - of Westerschelde.</p>
+                <button class="button is-fullwidth is-warning">Reserveren</button>
+                <br>
+                <button class="button is-fullwidth is-warning" routerLink=''>Meer info</button>
+            </article>
+            <article class = "tile is-child notification is-light box">
+                <p class="title">Contact</p>
+                <p class="subtitle">Hoe kom ik in contact met Rondvaartbedrijf de-Atol?</p>
+                <button class="button is-fullwidth is-warning" routerLink='/contact'>Meer info</button>
+            </article>
+        </div>
+    </div>
+</div>

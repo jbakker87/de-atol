@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  private _msgIsShown = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get msgIsShown() {
+    return this._msgIsShown;
+  }
+  
+  set msgIsShown(value) {
+    this._msgIsShown = value;
+  }
+
+  toggleCorona(): void {
+    this.msgIsShown = false;
   }
 
 }
