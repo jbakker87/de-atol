@@ -19,6 +19,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
+import { SafariComponent } from './diensten/safari/safari.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component'
     SidenavComponent,
     ContactComponent,
     VeerdienstComponent,
+    SafariComponent,
   ],
   imports: [
     BrowserModule,
