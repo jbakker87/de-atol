@@ -2,7 +2,7 @@
   <div class="columns is-centered">
     <div class="tile is-ancestor is-12">
       <div class="tile is-parent">
-        <article class="tile is-child notification is-light">
+        <article class="tile is-child notification is-light box">
           <p class="title">Informatie</p>
           <p class="content">We varen langs de platen zodat we de zonnende zeehonden kunnen bekijken. Deze kunnen we bij laag water op 50 meter afstand zien.</p>
             <p class="subtitle">
@@ -11,15 +11,15 @@
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <tr>
                 <th>Zeehondensafari</th>
-                <th>Prijs</th>
+                <th>Prijs p.p.</th>
               </tr>
               <tr>
                 <td><mat-icon>person</mat-icon> Volwassenen</td>
-                <td>€ {{ adultPrice | number : '1.2-2' }} p.p.</td>
+                <td>€ {{ adultPrice | number : '1.2-2' }}</td>
               </tr>
               <tr>
                 <td><mat-icon>child_care</mat-icon> Kinderen (3 t/m 11 jaar)</td>
-                <td>€ {{ childPrice | number : '1.2-2' }} p.p.</td>
+                <td>€ {{ childPrice | number : '1.2-2' }}</td>
               </tr>
             </table>
             <p class="subtitle">
@@ -50,7 +50,7 @@
         </article>
       </div>
       <div class="tile is-parent">
-        <article class="tile is-child notification is-light">
+        <article class="tile is-child notification is-light box">
           <p class="title">Beschikbare zeehondensafari's</p>
           <div class='image'>
             <img src='assets/images/zeehonden.jpg'>
@@ -63,7 +63,7 @@
               </tr>
               <tr>
                   <th>Augustus</th>
-                  <th></th>
+                  <th><mat-icon>access_time</mat-icon></th>
               </tr>
               <tr>
                   <td>Woensdag 12 Augustus</td>
@@ -111,7 +111,7 @@
               </tr>                                                                              
             </table>      
           <div>
-            <button class="button is-warning is-pulled-right" routerLink='/reserveren'>Reserveren</button>
+            <input type='submit' class="button is-warning" value='Reserveren 'routerLink='/reserveren'>
           </div>
         </article>
       </div>
