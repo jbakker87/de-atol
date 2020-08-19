@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RondvaartComponent implements OnInit {
 
+  firstHour = 325;
+  additionalHour = 150;
+
   constructor() { }
 
   ngOnInit(): void {

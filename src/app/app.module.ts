@@ -21,6 +21,8 @@ import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
 import { SafariComponent } from './diensten/safari/safari.component';
 import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
+import { FeestenComponent } from './diensten/feesten/feesten.component';
+import { SportvissenComponent } from './diensten/sportvissen/sportvissen.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
     VeerdienstComponent,
     SafariComponent,
     RondvaartComponent,
+    FeestenComponent,
+    SportvissenComponent,
   ],
   imports: [
     BrowserModule,

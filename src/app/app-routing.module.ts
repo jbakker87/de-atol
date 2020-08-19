@@ -6,7 +6,8 @@ import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
 import { SafariComponent } from './diensten/safari/safari.component';
 import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
-
+import { FeestenComponent } from './diensten/feesten/feesten.component';
+import { SportvissenComponent } from './diensten/sportvissen/sportvissen.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,14 @@ const routes: Routes = [
     path: 'diensten/veerdienst',
     component: VeerdienstComponent
   },  
+  {
+    path: 'diensten/sportvissen',
+    component: SportvissenComponent
+  },  
+  {
+    path: 'diensten/feesten',
+    component: FeestenComponent
+  }, 
   {
     path: 'diensten/rondvaart',
     component: RondvaartComponent
