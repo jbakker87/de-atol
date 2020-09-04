@@ -1,0 +1,42 @@
+<div> 
+    <mat-toolbar color="primary">
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>  
+      <a mat-button class="navbar-item" routerLink="/">
+        <span>De Atol</span>
+      </a>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <div class="navbar-start">
+            <a mat-button class='navbar-item' routerLink=''>Home</a>
+            <a mat-button class='navbar-item' routerLink='about'>Over ons</a>
+            <a mat-button class='navbar-item' routerLink='/diensten/veerdienst'>Veerdienst</a>
+            <a mat-button class='navbar-item' routerLink='/diensten/safari'>Zeehondensafari</a>
+            <a mat-button class='navbar-item' routerLink='/diensten/rondvaart'>Rondvaart</a>
+            <a mat-button class='navbar-item' routerLink='/diensten/feesten'>Feesten en partijen</a>
+            <a mat-button class='navbar-item' routerLink='/diensten/sportvissen'>Sportvissen</a>
+            <a mat-button class='navbar-item' routerLink='/contact'>Contact</a>
+        </div>
+      </div>
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill class="example-container">
+      <mat-sidenav color="primary" #sidenav (click)="sidenav.toggle()" fxLayout="column" mode="side" opened="false" fxHide.gt-sm="true">
+        <div fxLayout="column">
+            <a mat-button class='navbar-item has-text-left' routerLink=''>Home</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='about'>Over ons</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/veerdienst'>Veerdienst</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/safari'>Zeehondensafari</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/rondvaart'>Rondvaart</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/feesten'>Feesten en partijen</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/sportvissen'>Sportvissen</a>
+            <a mat-button class='navbar-item has-text-left' routerLink='/contact'>Contact</a>
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill (click)="sidenav.close()">
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

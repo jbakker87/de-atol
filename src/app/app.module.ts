@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ReserverenComponent } from './reserveren/reserveren.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -23,7 +22,9 @@ import { SafariComponent } from './diensten/safari/safari.component';
 import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
 import { FeestenComponent } from './diensten/feesten/feesten.component';
 import { SportvissenComponent } from './diensten/sportvissen/sportvissen.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,13 @@ import { SportvissenComponent } from './diensten/sportvissen/sportvissen.compone
     FooterComponent,
     HomeComponent,
     ReserverenComponent,
-    SidenavComponent,
     ContactComponent,
     VeerdienstComponent,
     SafariComponent,
     RondvaartComponent,
     FeestenComponent,
     SportvissenComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import { SportvissenComponent } from './diensten/sportvissen/sportvissen.compone
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
