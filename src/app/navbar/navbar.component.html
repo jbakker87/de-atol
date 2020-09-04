@@ -1,12 +1,8 @@
 <div> 
-    <mat-toolbar color="primary">
-      <div fxShow="true" fxHide.gt-sm="true">
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>  
+    <mat-toolbar class='custom-toolbar'>
       <a mat-button class="navbar-item" routerLink="/">
-        <span>De Atol</span>
+        <img src='../../assets/images/navbar_logo.png' class='navbar-brand-logo'>
+        <span class='pad'>De Atol</span>
       </a>
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true">
@@ -20,6 +16,13 @@
             <a mat-button class='navbar-item' routerLink='/diensten/sportvissen'>Sportvissen</a>
             <a mat-button class='navbar-item' routerLink='/contact'>Contact</a>
         </div>
+      </div>
+      <div class='navbar-end'>
+        <div fxShow="true" fxHide.gt-sm="true">
+          <button mat-icon-button (click)="sidenav.toggle()" class='custom-menu'>
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>  
       </div>
     </mat-toolbar>
     <mat-sidenav-container fxFlexFill class="example-container">

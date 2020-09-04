@@ -29,3 +29,15 @@ button {
 .example-spacer {
     flex: 1 1 auto;
 }
+
+.custom-menu {
+    background-color: transparent!important;
+}
+
+.custom-toolbar {
+    height: 60px;
+}
+
+.pad {
+    margin-left: 15px;
+}
