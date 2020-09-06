@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeerdienstComponent implements OnInit {
 
-  adultPrice = 7;
-  childPrice = 4;
-  bikePrice = 1;
-
   constructor() { }
 
   ngOnInit(): void {

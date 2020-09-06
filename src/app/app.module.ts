@@ -25,6 +25,8 @@ import { SportvissenComponent } from './diensten/sportvissen/sportvissen.compone
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { PrijzenComponent } from './prijzen/prijzen.component';
+import { OveronsComponent } from './overons/overons.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     FeestenComponent,
     SportvissenComponent,
     NavbarComponent,
+    PrijzenComponent,
+    OveronsComponent,
   ],
   imports: [
     BrowserModule,
