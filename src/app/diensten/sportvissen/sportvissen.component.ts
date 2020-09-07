@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SportvissenComponent implements OnInit {
 
+
+  dayPrice = 540;
+  hengelPrice = 10;
+  baitPrice = 10;
+
   constructor() { }
 
   ngOnInit(): void {
