@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { ContactRequest, PersonalData } from '../../models/contact-request';
 import { HttpService } from "../http-service.service";
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-
 
 @Component({
   selector: 'app-contact',
@@ -49,11 +47,11 @@ export class ContactComponent implements OnInit {
         {
           let res:any = data; 
           console.log(
-            `${user.name} DATA IS VERSTUURD ${res.messageId}`
+            `${user.name} heeft een mail verzonden.`
           );
         }
-      )  
-      this.revert();  
+      )
+      this.revert();
   }
 
   revert() {

@@ -9,12 +9,12 @@ async function main() {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "beurs.regelpaneel.com",
-    port: 587,
+    host: "smtp.mailtrap.io",
+    port: 2525,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: 'atol@zeelandnet.nl', // generated ethereal user
-      pass: 'Betty1507?', // generated ethereal password
+      user: '155d02fecdc18d', // generated ethereal user
+      pass: 'bac0ae79089676', // generated ethereal password
     },
   });
 
