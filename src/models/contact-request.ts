@@ -6,6 +6,6 @@ export class ContactRequest {
 export class PersonalData {
   name: string = '';
   phone: string = '';
-  emil: string = '';
+  email: string = '';
   msg: string = '';
 }

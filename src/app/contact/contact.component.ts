@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { ContactRequest, PersonalData } from '../../models/contact-request';
+import { HttpService } from "../http-service.service";
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +13,7 @@ import { ContactRequest, PersonalData } from '../../models/contact-request';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public http: HttpService) {
       this.contactForm = this.createFormGroup();
   }
 
@@ -33,7 +36,24 @@ export class ContactComponent implements OnInit {
 
     // Do useful stuff with the gathered data
     console.log(result);
-    this.revert();
+
+    let user = {
+      name: result.personalData.name,
+      phone: result.personalData.phone,
+      email: result.personalData.email,
+      msg: result.personalData.msg
+    }
+    this.http.sendEmail("http://localhost:3000/sendFormData", user).subscribe
+      (
+        data => 
+        {
+          let res:any = data; 
+          console.log(
+            `${user.name} DATA IS VERSTUURD ${res.messageId}`
+          );
+        }
+      )  
+      this.revert();  
   }
 
   revert() {
