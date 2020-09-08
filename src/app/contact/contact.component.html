@@ -39,49 +39,52 @@
             </div>
           </article>
         </div>
+        <!-- CONTACT FORM -->
         <div class="tile is-parent">
             <article class="tile is-child notification is-light box">
-              <form (ngSubmit)="processForm()">
-                <div class="field">
-                  <label class="label">Uw naam</label>
-                  <div class="control">
-                    <input class="input" name="name" type="text" [(ngModel)]="name" required minlength="3" #nameInput="ngModel">
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+                <div formGroupName="personalData" novalidate>
+                  <div class="field">
+                    <label class="label">Uw naam</label>
+                    <div class="control">
+                      <input class="input" name="name" type="text" formControlName="name">
+                    </div>
+                    <!-- <div class="help is-danger" *ngIf="nameInput.invalid && nameInput.dirty && nameInput.touched">
+                      Naam is verplicht en moet minstens uit 3 karakters bestaan.
+                    </div> -->
                   </div>
-                  <div class="help is-danger" *ngIf="nameInput.invalid && nameInput.dirty && nameInput.touched">
-                    Naam is verplicht en moet minstens uit 3 karakters bestaan.
+                  <div class="field">
+                    <label class="label">Emailadres</label>
+                    <div class="control">
+                      <input class="input" name="email" type="email" formControlName="email">
+                    </div>
+                    <!-- <div class="help is-danger" *ngIf="emailInput.invalid && emailInput.dirty && emailInput.touched">
+                      U dient een geldig emailadres op te geven.
+                    </div> -->
                   </div>
-                </div>
-                <div class="field">
-                  <label class="label">Emailadres</label>
-                  <div class="control">
-                    <input class="input" name="email" type="email" [(ngModel)]="email" required email #emailInput="ngModel">
+                  <div class="field">
+                    <label class="label">Telefoonnummer</label>
+                    <div class="control">
+                      <input class="input" name="phone" type="text" formControlName="phone">
+                    </div>
+                    <!-- <div class="help is-danger" *ngIf="phoneInput.invalid && phoneInput.dirty && phoneInput.touched">
+                      U dient een geldig telefoonnummer op te geven.
+                    </div> -->
                   </div>
-                  <div class="help is-danger" *ngIf="emailInput.invalid && emailInput.dirty && emailInput.touched">
-                    U dient een geldig emailadres op te geven.
+                  <div class="field">
+                    <label class="label">Bericht</label>
+                    <div class="control">
+                      <input class="textarea" name="message" type="text" formControlName="msg">
+                    </div>
+                    <!-- <div class="help is-danger" *ngIf="messageInput.invalid && messageInput.dirty && messageInput.touched">
+                      U heeft geen geldig bericht achter gelaten.
+                    </div> -->
                   </div>
-                </div>
-                <div class="field">
-                  <label class="label">Telefoonnummer</label>
-                  <div class="control">
-                    <input class="input" name="phone" type="text" [(ngModel)]="phone" required minlength='10' #phoneInput="ngModel">
-                  </div>
-                  <div class="help is-danger" *ngIf="phoneInput.invalid && phoneInput.dirty && phoneInput.touched">
-                    U dient een geldig telefoonnummer op te geven.
-                  </div>
-                </div>
-                <div class="field">
-                  <label class="label">Bericht</label>
-                  <div class="control">
-                    <input class="textarea" name="message" type="text" [(ngModel)]="message" required minlength="3" maxlength="1000" #messageInput="ngModel">
-                  </div>
-                  <div class="help is-danger" *ngIf="messageInput.invalid && messageInput.dirty && messageInput.touched">
-                    U heeft geen geldig bericht achter gelaten.
-                  </div>
-                </div>
-                <div class="container">
-                  <div>
-                    <input type='submit' class='button is-warning' value='Verzenden'>
-                  </div>
+                  <div class="container">
+                    <div>
+                      <input type='submit' class='button is-warning' value='Verzenden'>
+                    </div>
+                  </div>  
                 </div>
               </form>
             </article>
