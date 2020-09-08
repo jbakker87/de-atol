@@ -42,43 +42,31 @@
         <!-- CONTACT FORM -->
         <div class="tile is-parent">
             <article class="tile is-child notification is-light box">
-              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <div formGroupName="personalData" novalidate>
                   <div class="field">
                     <label class="label">Uw naam</label>
                     <div class="control">
-                      <input class="input" name="name" type="text" formControlName="name">
+                      <input class="input" name="name" type="text" formControlName="name" required>
                     </div>
-                    <!-- <div class="help is-danger" *ngIf="nameInput.invalid && nameInput.dirty && nameInput.touched">
-                      Naam is verplicht en moet minstens uit 3 karakters bestaan.
-                    </div> -->
                   </div>
                   <div class="field">
                     <label class="label">Emailadres</label>
                     <div class="control">
-                      <input class="input" name="email" type="email" formControlName="email">
+                      <input class="input" name="email" type="email" formControlName="email" required>
                     </div>
-                    <!-- <div class="help is-danger" *ngIf="emailInput.invalid && emailInput.dirty && emailInput.touched">
-                      U dient een geldig emailadres op te geven.
-                    </div> -->
                   </div>
                   <div class="field">
                     <label class="label">Telefoonnummer</label>
                     <div class="control">
-                      <input class="input" name="phone" type="text" formControlName="phone">
+                      <input class="input" name="phone" type="text" formControlName="phone" required>
                     </div>
-                    <!-- <div class="help is-danger" *ngIf="phoneInput.invalid && phoneInput.dirty && phoneInput.touched">
-                      U dient een geldig telefoonnummer op te geven.
-                    </div> -->
                   </div>
                   <div class="field">
                     <label class="label">Bericht</label>
                     <div class="control">
-                      <input class="textarea" name="message" type="text" formControlName="msg">
+                      <input class="textarea" name="message" type="text" formControlName="msg" required>
                     </div>
-                    <!-- <div class="help is-danger" *ngIf="messageInput.invalid && messageInput.dirty && messageInput.touched">
-                      U heeft geen geldig bericht achter gelaten.
-                    </div> -->
                   </div>
                   <div class="container">
                     <div>

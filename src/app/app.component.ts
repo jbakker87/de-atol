@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpService } from './http-service.service';
-
 
 @Component({
   selector: 'app-root',
@@ -8,6 +6,6 @@ import { HttpService } from './http-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public http: HttpService) { }
+  constructor() { }
   title = 'de-atol';
 }

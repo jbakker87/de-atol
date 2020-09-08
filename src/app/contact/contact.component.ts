@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms'
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { ContactRequest, PersonalData } from '../../models/contact-request';
-import { HttpService } from "../http-service.service";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-contact',
@@ -11,19 +11,18 @@ import { HttpService } from "../http-service.service";
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, public http: HttpService) {
+  constructor(private formBuilder: FormBuilder, public http: HttpClient) {
       this.contactForm = this.createFormGroup();
   }
 
   createFormGroup() {
     return new FormGroup({
       personalData: new FormGroup({
-        name: new FormControl(),
-        phone: new FormControl(),
-        msg: new FormControl(),
-        email: new FormControl()
+        name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+        phone: new FormControl('', [Validators.required, Validators.minLength(10)]),
+        msg: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]),
+        email: new FormControl('', [Validators.required, Validators.email]),
       }),
-      text: new FormControl(),
     })
   }
 
@@ -32,25 +31,18 @@ export class ContactComponent implements OnInit {
     const result: ContactRequest = Object.assign({}, this.contactForm.value);
     result.personalData = Object.assign({}, result.personalData);
 
-    // Do useful stuff with the gathered data
-    console.log(result);
-
     let user = {
+      email: result.personalData.email,
       name: result.personalData.name,
       phone: result.personalData.phone,
-      email: result.personalData.email,
       msg: result.personalData.msg
     }
-    this.http.sendEmail("http://localhost:3000/sendFormData", user).subscribe
-      (
-        data => 
-        {
-          let res:any = data; 
-          console.log(
-            `${user.name} heeft een mail verzonden.`
-          );
-        }
-      )
+
+    console.log(user);
+    this.http.post('https://beta.de-atol.nl/httpdocs/' + 'mail_send.php', (user)).subscribe(
+      (response) => {console.log(response)},
+      (error) => {console.log(error)}
+    );
       this.revert();
   }
 
