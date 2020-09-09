@@ -5,7 +5,7 @@
         Kom met ons in contact
       </h1>
       <h2 class="content">
-        Wilt u weten wat wij voor u kunnen betekenen? Of wenst u een vrijblijvende offerte? Neem gerust contact met ons op via onderstaand webformulier of mail naar <a href="mailto:info@de-atol.nl">info@de-atol.nl</a>. Wij proberen u binnen 24 uur te antwoorden. U mag natuurlijk ook bellen. 
+        Wilt u weten wat wij voor u kunnen betekenen? Of wenst u een vrijblijvende offerte? Neem gerust contact met ons op via onderstaand webformulier. Wij proberen u binnen 24 uur te antwoorden. U mag natuurlijk ook bellen. 
       </h2>
     </div>
   </div>
@@ -50,13 +50,10 @@
                     <div class="control">
                       <input class="input" type="text" formControlName="name">
                     </div>
-                    <!-- VALIDATION -->
-                    <div *ngIf="name.invalid && (name.dirty || name.touched)" style="color:red;">
+                    <!-- NAME VALIDATION -->
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
                       <div *ngIf="name.errors.required">
-                        Naam is verplicht
-                      </div>
-                      <div *ngIf="name.errors.minlength">
-                        Naam voldoet niet aan de minimum lengte
+                        Naam is verplicht.
                       </div>
                     </div>
                   </div>
@@ -64,6 +61,15 @@
                     <label class="label">Emailadres</label>
                     <div class="control">
                       <input class="input" type="email" formControlName="email">
+                    </div>
+                    <!-- EMAIL VALIDATION -->
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
+                      <div *ngIf="email.errors.required">
+                        Email is verplicht
+                      </div>
+                      <div *ngIf="email.errors.email">
+                        Geef een geldig emailadres op.
+                      </div>
                     </div>
                   </div>
                   <div class="field">
@@ -77,10 +83,20 @@
                     <div class="control">
                       <input class="textarea" type="text" formControlName="msg">
                     </div>
+                    <!-- MESSAGE VALIDATION -->
+                    <div *ngIf="msg.invalid && ( msg.dirty || msg.touched )" class="help is-danger">
+                      <div *ngIf="msg.errors.required">
+                        Bericht is verplicht
+                      </div>
+                    </div>
                   </div>
                   <div class="container">
-                    <button type="submit" [disabled]="!contactForm.valid" mat-button>Verzenden</button>
-                  </div>  
+                    <div *ngIf="contactForm.invalid" class="help is-help">
+                      U dient de verplichte velden in te vullen.
+                    </div>
+                    <br> 
+                    <button type="submit" [disabled]="!contactForm.valid" class='button is-warning'>Verzenden</button>
+                  </div>
               </form>
             </div>
           </div>

@@ -36,9 +36,9 @@ export class ContactComponent implements OnInit {
 
   createFormGroup(): FormGroup {
     return new FormGroup({
-        name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-        phone: new FormControl('', [Validators.required, Validators.minLength(10)]),
-        msg: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]),
+        name: new FormControl('', Validators.required),
+        phone: new FormControl(''),
+        msg: new FormControl('', Validators.required),
         email: new FormControl('', [Validators.required, Validators.email]),
     });
   }
