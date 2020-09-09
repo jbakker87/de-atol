@@ -1,3 +1,4 @@
+<app-contact-confirm *ngIf="showModal"></app-contact-confirm>
 <section class="hero">
   <div class="hero-body">
     <div class="container has-text-centered">
@@ -10,10 +11,6 @@
     </div>
   </div>
 </section>
-
-<div *ngIf="showModal">
-  <app-contact-confirm (closeModal)="showModal=false"></app-contact-confirm>
-</div>
 
 <div class='container section'>
   <div class="columns is-centered">

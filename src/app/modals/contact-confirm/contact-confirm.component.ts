@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact-confirm',
@@ -7,13 +7,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ContactConfirmComponent implements OnInit {
 
-  @Output()
-  closeModal = new EventEmitter();
+  showModal = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleModal(): void { this.closeModal.emit(); }
+  closeModal(): void {
+    this.showModal = false;
+  }
 }
