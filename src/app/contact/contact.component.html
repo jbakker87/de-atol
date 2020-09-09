@@ -81,7 +81,7 @@
                   <div class="field">
                     <label class="label">Bericht</label>
                     <div class="control">
-                      <input class="textarea" type="text" formControlName="msg">
+                      <textarea class="textarea" rows='5' type="text" formControlName="msg" style='resize: none;'></textarea>
                     </div>
                     <!-- MESSAGE VALIDATION -->
                     <div *ngIf="msg.invalid && ( msg.dirty || msg.touched )" class="help is-danger">

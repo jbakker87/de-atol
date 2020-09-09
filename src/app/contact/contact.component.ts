@@ -57,7 +57,7 @@ export class ContactComponent implements OnInit {
     //   (error) => {console.log(error)}
     // );
 
-    // this.resetForm();
+    this.resetForm();
   }
 
   resetForm(): void {
