@@ -10,6 +10,11 @@
     </div>
   </div>
 </section>
+
+<div *ngIf="showModal">
+  <app-contact-confirm (closeModal)="showModal=false"></app-contact-confirm>
+</div>
+
 <div class='container section'>
   <div class="columns is-centered">
     <div class="tile is-ancestor is-8">

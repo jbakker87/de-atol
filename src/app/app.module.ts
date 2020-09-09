@@ -16,8 +16,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from "@angular/material/icon";
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
 import { SafariComponent } from './diensten/safari/safari.component';
@@ -29,6 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { PrijzenComponent } from './prijzen/prijzen.component';
 import { OveronsComponent } from './overons/overons.component';
+import { ContactConfirmComponent } from './modals/contact-confirm/contact-confirm.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { OveronsComponent } from './overons/overons.component';
     NavbarComponent,
     PrijzenComponent,
     OveronsComponent,
+    ContactConfirmComponent,
   ],
   imports: [
     BrowserModule,
