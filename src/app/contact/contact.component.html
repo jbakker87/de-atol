@@ -48,8 +48,9 @@
                   <div class="field">
                     <label class="label">Uw naam</label>
                     <div class="control">
-                      <input class="input" name="name" type="text" formControlName="name">
+                      <input class="input" type="text" formControlName="name">
                     </div>
+                    <!-- VALIDATION -->
                     <div *ngIf="name.invalid && (name.dirty || name.touched)" style="color:red;">
                       <div *ngIf="name.errors.required">
                         Naam is verplicht
@@ -62,19 +63,19 @@
                   <div class="field">
                     <label class="label">Emailadres</label>
                     <div class="control">
-                      <input class="input" name="email" type="email" formControlName="email">
+                      <input class="input" type="email" formControlName="email">
                     </div>
                   </div>
                   <div class="field">
                     <label class="label">Telefoonnummer</label>
                     <div class="control">
-                      <input class="input" name="phone" type="text" formControlName="phone">
+                      <input class="input" type="text" formControlName="phone">
                     </div>
                   </div>
                   <div class="field">
                     <label class="label">Bericht</label>
                     <div class="control">
-                      <input class="textarea" name="message" type="text" formControlName="msg">
+                      <input class="textarea" type="text" formControlName="msg">
                     </div>
                   </div>
                   <div class="container">
