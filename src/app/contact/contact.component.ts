@@ -10,9 +10,26 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ContactComponent implements OnInit {
 
+  name: string;
+  address: string;
+  postalcode: string;
+  city: string;
+  phone: string;
+  adults: number;
+  childs: number;
+  email: string;
+  date1: Date;
+  date2: Date;
+  date3: Date;
+  type: string;
+  zeehond: string;
+  rondvaart: string;
+  sportvissen: string;
+  msg: string;
+
   contactForm: FormGroup;
   constructor(private formBuilder: FormBuilder, public http: HttpClient) {
-      this.contactForm = this.createFormGroup();
+      // this.formContact = this.createFormGroup();
   }
 
   createFormGroup() {
@@ -26,33 +43,38 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  onSubmit() {
+  submitForm() {
     // Make sure to create a deep copy of the form-model
-    const result: ContactRequest = Object.assign({}, this.contactForm.value);
-    result.personalData = Object.assign({}, result.personalData);
+    // const result: ContactRequest = Object.assign({}, this.formContact.value);
+    // result.personalData = Object.assign({}, result.personalData);
 
     let user = {
-      email: result.personalData.email,
-      name: result.personalData.name,
-      phone: result.personalData.phone,
-      msg: result.personalData.msg
+      "email": this.email,
+      "name": this.name,
+      "phone": this.phone,
+      "msg": this.msg
     }
 
     console.log(user);
-    this.http.post('https://beta.de-atol.nl/httpdocs/' + 'mail_send.php', (user)).subscribe(
-      (response) => {console.log(response)},
-      (error) => {console.log(error)}
-    );
-      this.revert();
+    // this.http.post('https://beta.de-atol.nl/httpdocs/' + 'mail_send.php', (user)).subscribe(
+    //   (response) => {console.log(response)},
+    //   (error) => {console.log(error)}
+    // );
+    
+    // this.resetForm();
   }
 
-  revert() {
-    // Resets to blank object
-    this.contactForm.reset();
-
-    // Resets to provided model
-    this.contactForm.reset({ personalData: new PersonalData(), requestType: '', text: '' });
+  resetForm() {
+    this.contactForm.reset()
   }
+
+  // revert() {
+  //   // Resets to blank object
+  //   this.formContact.reset();
+
+  //   // Resets to provided model
+  //   this.formContact.reset({ personalData: new PersonalData(), requestType: '', text: '' });
+  // }
 
   ngOnInit(): void {
   }

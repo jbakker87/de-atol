@@ -42,12 +42,12 @@
         <!-- CONTACT FORM -->
         <div class="tile is-parent">
             <article class="tile is-child notification is-light box">
-              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" #contactForm='ngForm'>
                 <div formGroupName="personalData" novalidate>
                   <div class="field">
                     <label class="label">Uw naam</label>
                     <div class="control">
-                      <input class="input" name="name" type="text" formControlName="name" required>
+                      <input class="input" name="name" type="text" formControlName="name" [(ngModel)]="name" #ctrl="ngModel" #nameInput="ngModel">
                     </div>
                   </div>
                   <div class="field">
@@ -70,11 +70,62 @@
                   </div>
                   <div class="container">
                     <div>
-                      <input type='submit' class='button is-warning' value='Verzenden'>
+                      <input 
+                        type='submit' 
+                        class='button is-warning' 
+                        value='Verzenden'
+                        [disabled]='contactForm.invalid'>
                     </div>
                   </div>  
                 </div>
-              </form>
+              </form> -->
+              <div class="section">
+                <div class="container">
+                    <form (ngSubmit)='submitForm()' #contactForm='ngForm'>
+                        <div class="field">
+                            <label class="label">Naam: </label>
+                            <div class='control'>
+                              <input type='text' name='name' class='input' [(ngModel)]="name" #ctrl="ngModel" #nameInput="ngModel" required minlength="3">
+                              <div class="help is-danger" *ngIf='nameInput.invalid && nameInput.dirty && nameInput.dirty && nameInput.touched'>
+                                U dient een geldige naam op te geven. Een naam moet uit minimaal 3 karakters bestaan.
+                              </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                          <label class="label">Telefoonnummer: </label>
+                          <div class='control'>
+                            <input type='text' name='phone' class='input'[(ngModel)]="phone" #ctrl="ngModel" #phoneInput="ngModel" required minlength="10">
+                            <div class="help is-danger" *ngIf='phoneInput.invalid && phoneInput.dirty && phoneInput.touched'>
+                              U dient een geldig telefoonnummer op te geven. Een geldig telefoonnummer bestaat uit ten minste 10 cijfers.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Email: </label>
+                            <div class='control'>
+                              <input type='text' name='email' class='input'[(ngModel)]="email" #ctrl="ngModel" #emailInput="ngModel" required email>
+                              <div class="help is-danger" *ngIf='emailInput.invalid && emailInput.dirty && emailInput.touched'>
+                                  U dient een geldig emailadres op te geven. Bijvoorbeeld johndoe@example.com
+                              </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Bericht: </label>
+                            <textarea name='msg' class='textarea' [(ngModel)]="msg" #ctrl="ngModel" #msgInput="ngModel" required minlength="10"></textarea>
+                            <div class="help is-danger" *ngIf='msgInput.invalid && msgInput.dirty && msgInput.touched'>
+                              U dient een bericht achter te laten.
+                          </div>
+                        </div>
+                        <button 
+                            type='submit' 
+                            class='button is-large is-warning'
+                            [disabled]='contactForm.invalid'>
+                            
+                            Verzenden
+                        </button>                                                           
+                    </form>
+                </div>
+            </div>
             </article>
         </div>
     </div>
