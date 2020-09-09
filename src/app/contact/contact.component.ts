@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
-import { ContactRequest, PersonalData } from '../../models/contact-request';
-import { HttpClient } from "@angular/common/http";
+import { FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { PersonalData } from '../../models/contact-request';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,60 +10,58 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ContactComponent implements OnInit {
 
-  name: string;
-  phone: string;
-  email: string;
-  msg: string;
-
   contactForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, public http: HttpClient) {
-      // this.formContact = this.createFormGroup();
+
+  constructor(public http: HttpClient) {
+      this.contactForm = this.createFormGroup();
   }
 
-  createFormGroup() {
+  get name(): AbstractControl {
+    return this.contactForm.get('name');
+  }
+
+  get phone(): AbstractControl {
+    return this.contactForm.get('phone');
+  }
+
+  get msg(): AbstractControl {
+    return this.contactForm.get('msg');
+  }
+
+  get email(): AbstractControl {
+    return this.contactForm.get('email');
+  }
+
+  ngOnInit(): void {}
+
+  createFormGroup(): FormGroup {
     return new FormGroup({
-      personalData: new FormGroup({
         name: new FormControl('', [Validators.required, Validators.minLength(3)]),
         phone: new FormControl('', [Validators.required, Validators.minLength(10)]),
         msg: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]),
         email: new FormControl('', [Validators.required, Validators.email]),
-      }),
-    })
+    });
   }
 
-  submitForm() {
-    // Make sure to create a deep copy of the form-model
-    // const result: ContactRequest = Object.assign({}, this.formContact.value);
-    // result.personalData = Object.assign({}, result.personalData);
-
-    let user = {
-      "email": this.email,
-      "name": this.name,
-      "phone": this.phone,
-      "msg": this.msg
-    }
+  onSubmit(): void {
+    const user: PersonalData = {
+      email: this.email.value,
+      name: this.name.value,
+      phone: this.phone.value,
+      msg: this.msg.value
+    };
 
     console.log(user);
     // this.http.post('https://beta.de-atol.nl/httpdocs/' + 'mail_send.php', (user)).subscribe(
     //   (response) => {console.log(response)},
     //   (error) => {console.log(error)}
     // );
-    
+
     // this.resetForm();
   }
 
-  resetForm() {
-    this.contactForm.reset()
+  resetForm(): void {
+    this.contactForm.reset();
   }
 
-  // revert() {
-  //   // Resets to blank object
-  //   this.formContact.reset();
-
-  //   // Resets to provided model
-  //   this.formContact.reset({ personalData: new PersonalData(), requestType: '', text: '' });
-  // }
-
-  ngOnInit(): void {
-  }
 }

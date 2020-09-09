@@ -13,121 +13,78 @@
 <div class='container section'>
   <div class="columns is-centered">
     <div class="tile is-ancestor is-8">
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-light box">
-            <p class="title">Rondvaartbedrijf <br>De Atol</p>
-            <p class="subtitle">Voor veel vaar plezier</p>
-            <p class="content">
-              Factuuradres:<br>
-              t.a.v. Nils de Brouwer<br>
-              Kerkhoflaan 11<br>
-              4537 PM TERNEUZEN<br>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-light box">
+          <p class="title">Rondvaartbedrijf <br>De Atol</p>
+          <p class="subtitle">Voor veel vaar plezier</p>
+          <p class="content">
+            Factuuradres:<br>
+            t.a.v. Nils de Brouwer<br>
+            Kerkhoflaan 11<br>
+            4537 PM TERNEUZEN<br>
+          </p>
+            <iframe class='contact_maps_location' width="100%" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7138.20456916837!2d4.0270314797524405!3d51.403213941594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU0LjQiTiA0wrAwMScwMC4xIkU!5e0!3m2!1snl!2snl!4v1597529230464!5m2!1snl!2snl" frameborder="0" allowfullscreen></iframe>
+          <div class="content">
+            <p>
+              <mat-icon class='pad'>call</mat-icon>
+              <a href="tel:+31651200389">+31(0)651200389</a> of
+              <a href="tel:+31641218109"> +31(0)641218109</a>
             </p>
-              <iframe class='contact_maps_location' width="100%" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7138.20456916837!2d4.0270314797524405!3d51.403213941594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU0LjQiTiA0wrAwMScwMC4xIkU!5e0!3m2!1snl!2snl!4v1597529230464!5m2!1snl!2snl" frameborder="0" allowfullscreen></iframe>
-            <div class="content">
-                <p>
-                  <mat-icon class='pad'>call</mat-icon>
-                  <a href="tel:+31651200389">+31(0)651200389</a> of
-                  <a href="tel:+31641218109"> +31(0)641218109</a>
-                </p>
-                <p>
-                  <mat-icon class="pad">email</mat-icon>
-                  <a href="mailto:info@de-atol.nl">info@de-atol.nl</a>
-                <p><mat-icon class="pad">facebook</mat-icon>
-                  <a href="https://www.facebook.com/RondvaartbedrijfDeAtol" target="_blank">De Atol</a></p>
-                <p>
-            </div>
-          </article>
-        </div>
-        <!-- CONTACT FORM -->
-        <div class="tile is-parent">
-            <article class="tile is-child notification is-light box">
-              <!-- <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" #contactForm='ngForm'>
-                <div formGroupName="personalData" novalidate>
+            <p>
+              <mat-icon class="pad">email</mat-icon>
+              <a href="mailto:info@de-atol.nl">info@de-atol.nl</a>
+            <p><mat-icon class="pad">facebook</mat-icon>
+              <a href="https://www.facebook.com/RondvaartbedrijfDeAtol" target="_blank">De Atol</a></p>
+            <p>
+          </div>
+        </article>
+      </div>
+      <!-- CONTACT FORM -->
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-light box">
+          <div class="section">
+            <div class="container">
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                   <div class="field">
                     <label class="label">Uw naam</label>
                     <div class="control">
-                      <input class="input" name="name" type="text" formControlName="name" [(ngModel)]="name" #ctrl="ngModel" #nameInput="ngModel">
+                      <input class="input" name="name" type="text" formControlName="name">
+                    </div>
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" style="color:red;">
+                      <div *ngIf="name.errors.required">
+                        Naam is verplicht
+                      </div>
+                      <div *ngIf="name.errors.minlength">
+                        Naam voldoet niet aan de minimum lengte
+                      </div>
                     </div>
                   </div>
                   <div class="field">
                     <label class="label">Emailadres</label>
                     <div class="control">
-                      <input class="input" name="email" type="email" formControlName="email" required>
+                      <input class="input" name="email" type="email" formControlName="email">
                     </div>
                   </div>
                   <div class="field">
                     <label class="label">Telefoonnummer</label>
                     <div class="control">
-                      <input class="input" name="phone" type="text" formControlName="phone" required>
+                      <input class="input" name="phone" type="text" formControlName="phone">
                     </div>
                   </div>
                   <div class="field">
                     <label class="label">Bericht</label>
                     <div class="control">
-                      <input class="textarea" name="message" type="text" formControlName="msg" required>
+                      <input class="textarea" name="message" type="text" formControlName="msg">
                     </div>
                   </div>
                   <div class="container">
-                    <div>
-                      <input 
-                        type='submit' 
-                        class='button is-warning' 
-                        value='Verzenden'
-                        [disabled]='contactForm.invalid'>
-                    </div>
+                    <button type="submit" [disabled]="!contactForm.valid" mat-button>Verzenden</button>
                   </div>  
-                </div>
-              </form> -->
-              <div class="section">
-                <div class="container">
-                    <form (ngSubmit)='submitForm()' #contactForm='ngForm'>
-                        <div class="field">
-                            <label class="label">Naam: </label>
-                            <div class='control'>
-                              <input type='text' name='name' class='input' [(ngModel)]="name" #ctrl="ngModel" #nameInput="ngModel" required minlength="3">
-                              <div class="help is-danger" *ngIf='nameInput.invalid && nameInput.dirty && nameInput.dirty && nameInput.touched'>
-                                U dient een geldige naam op te geven. Een naam moet uit minimaal 3 karakters bestaan.
-                              </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                          <label class="label">Telefoonnummer: </label>
-                          <div class='control'>
-                            <input type='text' name='phone' class='input'[(ngModel)]="phone" #ctrl="ngModel" #phoneInput="ngModel" required minlength="10">
-                            <div class="help is-danger" *ngIf='phoneInput.invalid && phoneInput.dirty && phoneInput.touched'>
-                              U dient een geldig telefoonnummer op te geven. Een geldig telefoonnummer bestaat uit ten minste 10 cijfers.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Email: </label>
-                            <div class='control'>
-                              <input type='text' name='email' class='input'[(ngModel)]="email" #ctrl="ngModel" #emailInput="ngModel" required email>
-                              <div class="help is-danger" *ngIf='emailInput.invalid && emailInput.dirty && emailInput.touched'>
-                                  U dient een geldig emailadres op te geven. Bijvoorbeeld johndoe@example.com
-                              </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Bericht: </label>
-                            <textarea name='msg' class='textarea' [(ngModel)]="msg" #ctrl="ngModel" #msgInput="ngModel" required minlength="10"></textarea>
-                            <div class="help is-danger" *ngIf='msgInput.invalid && msgInput.dirty && msgInput.touched'>
-                              U dient een bericht achter te laten.
-                          </div>
-                        </div>
-                        <button 
-                            type='submit' 
-                            class='button is-large is-warning'
-                            [disabled]='contactForm.invalid'>
-                            
-                            Verzenden
-                        </button>                                                           
-                    </form>
-                </div>
+              </form>
             </div>
-            </article>
-        </div>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </div>
