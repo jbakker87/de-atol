@@ -9,6 +9,7 @@ import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
 import { FeestenComponent } from './diensten/feesten/feesten.component';
 import { SportvissenComponent } from './diensten/sportvissen/sportvissen.component';
 import { OveronsComponent } from './overons/overons.component';
+import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeehond.component';
 
 
 const routes: Routes = [
@@ -23,23 +24,23 @@ const routes: Routes = [
   {
     path: 'overons',
     component: OveronsComponent
-  },  
+  },
   {
     path: 'diensten/sportvissen',
     component: SportvissenComponent
-  },  
+  },
   {
     path: 'diensten/feesten',
     component: FeestenComponent
-  }, 
+  },
   {
     path: 'diensten/rondvaart',
     component: RondvaartComponent
-  },    
+  },
   {
     path: 'diensten/safari',
     component: SafariComponent
-  },   
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -51,12 +52,12 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
-  }  
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled'    
+    scrollPositionRestoration: 'enabled'
   })],
   exports: [RouterModule]
 })

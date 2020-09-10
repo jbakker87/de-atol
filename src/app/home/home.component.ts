@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ReserverenZeehondComponent } from '../reserveren-zeehond/reserveren-zeehond.component';
 
 @Component({
   selector: 'app-home',
@@ -7,23 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  private _msgIsShown = true;
+  msgIsShown = true;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  get msgIsShown() {
-    return this._msgIsShown;
-  }
-  
-  set msgIsShown(value) {
-    this._msgIsShown = value;
-  }
-
   toggleCorona(): void {
     this.msgIsShown = false;
+  }
+
+  openZeehondenDialog(): void {
+    const dialogRef = this.dialog.open(ReserverenZeehondComponent, {
+      height: '700px',
+      width: '600px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // TODO handle form data
+    });
   }
 
 }

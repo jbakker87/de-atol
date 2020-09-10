@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
@@ -16,8 +19,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from "@angular/material/icon";
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
 import { SafariComponent } from './diensten/safari/safari.component';
@@ -29,6 +32,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { PrijzenComponent } from './prijzen/prijzen.component';
 import { OveronsComponent } from './overons/overons.component';
+import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeehond.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -45,6 +51,7 @@ import { OveronsComponent } from './overons/overons.component';
     NavbarComponent,
     PrijzenComponent,
     OveronsComponent,
+    ReserverenZeehondComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +68,11 @@ import { OveronsComponent } from './overons/overons.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatDialogModule,
     MatCarouselModule.forRoot(),
   ],
   providers: [],
