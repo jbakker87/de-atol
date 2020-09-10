@@ -48,9 +48,9 @@
     <div *ngIf="selectedDate">
       <mat-form-field appearance="outline">
         <mat-label>Aantal personen</mat-label>
-        <select matNativeControl formControlName="pax">
-          <option *ngFor="let item of options; let i = index;" [value]="i+1">{{i+1}}</option>
-        </select>
+        <mat-select matInput formControlName="pax">
+          <mat-option *ngFor="let item of options; let i = index;" [value]="i+1">{{i+1}}</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <p>

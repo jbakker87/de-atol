@@ -35,6 +35,7 @@ import { OveronsComponent } from './overons/overons.component';
 import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeehond.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     MatDatepickerModule,
     MatInputModule,
+    MatSelectModule,
     MatNativeDateModule,
     MatFormFieldModule,
     MatDialogModule,

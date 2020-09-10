@@ -30,7 +30,7 @@ export class ReserverenZeehondComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<ReserverenZeehondComponent>) {}
 
   get options(): number[] {
-    return Array(this.selectedDate.pax || 0);
+    return Array(this.selectedDate.pax);
   }
 
   filter = (d: Date | null): boolean => {
@@ -49,7 +49,7 @@ export class ReserverenZeehondComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.dialogRef.close(this.reserverenForm.value);
+    this.dialogRef.close(this.reserverenForm);
   }
 
   onDateChange(event: MatDatepickerInputEvent<Date>): void {
