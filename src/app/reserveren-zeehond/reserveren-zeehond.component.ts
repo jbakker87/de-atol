@@ -49,7 +49,7 @@ export class ReserverenZeehondComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.dialogRef.close(this.reserverenForm);
+    this.dialogRef.close(this.reserverenForm.value);
   }
 
   onDateChange(event: MatDatepickerInputEvent<Date>): void {
