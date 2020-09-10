@@ -37,6 +37,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { ContactConfirmComponent } from './modals/contact-confirm/contact-confirm.component';
+import { LoginComponent } from './login/login.component';
+import { CmsComponent } from './cms/cms.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { ContactConfirmComponent } from './modals/contact-confirm/contact-confir
     OveronsComponent,
     ReserverenZeehondComponent,
     ContactConfirmComponent,
+    LoginComponent,
+    CmsComponent,
   ],
   imports: [
     BrowserModule,

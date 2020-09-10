@@ -9,8 +9,8 @@ import { RondvaartComponent } from './diensten/rondvaart/rondvaart.component';
 import { FeestenComponent } from './diensten/feesten/feesten.component';
 import { SportvissenComponent } from './diensten/sportvissen/sportvissen.component';
 import { OveronsComponent } from './overons/overons.component';
-import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeehond.component';
-
+import { LoginComponent } from './login/login.component';
+import { CmsComponent } from './cms/cms.component';
 
 const routes: Routes = [
   {
@@ -52,6 +52,14 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'cms',
+    component: CmsComponent
   }
 ];
 

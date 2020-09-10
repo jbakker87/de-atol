@@ -1,43 +1,43 @@
 .mat-toolbar {
-    height: 7vh;
+  height: 7vh;
 }
 
 div {
-    overflow: inherit;
+  overflow: inherit;
 }
 
 .mat-sidenav-container {
-    background-color: white;
-    min-height: 93vh !important;
+  background-color: white;
+  min-height: 93vh !important;
 }
 
 a {
-    text-decoration: none;
-    font-size: 110%;
-    white-space: normal;
+  text-decoration: none;
+  font-size: 85%;
+  white-space: normal;
 }
 
 button {
-    font-size: 110%;
-    min-width: min-content;
+  font-size: 110%;
+  min-width: min-content;
 }
 
 .example-icon {
-    padding: 0 14px;
+  padding: 0 14px;
 }
 
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .custom-menu {
-    background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 .custom-toolbar {
-    height: 60px;
+  height: 60px;
 }
 
 .pad {
-    margin-left: 15px;
+  margin-left: 15px;
 }
