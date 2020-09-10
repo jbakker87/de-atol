@@ -25,6 +25,7 @@ export class SafariComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       // TODO handle form data
+      console.log(result);
     });
   }
 

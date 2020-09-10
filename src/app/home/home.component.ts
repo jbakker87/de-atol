@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       // TODO handle form data
+      console.log(result);
     });
   }
 
