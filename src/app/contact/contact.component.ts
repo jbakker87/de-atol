@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
+  showModal = false;
 
   constructor(public http: HttpClient) {
       this.contactForm = this.createFormGroup();
@@ -57,11 +58,21 @@ export class ContactComponent implements OnInit {
     //   (error) => {console.log(error)}
     // );
 
-    // this.resetForm();
+    this.resetForm();
+    this.openModal();
+    this.scrollToTop();
   }
 
   resetForm(): void {
     this.contactForm.reset();
+  }
+
+  openModal(): void {
+    this.showModal = true;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo( 0 , 0 );
   }
 
 }

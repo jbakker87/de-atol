@@ -36,6 +36,7 @@ import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeeh
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
+import { ContactConfirmComponent } from './modals/contact-confirm/contact-confirm.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { MatSelectModule } from '@angular/material/select';
     PrijzenComponent,
     OveronsComponent,
     ReserverenZeehondComponent,
+    ContactConfirmComponent,
   ],
   imports: [
     BrowserModule,
