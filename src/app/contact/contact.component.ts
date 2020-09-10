@@ -35,12 +35,6 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  delayedModalClose(): void {
-    setTimeout(() => {
-      this.showModal = false;
-    }, 5000);
-  }
-
   createFormGroup(): FormGroup {
     return new FormGroup({
         name: new FormControl('', Validators.required),
@@ -67,7 +61,6 @@ export class ContactComponent implements OnInit {
     this.resetForm();
     this.openModal();
     this.scrollToTop();
-    this.delayedModalClose();
   }
 
   resetForm(): void {
