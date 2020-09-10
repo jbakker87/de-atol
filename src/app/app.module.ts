@@ -20,6 +20,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
@@ -39,6 +40,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ContactConfirmComponent } from './modals/contact-confirm/contact-confirm.component';
 import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
+import { ImageModalComponent } from './modals/image-modal/image-modal.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,7 @@ import { CmsComponent } from './cms/cms.component';
     ContactConfirmComponent,
     LoginComponent,
     CmsComponent,
+    ImageModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +73,7 @@ import { CmsComponent } from './cms/cms.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    MatCardModule,
     MatButtonModule,
     FlexLayoutModule,
     FormsModule,

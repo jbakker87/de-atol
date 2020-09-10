@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.component';
 
 @Component({
   selector: 'app-veerdienst',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VeerdienstComponent implements OnInit {
 
-  constructor() { }
+  showHansweer = false;
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  showImage(value): void {
+    const dialogRef = this.dialog.open(ImageModalComponent, {
+      data: { src: value }
+    });
+    // alert(value);
+  }
 }
