@@ -28,7 +28,7 @@
                 </p>
                 <p class="content">
                     De-Atol is hét rondvaartbedrijf dat opereert in Zeeuws-Vlaanderen. Wij verzorgen al meer dan een halve eeuw rondvaarten, bedrijfsevenementen, excursies en dagtochten op bijvoorbeeld de Ooster- of Westerschelde.
-                </p>
+                </p><br>
                 <p class="subtitle">
                     <mat-icon>thumb_up</mat-icon><strong> Wat u kunt verwachten</strong>
                 </p>
@@ -44,20 +44,7 @@
                 <p class="subtitle">
                     <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
                 </p>
-                <table class="table is-fullwidth">
-                    <tr>
-                        <th>Mps. ONDERNEMING</th>
-                        <th>Prijs €</th>
-                    </tr>
-                    <tr>
-                        <td>Basistarief 1é vaaruur</td>
-                        <td>€ {{ firstHour }},-</td>
-                    </tr>
-                    <tr>
-                        <td>Extra volguren</td>
-                        <td>€ {{ additionalHour }},-</td>
-                    </tr>
-                </table>
+                <app-standaard-tarief></app-standaard-tarief>
                 <br><br>
                 <div class="buttons is-right button-on-bottom">
                     <input type='submit' class="button is-warning" value='Reserveren 'routerLink='/reserveren'>
@@ -69,42 +56,34 @@
             <div class="tile is-parent">
                 <article class="tile is-child notification is-light box padding">
                 <p class="title">
-                    <mat-icon>nights_stay</mat-icon><strong> Moonlightsailing</strong>
+                    <img src='assets/images/kist_logo.png' style='width: 30px; height: 30px; color: #363636;'><strong> Asverstrooing</strong>
                 </p>
                 <figure class='image contact_maps_location'>
-                    <img src='assets/images/moonlight_sailing.jpg'>
+                    <img src='assets/images/asverstrooien.jpg'>
                 </figure>
                 <p class="subtitle">
                     <mat-icon>info</mat-icon><strong> Informatie</strong>
                 </p>
                 <p class="content">
-                    Boek een exclusieve tocht op onze comfortabele boot onder het maanlicht. Geniet van de koele zeebries, de sterren, de stadslichten en de maan terwijl je op het water drijft.
+                    Door oude maritieme tradities in ere te houden, maken wij van elke asverstrooiing een gedenkwaardig en onvergetelijk afscheid. U kunt bij ons terecht voor de verstrooiing of bijzetting van de as van uw dierbare op het water.
                 </p>
                 <p class="subtitle">
                     <mat-icon>thumb_up</mat-icon><strong> Wat u kunt verwachten</strong>
                 </p>
                 <p class="content">
-                    In de zomeravonden in de maanden Juni, Juli, Augustus en September rond de dagen waarop het volle maan wordt, is rondvaartbedrijf De-Atol voor u geopend om een unieke ervaring mee te maken onder de maan.
+                    Buiten uw gezelschap en onze bemanning, zijn er geen andere mensen aan boord. U kunt de gehele plechtigheid door ons laten verzorgen of u huurt alleen de boot. Wij kunnen alles voor u uithanden nemen.
                 </p>
                 <p class="content">
-                    Onze tocht van 4 uur is dé perfecte manier om 's nachts elke gelegenheid te vieren. Ontspan op het dek en geniet van de weerspiegeling van de lichtgevende skyline van Antwerpen met de maan achter de stad. 
-                </p>
-                <p class="content">
-                    Laat het vaste land achterwege voor een intieme ervaring met rondvaartbedrijf De Atol. Boek nu om een ​​plek te reserveren!
-                </p>
-                <p class='content'>
-                    Graag maken wij een afspraak zodat we u een tocht op maat aan kunnen bieden. Wij kunnen zorg dragen voor o.a. catering en entertainment. Laat u verrassen door de creatieve invulling van rondvaartbedrijf De-Atol!
-                </p>       
+                    Een schip waar u gastvrij wordt ontvangen uitgebreide catering mogelijk is en u niet snel zeeziek op zult worden. Varen op zee zoals dit bedoeld is. Capaciteit 15 personen. 
+                </p>     
                 <p class="subtitle">
-                    <mat-icon>info</mat-icon><strong> Praktische informatie</strong>
+                    <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
                 </p>
-                <p class="content">
-                    Afvaart 20.00 uur - Thuiskomst 24.00 uur
-                </p> 
+                <app-standaard-tarief></app-standaard-tarief>
+
                 <br>
                 <div class="buttons is-right button-on-bottom">
                     <input type='submit' class="button is-warning" value='Reserveren 'routerLink='/reserveren'>
-                    <!-- <input type='submit' class="button is-warning button-on-bottom" value='Meer info'routerLink='/contact'> -->
                 </div>
                 </article>
             </div>

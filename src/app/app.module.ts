@@ -31,7 +31,6 @@ import { SportvissenComponent } from './diensten/sportvissen/sportvissen.compone
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-import { PrijzenComponent } from './prijzen/prijzen.component';
 import { OveronsComponent } from './overons/overons.component';
 import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeehond.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -41,6 +40,8 @@ import { ContactConfirmComponent } from './modals/contact-confirm/contact-confir
 import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
 import { ImageModalComponent } from './modals/image-modal/image-modal.component';
+import { StandaardTariefComponent } from './tarieven/standaard-tarief/standaard-tarief.component';
+import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdienst-tarief.component';
 
 @NgModule({
   declarations: [
@@ -55,13 +56,14 @@ import { ImageModalComponent } from './modals/image-modal/image-modal.component'
     FeestenComponent,
     SportvissenComponent,
     NavbarComponent,
-    PrijzenComponent,
     OveronsComponent,
     ReserverenZeehondComponent,
     ContactConfirmComponent,
     LoginComponent,
     CmsComponent,
     ImageModalComponent,
+    StandaardTariefComponent,
+    VeerdienstTariefComponent,
   ],
   imports: [
     BrowserModule,
