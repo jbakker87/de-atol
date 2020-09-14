@@ -44,64 +44,58 @@
       <!-- CONTACT FORM -->
       <div class="tile is-parent">
         <article class="tile is-child notification is-light box">
-          <div class="section">
-            <div class="container">
-              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                  <div class="field">
-                    <label class="label">Uw naam</label>
-                    <div class="control">
-                      <input class="input" type="text" formControlName="name">
-                    </div>
-                    <!-- NAME VALIDATION -->
-                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
-                      <div *ngIf="name.errors.required">
-                        Naam is verplicht.
-                      </div>
-                    </div>
+          <p class="title">Contact</p>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <div class="field">
+                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                  <mat-label>Naam</mat-label>
+                  <input matInput formControlName="name" required>
+                </mat-form-field>
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
+                  <div *ngIf="name.errors.required">
+                    Naam is verplicht
                   </div>
-                  <div class="field">
-                    <label class="label">Emailadres</label>
-                    <div class="control">
-                      <input class="input" type="email" formControlName="email">
-                    </div>
-                    <!-- EMAIL VALIDATION -->
-                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
-                      <div *ngIf="email.errors.required">
-                        Email is verplicht
-                      </div>
-                      <div *ngIf="email.errors.email">
-                        Geef een geldig emailadres op.
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="field">
+                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email" required>
+                </mat-form-field>
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
+                  <div *ngIf="email.errors.required">
+                    Email is verplicht
                   </div>
-                  <div class="field">
-                    <label class="label">Telefoonnummer</label>
-                    <div class="control">
-                      <input class="input" type="text" formControlName="phone">
-                    </div>
+                  <div *ngIf="email.errors.email">
+                    Geef een geldig emailadres op
                   </div>
-                  <div class="field">
-                    <label class="label">Bericht</label>
-                    <div class="control">
-                      <textarea class="textarea" rows='5' type="text" formControlName="msg" style='resize: none;'></textarea>
-                    </div>
-                    <!-- MESSAGE VALIDATION -->
-                    <div *ngIf="msg.invalid && ( msg.dirty || msg.touched )" class="help is-danger">
-                      <div *ngIf="msg.errors.required">
-                        Bericht is verplicht
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="field">
+                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                  <mat-label>Telefoonnummer</mat-label>
+                  <input matInput formControlName="phone">
+                </mat-form-field>
+              </div>
+              <div class="field">
+                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                  <mat-label>Bericht</mat-label>
+                  <textarea matInput formControlName="msg" rows='10' formControlName="msg" required style='resize: none;'></textarea>
+                </mat-form-field>
+                <div *ngIf="msg.invalid && ( msg.dirty || msg.touched )" class="help is-danger">
+                  <div *ngIf="msg.errors.required">
+                    Bericht is verplicht
                   </div>
-                  <div class="container">
-                    <div *ngIf="contactForm.invalid" class="help is-help">
-                      U dient de verplichte velden in te vullen.
-                    </div>
-                    <br> 
-                    <button type="submit" [disabled]="!contactForm.valid" class='button is-warning'>Verzenden</button>
-                  </div>
-              </form>
-            </div>
-          </div>
+                </div>
+              </div>
+              <div class="container">
+                <div *ngIf="contactForm.invalid" class="help is-help">
+                  * U dient de verplichte velden in te vullen.
+                </div>
+                <br> 
+                <button type="submit" [disabled]="!contactForm.valid" class='button is-warning'>Verzenden</button>
+              </div>
+          </form>
         </article>
       </div>
     </div>

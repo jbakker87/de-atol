@@ -9,3 +9,7 @@
 .contact_maps_location {
     padding-bottom: 20px;
 }
+
+.contact-formfield-fullwidth {
+    width: 100%;
+  }
