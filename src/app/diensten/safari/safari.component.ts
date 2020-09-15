@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.component';
 import { ReserverenZeehondComponent } from 'src/app/reserveren-zeehond/reserveren-zeehond.component';
 
 @Component({
@@ -26,6 +27,11 @@ export class SafariComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       // TODO handle form data
       console.log(result);
+    });
+  }
+  showImage(value): void {
+    const dialogRef = this.dialog.open(ImageModalComponent, {
+      data: { src: value }
     });
   }
 

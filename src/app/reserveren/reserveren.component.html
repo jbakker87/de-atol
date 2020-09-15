@@ -102,6 +102,12 @@
                                         <label class="radio">
                                             <input type="radio" formControlName="type" value='sportvissen'> Sportvissen
                                         </label>
+                                        <label class="radio">
+                                            <input type="radio" formControlName="type" value='asverstrooiing'> Asverstrooiing
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" formControlName="type" value='scheidingsfeest'> Scheidingsfeest
+                                        </label>
                                     </div>
                                     <div *ngIf="type.invalid && (type.dirty || type.touched)" class="help is-danger">
                                         <div *ngIf="type.errors.required">

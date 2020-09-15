@@ -9,8 +9,6 @@ import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.comp
 })
 export class VeerdienstComponent implements OnInit {
 
-  showHansweer = false;
-
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -20,6 +18,5 @@ export class VeerdienstComponent implements OnInit {
     const dialogRef = this.dialog.open(ImageModalComponent, {
       data: { src: value }
     });
-    // alert(value);
   }
 }

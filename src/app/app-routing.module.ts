@@ -11,11 +11,17 @@ import { SportvissenComponent } from './diensten/sportvissen/sportvissen.compone
 import { OveronsComponent } from './overons/overons.component';
 import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
+import { FetchComponent } from './fetch/fetch.component';
+
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'fetch',
+    component: FetchComponent
   },
   {
     path: 'diensten/veerdienst',

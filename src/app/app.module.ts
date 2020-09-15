@@ -42,6 +42,7 @@ import { CmsComponent } from './cms/cms.component';
 import { ImageModalComponent } from './modals/image-modal/image-modal.component';
 import { StandaardTariefComponent } from './tarieven/standaard-tarief/standaard-tarief.component';
 import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdienst-tarief.component';
+import { FetchComponent } from './fetch/fetch.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdien
     ImageModalComponent,
     StandaardTariefComponent,
     VeerdienstTariefComponent,
+    FetchComponent,
   ],
   imports: [
     BrowserModule,

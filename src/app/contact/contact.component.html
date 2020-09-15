@@ -47,7 +47,7 @@
           <p class="title">Contact</p>
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
               <div class="field">
-                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
                   <mat-label>Naam</mat-label>
                   <input matInput formControlName="name" required>
                 </mat-form-field>
@@ -58,7 +58,7 @@
                 </div>
               </div>
               <div class="field">
-                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
                   <mat-label>Email</mat-label>
                   <input matInput formControlName="email" required>
                 </mat-form-field>
@@ -72,13 +72,13 @@
                 </div>
               </div>
               <div class="field">
-                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
                   <mat-label>Telefoonnummer</mat-label>
                   <input matInput formControlName="phone">
                 </mat-form-field>
               </div>
               <div class="field">
-                <mat-form-field appearance="legacy" class='contact-formfield-fullwidth'>
+                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
                   <mat-label>Bericht</mat-label>
                   <textarea matInput formControlName="msg" rows='10' formControlName="msg" required style='resize: none;'></textarea>
                 </mat-form-field>
@@ -93,7 +93,7 @@
                   * U dient de verplichte velden in te vullen.
                 </div>
                 <br> 
-                <button type="submit" [disabled]="!contactForm.valid" class='button is-warning'>Verzenden</button>
+                <button type="reset" (click)='onSubmit()' [disabled]="!contactForm.valid" class='button is-warning'>Verzenden</button>
               </div>
           </form>
         </article>

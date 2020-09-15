@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-image-modal',
@@ -8,9 +8,13 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ImageModalComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  closeModal(): void {
+    this.dialog.closeAll();
   }
 
 }

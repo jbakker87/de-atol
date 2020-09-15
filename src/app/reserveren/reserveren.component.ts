@@ -71,7 +71,7 @@ export class ReserverenComponent implements OnInit {
         date1 : new FormControl('', Validators.required),
         date2 : new FormControl(''),
         date3 : new FormControl(''),
-        type  : new FormControl(''),
+        type  : new FormControl('', Validators.required),
         msg   : new FormControl(''),
     });
   }

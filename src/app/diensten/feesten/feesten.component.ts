@@ -9,17 +9,17 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 })
 export class FeestenComponent implements OnInit {
 
-  slides = 
+  slides =
   [
-      { 'image': 'https://gsr.dev/material2-carousel/assets/demo.png' }, 
-      { 'image': 'https://gsr.dev/material2-carousel/assets/demo.png' },
-      { 'image': 'https://gsr.dev/material2-carousel/assets/demo.png' }, 
-      { 'image': 'https://gsr.dev/material2-carousel/assets/demo.png' }, 
-      { 'image': 'https://gsr.dev/material2-carousel/assets/demo.png' }
+      { image: 'https://gsr.dev/material2-carousel/assets/demo.png' },
+      { image: 'https://gsr.dev/material2-carousel/assets/demo.png' },
+      { image: 'https://gsr.dev/material2-carousel/assets/demo.png' },
+      { image: 'https://gsr.dev/material2-carousel/assets/demo.png' },
+      { image: 'https://gsr.dev/material2-carousel/assets/demo.png' }
     ];
 
   constructor() {}
 
   ngOnInit(): void {
-  } 
+  }
 }
