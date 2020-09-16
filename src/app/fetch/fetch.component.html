@@ -34,7 +34,7 @@
     <td> {{ reservation.tocht_type }} </td>
     <td> {{ reservation.aantal_volwassenen }} </td>
     <td> {{ reservation.aantal_kinderen }} </td>
-    <td> {{ reservation.datum_reservatie }} </td>
+    <td> {{ reservation.datum_reservatie | date:"dd-MM-yyyy hh:mm" }} </td>
   </tr>
 </table>
 
