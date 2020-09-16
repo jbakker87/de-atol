@@ -77,7 +77,7 @@ export class ReserverenComponent implements OnInit {
   }
 
   setFormatFor(date): any {
-    return date === '' ? '' : formatDate(date, 'dd/MM/yyy', 'en-US');
+    return date === '' ? '' : formatDate(date, 'yyyyMMdd', 'en-US');
   }
 
   onSubmit(): void {
@@ -87,6 +87,7 @@ export class ReserverenComponent implements OnInit {
       adults: this.adults.value,
       child: this.childs.value,
       email: this.email.value,
+      // date1: this.date1.value,
       date1: this.setFormatFor(this.date1.value),
       date2: this.setFormatFor(this.date2.value),
       date3: this.setFormatFor(this.date3.value),

@@ -1,8 +1,8 @@
-import { JsonPipe } from '@angular/common';
+import { formatDate, JsonPipe } from '@angular/common';
 import { HttpClient, JsonpInterceptor } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Passagier } from '../../models/passagier';
-
+import { Reservation } from '../../models/reservation';
 
 @Component({
   selector: 'app-fetch',
@@ -11,33 +11,53 @@ import { Passagier } from '../../models/passagier';
 })
 export class FetchComponent implements OnInit {
 
-  products = [];
+  peoples = [];
+  reservations = [];
+
+  localHost = 'http://localhost:8888/';
+  serverHost = 'beurs.regelpaneel.com:3306/';
+  list = 'list.php';
+  listReservations = 'list_reservations.php';
+  store = 'store.php';
 
   constructor(public http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
+  fetchPeople(): void {
+    this.peoples = [];
 
-    // this.http.get('https://beta.de-atol.nl/httpdocs/' + 'list.php', (passagier)).subscribe(
-    //   (response) => { console.log(response); },
-    //   (error) => { console.log(error); }
-    // );
+    this.http.get(this.localHost + this.list).subscribe((result: any) => {
+      result.data.forEach(p => {
+      this.peoples.push(new Passagier(p));
+      });
+      console.log(result);
+    });
+  }
 
-    const passagier: Passagier = {
-      email: '',
-      voornaam: '',
-      achternaam: '',
-      passagierId: 0
+  fetchReservations(): void {
+    this.reservations = [];
+
+    this.http.get(this.localHost + this.listReservations).subscribe((result: any) => {
+      result.data.forEach(r => {
+      this.reservations.push(new Reservation(r));
+    });
+      console.log(result);
+    });
+  }
+
+  onPost(): void {
+    const reservatie = {
+      tocht_type: 'safari',
+      aantal_volwassenen: 10,
+      aantal_kinderen: 10,
+      datum_reservatie: formatDate(new Date(), 'yyyyMMdd h:mm:ss a', 'en-US')
     };
 
-    this.http.get<Passagier>('https://beta.de-atol.nl/httpdocs/' + 'list.php').subscribe((data: Passagier) => {
-    passagier.achternaam = data['data']['0'].achternaam;
-    passagier.voornaam = data['data']['0'].voornaam;
-    passagier.email = data['data']['0'].email;
-    passagier.passagierId = data['data']['0'].passagierId;
-    console.log(passagier);
-    });
+    this.http.post(this.localHost + 'store_reservation.php', (reservatie)).subscribe(
+      (response) => {console.log(response); },
+      (error) => {console.log(error); }
+    );
   }
 }

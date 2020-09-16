@@ -1,3 +1,43 @@
-<form (ngSubmit)="onSubmit()">
-    <input type="button" (click)='onSubmit()' class='button is-warning' value='Fetch'>
+<form (ngSubmit)="fetchPeople()">
+    <input type="button" (click)='fetchPeople()' class='button is-warning' value='Fetch Passagiers'>
+</form>
+
+  <table class="table is-bordered">
+    <tr>
+        <th>passagierId</th>
+        <th>voornaam</th>
+        <th>achternaam</th>
+        <th>email</th>
+    </tr>
+    <tr *ngFor="let people of peoples">
+      <td> {{ people.passagierId }} </td>
+      <td> {{ people.voornaam }} </td>
+      <td> {{ people.achternaam }} </td>
+      <td> {{ people.email }} </td>
+    </tr>
+</table>
+
+<form (ngSubmit)='fetchReservations()'>
+  <input type='button' (click)='fetchReservations()' class='button is-warning' value='Fetch Reservations'>
+</form>
+
+<table class="table is-bordered">
+  <tr>
+      <th>reservatieId</th>
+      <th>Type vaartocht</th>
+      <th>Aantal volwassenen</th>
+      <th>Aantal Kinderen</th>
+      <th>Datum reservatie</th>
+  </tr>
+  <tr *ngFor="let reservation of reservations">
+    <td> {{ reservation.reservatieId }} </td>
+    <td> {{ reservation.tocht_type }} </td>
+    <td> {{ reservation.aantal_volwassenen }} </td>
+    <td> {{ reservation.aantal_kinderen }} </td>
+    <td> {{ reservation.datum_reservatie }} </td>
+  </tr>
+</table>
+
+<form (ngSubmit)="onPost()">
+  <input type="button" (click)='onPost()' class='button is-warning' value='Post'>
 </form>
