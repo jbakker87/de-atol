@@ -91,7 +91,7 @@
                                 <!-- DATE1 INPUT -->
 
                                 <div class="field">
-                                    <mat-form-field appearance="outline">
+                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>1e datum vaartocht:</mat-label>
                                         <input  matInput formControlName="date1" [matDatepicker]="datePick1" required>
                                         <mat-datepicker-toggle matSuffix [for]="datePick1"></mat-datepicker-toggle>
@@ -107,7 +107,7 @@
                                 <!-- DATE2 INPUT -->
 
                                 <div class="field">
-                                    <mat-form-field appearance="outline">
+                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>2e datum vaartocht:</mat-label>
                                         <input  matInput formControlName="date2" [matDatepicker]="datePick2">
                                         <mat-datepicker-toggle matSuffix [for]="datePick2"></mat-datepicker-toggle>
@@ -118,7 +118,7 @@
                                 <!-- DATE3 INPUT -->
 
                                 <div class="field">
-                                    <mat-form-field appearance="outline">
+                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>3e datum vaartocht:</mat-label>
                                         <input  matInput formControlName="date3" [matDatepicker]="datePick3">
                                         <mat-datepicker-toggle matSuffix [for]="datePick3"></mat-datepicker-toggle>
@@ -129,7 +129,7 @@
                                 <!-- TYPE INPUT -->
 
                                 <div class="field">
-                                    <mat-form-field appearance="outline">
+                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>Type vaartocht</mat-label>
                                         <mat-select matInput formControlName='type'>
                                             <mat-option *ngFor="let type of types" [value]="type.value">
