@@ -14,10 +14,16 @@ export interface PeriodicElement {
 const ELEMENT_DATA: PeriodicElement[] = [
   { type: 'Safari', adult: 2, child: 1, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
   { type: 'Rondvaart', adult: 1, child: 3, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
-  { type: 'Scheidingsfeest', adult: 7, child: 2, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Scheiding', adult: 7, child: 2, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
   { type: 'Safari', adult: 2, child: 1, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
   { type: 'Rondvaart', adult: 1, child: 3, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
-  { type: 'Scheidingsfeest', adult: 7, child: 2, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Scheiding', adult: 7, child: 2, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Safari', adult: 2, child: 1, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Rondvaart', adult: 1, child: 3, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Scheiding', adult: 7, child: 2, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Safari', adult: 2, child: 1, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Rondvaart', adult: 1, child: 3, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
+  { type: 'Scheiding', adult: 7, child: 2, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') },
   { type: 'Sportvissen', adult: 8, child: 8, date: formatDate('1993-03-24', 'dd-MM-yyyy', 'en-US') }
 ];
 
@@ -44,6 +50,7 @@ export class TableMatComponent implements AfterViewInit {
   }
 
   onRowClicked(row: any): void {
+    alert('Row clicked: ' + JSON.stringify(row));
     console.log('Row clicked: ', row);
-}
+  }
 }
