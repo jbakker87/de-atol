@@ -1,9 +1,9 @@
 <app-contact-confirm *ngIf="showModal"></app-contact-confirm>
-<section class="hero">
+<section class="hero is-dark">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        Reserveren vaartochten
+        Reserveren
       </h1>
       <h2 class="content">
         Voor het maken van een reservering kunt u onderstaand reserveringsformulier invullen.
@@ -11,159 +11,147 @@
     </div>
   </div>
 </section>
-<div class='container section'>
-    <div class="columns is-centered">
-        <div class="tile is-ancestor is-8">
-            <div class="tile is-parent">
-                <article class="tile is-child notification is-light box">
-                    <div class="section">
-                        <div class="container">
-                            <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
-
-                                <!-- NAME INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                                      <mat-label>Naam</mat-label>
-                                      <input matInput formControlName="name" required>
-                                    </mat-form-field>
-                                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
-                                        <div *ngIf="name.errors.required">
-                                            Naam is verplicht
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- PHONE INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                                      <mat-label>Telefoonnummer</mat-label>
-                                      <input matInput formControlName="phone">
-                                    </mat-form-field>
-                                </div>
-
-                                <!-- ADULTS INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                                        <mat-label>Aantal personen (ouder dan 11 jaar)</mat-label>
-                                         <input matInput type='number' formControlName="adults" required>
-                                    </mat-form-field>
-                                    <div *ngIf="adults.invalid && (adults.dirty || adults.touched)" class="help is-danger">
-                                        <div *ngIf="adults.errors.required">
-                                        U dient aan te geven voor hoeveel volwassenen u wenst te reserveren.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- CHILDS INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                                      <mat-label>Aantal kinderen (3 t/m 11 jaar)</mat-label>
-                                      <input matInput type='number' formControlName="childs" required>
-                                    </mat-form-field>
-                                    <div *ngIf="childs.invalid && (childs.dirty || childs.touched)" class="help is-danger">
-                                        <div *ngIf="childs.errors.required">
-                                            U dient aan te geven voor hoeveel kinderen u wenst te reserveren.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- EMAIL INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                                        <mat-label>Email</mat-label>
-                                        <input matInput formControlName="email" required>
-                                    </mat-form-field>
-                                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
-                                        <div *ngIf="email.errors.required">
-                                            Email is verplicht
-                                        </div>
-                                        <div *ngIf="email.errors.email">
-                                            Geef een geldig emailadres op
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- DATE1 INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
-                                        <mat-label>1e datum vaartocht:</mat-label>
-                                        <input  matInput formControlName="date1" [matDatepicker]="datePick1" required>
-                                        <mat-datepicker-toggle matSuffix [for]="datePick1"></mat-datepicker-toggle>
-                                        <mat-datepicker #datePick1></mat-datepicker>
-                                    </mat-form-field>
-                                    <div *ngIf="date1.invalid && (date1.dirty || date1.touched)" class="help is-danger">
-                                        <div *ngIf="date1.errors.required">
-                                            U dient minimaal 1 gewenste datum op te geven.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- DATE2 INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
-                                        <mat-label>2e datum vaartocht:</mat-label>
-                                        <input  matInput formControlName="date2" [matDatepicker]="datePick2">
-                                        <mat-datepicker-toggle matSuffix [for]="datePick2"></mat-datepicker-toggle>
-                                        <mat-datepicker #datePick2></mat-datepicker>
-                                    </mat-form-field>
-                                </div>
-
-                                <!-- DATE3 INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
-                                        <mat-label>3e datum vaartocht:</mat-label>
-                                        <input  matInput formControlName="date3" [matDatepicker]="datePick3">
-                                        <mat-datepicker-toggle matSuffix [for]="datePick3"></mat-datepicker-toggle>
-                                        <mat-datepicker #datePick3></mat-datepicker>
-                                    </mat-form-field>
-                                </div>
-
-                                <!-- TYPE INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
-                                        <mat-label>Type vaartocht</mat-label>
-                                        <mat-select matInput formControlName='type'>
-                                            <mat-option *ngFor="let type of types" [value]="type.value">
-                                              {{type.viewValue}}
-                                            </mat-option>
-                                          </mat-select>
-                                    </mat-form-field>
-                                    <div *ngIf="type.invalid && (type.dirty || type.touched)" class="help is-danger">
-                                        <div *ngIf="type.errors.required">
-                                            U dient aan te geven voor welk type vaartocht u wenst te reserveren.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- MESSAGE INPUT -->
-
-                                <div class="field">
-                                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                                        <mat-label>Bericht</mat-label>
-                                        <textarea matInput formControlName="msg" rows='10' formControlName="msg" style='resize: none;'></textarea>
-                                    </mat-form-field>
-                                </div>
-                                <div class="container">
-                                    <div *ngIf="reservationForm.invalid" class="help is-help">
-                                      U dient de verplichte velden in te vullen.
-                                    </div>
-                                </div>
-                                    <br> 
-                                <button type="submit" [disabled]="!reservationForm.valid" class='button is-warning'>Verzenden</button>                 
-                            </form>
-                        </div>
-                    </div>
-                </article>
+<div class="container section">
+    <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+    
+        <!-- NAME INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                <mat-label>Naam</mat-label>
+                <input matInput formControlName="name" required>
+            </mat-form-field>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
+                <div *ngIf="name.errors.required">
+                    Naam is verplicht
+                </div>
             </div>
         </div>
-    </div>
+    
+        <!-- PHONE INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                <mat-label>Telefoonnummer</mat-label>
+                <input matInput formControlName="phone">
+            </mat-form-field>
+        </div>
+    
+        <!-- ADULTS INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                <mat-label>Aantal personen (ouder dan 11 jaar)</mat-label>
+                    <input matInput type='number' formControlName="adults" required>
+            </mat-form-field>
+            <div *ngIf="adults.invalid && (adults.dirty || adults.touched)" class="help is-danger">
+                <div *ngIf="adults.errors.required">
+                U dient aan te geven voor hoeveel volwassenen u wenst te reserveren.
+                </div>
+            </div>
+        </div>
+    
+        <!-- CHILDS INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                <mat-label>Aantal kinderen (3 t/m 11 jaar)</mat-label>
+                <input matInput type='number' formControlName="childs" required>
+            </mat-form-field>
+            <div *ngIf="childs.invalid && (childs.dirty || childs.touched)" class="help is-danger">
+                <div *ngIf="childs.errors.required">
+                    U dient aan te geven voor hoeveel kinderen u wenst te reserveren.
+                </div>
+            </div>
+        </div>
+    
+        <!-- EMAIL INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" required>
+            </mat-form-field>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
+                <div *ngIf="email.errors.required">
+                    Email is verplicht
+                </div>
+                <div *ngIf="email.errors.email">
+                    Geef een geldig emailadres op
+                </div>
+            </div>
+        </div>
+    
+        <!-- DATE1 INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
+                <mat-label>1e datum vaartocht:</mat-label>
+                <input  matInput formControlName="date1" [matDatepicker]="datePick1" required>
+                <mat-datepicker-toggle matSuffix [for]="datePick1"></mat-datepicker-toggle>
+                <mat-datepicker #datePick1></mat-datepicker>
+            </mat-form-field>
+            <div *ngIf="date1.invalid && (date1.dirty || date1.touched)" class="help is-danger">
+                <div *ngIf="date1.errors.required">
+                    U dient minimaal 1 gewenste datum op te geven.
+                </div>
+            </div>
+        </div>
+    
+        <!-- DATE2 INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
+                <mat-label>2e datum vaartocht:</mat-label>
+                <input  matInput formControlName="date2" [matDatepicker]="datePick2">
+                <mat-datepicker-toggle matSuffix [for]="datePick2"></mat-datepicker-toggle>
+                <mat-datepicker #datePick2></mat-datepicker>
+            </mat-form-field>
+        </div>
+    
+        <!-- DATE3 INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
+                <mat-label>3e datum vaartocht:</mat-label>
+                <input  matInput formControlName="date3" [matDatepicker]="datePick3">
+                <mat-datepicker-toggle matSuffix [for]="datePick3"></mat-datepicker-toggle>
+                <mat-datepicker #datePick3></mat-datepicker>
+            </mat-form-field>
+        </div>
+    
+        <!-- TYPE INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
+                <mat-label>Type vaartocht</mat-label>
+                <mat-select matInput formControlName='type'>
+                    <mat-option *ngFor="let type of types" [value]="type.value">
+                        {{type.viewValue}}
+                    </mat-option>
+                    </mat-select>
+            </mat-form-field>
+            <div *ngIf="type.invalid && (type.dirty || type.touched)" class="help is-danger">
+                <div *ngIf="type.errors.required">
+                    U dient aan te geven voor welk type vaartocht u wenst te reserveren.
+                </div>
+            </div>
+        </div>
+    
+        <!-- MESSAGE INPUT -->
+    
+        <div class="field">
+            <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                <mat-label>Bericht</mat-label>
+                <textarea matInput formControlName="msg" rows='10' formControlName="msg" style='resize: none;'></textarea>
+            </mat-form-field>
+        </div>
+        <div class="container">
+            <div *ngIf="reservationForm.invalid" class="help is-help">
+                U dient de verplichte velden in te vullen.
+            </div>
+        </div>
+            <br> 
+        <button type="submit" [disabled]="!reservationForm.valid" class='button is-warning'>Verzenden</button>                 
+    </form>
 </div>
