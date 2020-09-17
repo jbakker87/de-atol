@@ -29,6 +29,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
@@ -97,6 +98,7 @@ import { TableMatComponent } from './table-mat/table-mat.component';
     MatDialogModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
     MatCarouselModule.forRoot(),
   ],
   providers: [],
