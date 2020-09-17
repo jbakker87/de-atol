@@ -23,18 +23,22 @@
 
 <table class="table is-bordered">
   <tr>
-      <th>reservatieId</th>
-      <th>Type vaartocht</th>
-      <th>Aantal volwassenen</th>
-      <th>Aantal Kinderen</th>
-      <th>Datum reservatie</th>
+      <th><mat-icon> directions_boat</mat-icon></th>
+      <th><mat-icon>people</mat-icon></th>
+      <th><mat-icon>child_care</mat-icon></th>
+      <!-- <th>Ontvangen</th> -->
+      <th><mat-icon>calendar_today</mat-icon> 1</th>
+      <th><mat-icon>calendar_today</mat-icon> 2</th>
+      <th><mat-icon>calendar_today</mat-icon> 3</th>
   </tr>
   <tr *ngFor="let reservation of reservations">
-    <td> {{ reservation.reservatieId }} </td>
     <td> {{ reservation.tocht_type }} </td>
     <td> {{ reservation.aantal_volwassenen }} </td>
     <td> {{ reservation.aantal_kinderen }} </td>
-    <td> {{ reservation.datum_reservatie | date:"dd-MM-yyyy hh:mm" }} </td>
+    <!-- <td> {{ reservation.datum_reservatie | date:"d-M-yy h:mm" }} </td> -->
+    <td> {{ reservation.vaardatum1 | date:"d-M-yy" }} </td>
+    <td> {{ reservation.vaardatum2 == "0000-00-00 00:00:00" ? "nvt" :  (reservation.vaardatum3 | date:"d-M-yy") }} </td>
+    <td> {{ reservation.vaardatum3 == "0000-00-00 00:00:00" ? "nvt" :  reservation.vaardatum3 | date:"d-M-yy" }} </td>
   </tr>
 </table>
 

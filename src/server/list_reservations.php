@@ -6,7 +6,7 @@
 require 'connect.php';
     
 $reservaties = [];
-$sql = "SELECT reservatieId, tocht_type, aantal_volwassenen, aantal_kinderen, datum_reservatie FROM reservaties";
+$sql = "SELECT reservatieId, tocht_type, aantal_volwassenen, aantal_kinderen, datum_reservatie, vaardatum1, vaardatum2, vaardatum3 FROM reservaties";
 
 if($result = mysqli_query($con,$sql))
 {
@@ -18,6 +18,9 @@ if($result = mysqli_query($con,$sql))
         $reservaties[$cr]['aantal_volwassenen'] = $row['aantal_volwassenen'];
         $reservaties[$cr]['aantal_kinderen'] = $row['aantal_kinderen'];
         $reservaties[$cr]['datum_reservatie'] = $row['datum_reservatie'];
+        $reservaties[$cr]['vaardatum1'] = $row['vaardatum1'];
+        $reservaties[$cr]['vaardatum2'] = $row['vaardatum2'];
+        $reservaties[$cr]['vaardatum3'] = $row['vaardatum3'];
         $cr++;
       }
 

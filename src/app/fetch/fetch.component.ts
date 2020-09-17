@@ -52,8 +52,13 @@ export class FetchComponent implements OnInit {
       tocht_type: 'safari',
       aantal_volwassenen: 10,
       aantal_kinderen: 10,
+      vaardatum1: formatDate('1993-03-24', 'yyyyMMdd h:mm:ss a', 'en-US'),
+      vaardatum2: '' ,
+      vaardatum3: '' ,
       datum_reservatie: formatDate(new Date(), 'yyyyMMdd h:mm:ss a', 'en-US')
     };
+
+    console.log(reservatie);
 
     this.http.post(this.localHost + 'store_reservation.php', (reservatie)).subscribe(
       (response) => {console.log(response); },

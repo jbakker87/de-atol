@@ -3,6 +3,8 @@ import { FormGroup, AbstractControl, FormControl, Validators } from '@angular/fo
 import { HttpClient } from '@angular/common/http';
 import { ReservationData } from '../../models/reservation-request';
 import { formatDate } from '@angular/common';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { TripType } from '../reserveren/triptype';
 
 @Component({
   selector: 'app-reserveren',
@@ -13,6 +15,13 @@ export class ReserverenComponent implements OnInit {
 
   reservationForm: FormGroup;
   showModal = false;
+
+  types: TripType[] = [
+    {value: 'Rondvaart', viewValue: 'Rondvaart'},
+    {value: 'Sportvissen', viewValue: 'Sportvissen'},
+    {value: 'Asverstrooiing', viewValue: 'Asverstrooiing'},
+    {value: 'Scheidingsfeest', viewValue: 'Scheidingsfeest'}
+  ];
 
   constructor(public http: HttpClient) {
     this.reservationForm = this.createFormGroup();
