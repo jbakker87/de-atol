@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+
+.dropped-table-padding {
+    padding-top: 15px!important;
+}
+
+.big-font {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+  }

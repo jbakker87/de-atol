@@ -12,12 +12,17 @@ import { OveronsComponent } from './overons/overons.component';
 import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
 import { FetchComponent } from './fetch/fetch.component';
+import { TableMatComponent } from './table-mat/table-mat.component';
 
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'table',
+    component: TableMatComponent
   },
   {
     path: 'fetch',
