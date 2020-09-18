@@ -1,7 +1,3 @@
-.contact_maps_location {
-    padding-bottom: 20px;
-}
-
 .button-on-bottom {
     position: absolute;
     bottom: 25px;
@@ -9,8 +5,4 @@
 
 .padding {
     padding: 1.25rem 2.5rem 2.5rem 1.5rem;
-}
-
-.section {
-    background-color: #F5F5F5;
 }

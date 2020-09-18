@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-standaard-tarief',
-  templateUrl: './standaard-tarief.component.html',
-  styleUrls: ['./standaard-tarief.component.css']
+  selector: 'app-sportvissen-tarief',
+  templateUrl: './sportvissen-tarief.component.html',
+  styleUrls: ['./sportvissen-tarief.component.css']
 })
-export class StandaardTariefComponent implements OnInit {
+export class SportvissenTariefComponent implements OnInit {
   columnsToDisplay: string[] = ['text', 'price'];
   priceSource = new MatTableDataSource<PricesElements>(priceData);
   dataSource: MatTableDataSource<PricesElements>;
@@ -27,6 +27,7 @@ export interface PricesElements {
 }
 
 const priceData: PricesElements[] = [
-  { text: 'Basistarief 1é vaaruur', price: 325 },
-  { text: 'Extra volguren', price: 150 },
+  { text: 'Per dag ongeacht aantal personen', price: 540 },
+  { text: 'Hengel v.a. (per dag)', price: 10 },
+  { text: 'Porties aas v.a.', price: 10 }
 ];

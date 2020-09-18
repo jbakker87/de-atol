@@ -1,6 +1,9 @@
-<div class="hero">
-    <!-- <app-sidenav></app-sidenav> -->
-    <app-navbar></app-navbar>
-    <!-- <router-outlet></router-outlet> -->
-    <app-footer></app-footer>
-</div>
+<mat-sidenav #sidenav role="navigation" (click)="sidenav.toggle()">
+    <app-navbar (sidenavClose)="sidenav.close()"></app-navbar>
+</mat-sidenav>
+<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+<main (click)="sidenav.close()">
+    <router-outlet></router-outlet>
+</main>
+    <mat-sidenav-container></mat-sidenav-container>
+<app-footer></app-footer>

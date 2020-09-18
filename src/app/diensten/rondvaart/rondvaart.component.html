@@ -1,15 +1,15 @@
-<section class="hero is-dark">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h1 class="title">
-                Rondvaarten
-            </h1>
-            <h2 class="content">
-                Zomaar genieten van de omgeving of een speciaal arrangement? Wij leveren rondvaarten op maat. Neem vrijblijvend contact op om uw wensen te bespreken.
-            </h2>
-        </div>
+<section class="hero is-dark is-fullwidth">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <h1 class="title">
+            Rondvaarten
+        </h1>
+        <h2 class="subtitle">
+            Zomaar genieten van de omgeving of een speciaal arrangement? Wij leveren rondvaarten op maat. Neem vrijblijvend contact op om uw wensen te bespreken.
+        </h2>
+      </div>
     </div>
-</section>
+  </section>
 
 <!-- Rondvaarten -->
 <div class='container section'>
@@ -21,7 +21,8 @@
                     <mat-icon>directions_boat</mat-icon><strong> Rondvaarten</strong>
                 </p>
                 <figure class='image contact_maps_location'>
-                    <img src='assets/images/ligplaats_hansweert.jpg'>
+                    <img src='assets/images/rondvaart.jpg' (click)="showImage('assets/images/rondvaart_modal_image.jpg')" style='cursor: pointer;'>>
+                    <div class='help is-help'>Klik op de afbeelding om de afbeelding te vergroten.</div>
                 </figure>
                 <p class="subtitle">
                     <mat-icon>info</mat-icon><strong> Informatie</strong>
@@ -36,7 +37,7 @@
                     U kunt tijdens de vaart van al onze faciliteiten gebruik maken, zoals de bar en keuken en natuurlijk ook het sanitair. U kunt ruim op alle dekken kunt vertoeven. Ook kunt u zittend in de salon gezellig naar buiten kijken onder het genoeg van een hapje of een drankje.                 
                 </p>
                 <p class="subtitle">
-                    <mat-icon>info</mat-icon><strong> Praktische isnformatie</strong>
+                    <mat-icon>info</mat-icon><strong> Praktische informatie</strong>
                 </p>
                 <p class="content">
                     • We vragen u om minimaal 15 minuten van te voren aanwezig te zijn. Zo voorkomt u dat de boot zonder u vertrekt.<br>
@@ -57,7 +58,7 @@
                     <img src='assets/images/kist_logo.png' style='width: 30px; height: 30px; color: #363636;'><strong> Asverstrooing</strong>
                 </p>
                 <figure class='image contact_maps_location'>
-                    <img src='assets/images/asverstrooien.jpg'>
+                    <img src='assets/images/asverstrooiien.jpg'>
                 </figure>
                 <p class="subtitle">
                     <mat-icon>info</mat-icon><strong> Informatie</strong>
@@ -72,7 +73,7 @@
                     Buiten uw gezelschap en onze bemanning, zijn er geen andere mensen aan boord. U kunt de gehele plechtigheid door ons laten verzorgen of u huurt alleen de boot. Wij kunnen alles voor u uithanden nemen.
                 </p>
                 <p class="content">
-                    Een schip waar u gastvrij wordt ontvangen uitgebreide catering mogelijk is en u niet snel zeeziek op zult worden. Varen op zee zoals dit bedoeld is. Capaciteit 15 personen. 
+                    Een schip waar u gastvrij wordt ontvangen, waar een uitgebreide catering mogelijk is en waar u niet snel zeeziek op zult worden. Varen op zee zoals dit bedoeld is. Capaciteit 50 personen. 
                 </p>     
                 <app-standaard-tarief></app-standaard-tarief>
                 <br>

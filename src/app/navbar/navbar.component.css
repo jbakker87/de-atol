@@ -36,8 +36,15 @@ button {
 
 .custom-toolbar {
   height: 60px;
+  border-bottom: 1px solid gray!important;
 }
 
 .pad {
   margin-left: 15px;
+}
+
+.aligned-with-text {
+  position: relative;
+  bottom: 3px;
+  margin-right: 10px;
 }

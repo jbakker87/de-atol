@@ -1,4 +1,6 @@
-
-.section {
-    background-color: #F5F5F5;
+.big-font {
+    top: 5px;
+    font-size: 28px;
+    position: relative;
+    margin-right: 5px;
 }

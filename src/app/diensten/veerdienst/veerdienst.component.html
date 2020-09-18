@@ -1,27 +1,15 @@
-<section class="hero is-dark">
-  <div class="hero-body">
-    <div class="container has-text-centered">
+<section class="hero is-dark is-fullwidth">
+  <div class="hero-body has-text-centered">
+    <div class="container">
       <h1 class="title">
-        Veerdienst 2020
+        Veerdienst
       </h1>
-      <h2 class="content">
-        Zoals elke zomer heten wij u van harte welkom aan boord. U kunt opstappen te Perkpolder en Hansweert.
-        Tijdens de overtocht is de bar open voor bijvoorbeeld koffie met gebak, frisdrank, snacks of andere consumpties. Ook hebben wij voor de liefhebber ijs aan boord.
+      <h2 class="subtitle">
+        Elke zomer heten wij u van harte welkom aan boord van onze veerdienst.
       </h2>
     </div>
   </div>
 </section>
-
-<!-- <div class="modal is-active">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <p class="image is-5by3">
-      <img src="assets/images/hansweert_modal_image.jpg">
-    </p>
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div> -->
-
 <div class='container section'>
   <div class="columns is-centered">
     <div class="tile is-ancestor is-12">
@@ -31,45 +19,17 @@
           <article class="tile is-child notification is-light box">
             <p class='title'>Perkpolder - Hansweert</p>
               <div class='image'>
-                <img src='assets/images/ligplaats_perkpolder.jpg' (click)="showImage('assets/images/perkpolder_modal_image.jpg')">
+                <img src='assets/images/ligplaats_perkpolder.jpg' (click)="showImage('assets/images/perkpolder_modal_image.jpg')" style='cursor: pointer;'>>
                 <div class='help is-help'>Klik op de afbeelding om de afbeelding te vergroten.</div>
               </div><br>
               <h1 class="subtitle">
                 <mat-icon>access_time</mat-icon><strong> Vertrektijden</strong>
               </h1>
               <p class='content has-text-danger'>Wij verzoeken u 15 minuten voor de afvaart aanwezig te zijn.</p>
-              <table class='table is-fullwidth'>
-                <tr>
-                  <th>Vaardagen</th>
-                  <th><mat-icon>access_time</mat-icon></th>
-                  <th><mat-icon>access_time</mat-icon></th>
-                  <th><mat-icon>access_time</mat-icon></th>
-                </tr>
-                <tr>
-                  <td>Zondag</td>
-                  <td>09:00</td>
-                  <td>11:00</td>
-                  <td>16:15</td>
-                </tr>
-                <tr>
-                  <td>Maandag</td>
-                  <td>09:00</td>
-                  <td>11:00</td>
-                  <td>16:15</td>
-                </tr>
-                <tr>
-                  <td>Woensdag</td>
-                  <td>09:00</td>
-                  <td>11:00</td>
-                  <td>16:15</td>
-                </tr>     
-                <tr>
-                  <td>Vrijdag</td>
-                  <td>09:00</td>
-                  <td>11:00</td>
-                  <td>16:15</td>
-                </tr>                                                             
-              </table>
+              <app-veerdienst-perkpolder></app-veerdienst-perkpolder>
+              <h1 class="subtitle padding-to-prices">
+                <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
+              </h1>
               <app-veerdienst-tarief></app-veerdienst-tarief>
               <p class="subtitle padding-to-prices">
                 <mat-icon>directions_boat</mat-icon><strong> Opstaplocatie</strong>
@@ -79,6 +39,7 @@
                 4588 RB Walsoorden <br>
                 We zijn te bereiken via de oude N60 (N689) of via Noordstraat en dan rechts de Kalverdijk op.
               </p>
+              <br>
               <p class="subtitle">
                 <mat-icon>gps_fixed</mat-icon><strong> GPS</strong>
               </p>
@@ -97,45 +58,17 @@
           <article class="tile is-child notification is-light box">
             <p class='title'>Hansweert - Perkpolder</p>
               <div class='image'>
-                <img src='assets/images/ligplaats_hansweert.jpg' (click)="showImage('assets/images/hansweert_modal_image.jpg')">
+                <img src='assets/images/ligplaats_hansweert.jpg' (click)="showImage('assets/images/hansweert_modal_image.jpg')" style='cursor: pointer;'>>
                 <div class='help is-help'>Klik op de afbeelding om de afbeelding te vergroten.</div>
               </div><br>
               <h1 class="subtitle">
                 <mat-icon>access_time</mat-icon><strong> Vertrektijden</strong>
               </h1>
               <p class='content has-text-danger'>Wij verzoeken u 15 minuten voor de afvaart aanwezig te zijn.</p>
-              <table class='table is-fullwidth'>
-                <tr>
-                  <th>Vaardagen</th>
-                  <th><mat-icon>access_time</mat-icon></th>
-                  <th><mat-icon>access_time</mat-icon></th>
-                  <th><mat-icon>access_time</mat-icon></th>
-                </tr>
-                <tr>
-                  <td>Zondag</td>
-                  <td>10:00</td>
-                  <td>12:00</td>
-                  <td>17:00</td>
-                </tr>
-                <tr>
-                  <td>Maandag</td>
-                  <td>10:00</td>
-                  <td>12:00</td>
-                  <td>17:00</td>
-                </tr>
-                <tr>
-                  <td>Woensdag</td>
-                  <td>10:00</td>
-                  <td>12:00</td>
-                  <td>17:00</td>
-                </tr>     
-                <tr>
-                  <td>Vrijdag</td>
-                  <td>10:00</td>
-                  <td>12:00</td>
-                  <td>17:00</td>
-                </tr>                                                             
-              </table>
+              <app-veerdienst-hansweert></app-veerdienst-hansweert>
+              <h1 class="subtitle padding-to-prices">
+                <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
+              </h1>
               <app-veerdienst-tarief></app-veerdienst-tarief>
               <p class="subtitle padding-to-prices">
                 <mat-icon>directions_boat</mat-icon><strong> Opstaplocatie</strong>

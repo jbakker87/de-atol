@@ -1,22 +1,21 @@
 <app-contact-confirm *ngIf="showModal"></app-contact-confirm>
-<section class="hero is-dark">
-  <div class="hero-body">
-    <div class="container has-text-centered">
+<section class="hero is-dark is-fullwidth">
+  <div class="hero-body has-text-centered">
+    <div class="container">
       <h1 class="title">
         Kom met ons in contact
       </h1>
-      <h2 class="content">
-        Wilt u weten wat wij voor u kunnen betekenen? Of wenst u een vrijblijvende offerte? Neem gerust contact met ons op via onderstaand webformulier. Wij proberen u binnen 24 uur te antwoorden. U mag natuurlijk ook bellen. 
+      <h2 class="subtitle">
+        Wilt u weten wat wij voor u kunnen betekenen? Of wenst u een vrijblijvende offerte? Neem gerust contact met ons op via onderstaand webformulier.
       </h2>
     </div>
   </div>
 </section>
-
 <div class='container section'>
   <div class="columns is-centered">
     <div class="tile is-ancestor is-8">
       <div class="tile is-parent">
-        <article class="tile is-child notification is-light box">
+        <article class="tile is-child notification is-white box">
           <p class="title">Rondvaartbedrijf <br>De Atol</p>
           <p class="subtitle">Voor veel vaar plezier</p>
           <p class="content">
@@ -25,7 +24,10 @@
             Kerkhoflaan 11<br>
             4537 PM TERNEUZEN<br>
           </p>
-            <iframe class='contact_maps_location' width="100%" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7138.20456916837!2d4.0270314797524405!3d51.403213941594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU0LjQiTiA0wrAwMScwMC4xIkU!5e0!3m2!1snl!2snl!4v1597529230464!5m2!1snl!2snl" frameborder="0" allowfullscreen></iframe>
+          <p class="subtitle">
+            <mat-icon>place</mat-icon><strong> Kaart</strong>
+          </p>
+          <iframe class='contact_maps_location' width="100%" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7138.20456916837!2d4.0270314797524405!3d51.403213941594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU0LjQiTiA0wrAwMScwMC4xIkU!5e0!3m2!1snl!2snl!4v1597529230464!5m2!1snl!2snl" frameborder="0" allowfullscreen></iframe>
           <div class="content">
             <p>
               <mat-icon class='pad'>call</mat-icon>
@@ -43,7 +45,7 @@
       </div>
       <!-- CONTACT FORM -->
       <div class="tile is-parent">
-        <article class="tile is-child notification is-light box">
+        <article class="tile is-child notification is-white box">
           <p class="title">Contact</p>
           <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
               <div class="field">

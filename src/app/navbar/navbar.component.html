@@ -1,48 +1,32 @@
-<div> 
-    <mat-toolbar class='custom-toolbar'>
-      <a mat-button class="navbar-item" routerLink="/">
-        <img src='../../assets/images/navbar_logo.jpg' class='navbar-brand-logo'>
-        <span class='pad'>De Atol</span>
-      </a>
-      <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
-        <div class="navbar-start">
-            <a mat-button class='navbar-item' routerLink=''>Home</a>
-            <a mat-button class='navbar-item' routerLink='/overons'>Over ons</a>
-            <a mat-button class='navbar-item' routerLink='/diensten/veerdienst'>Veerdienst</a>
-            <a mat-button class='navbar-item' routerLink='/diensten/safari'>Zeehondensafari</a>
-            <a mat-button class='navbar-item' routerLink='/diensten/rondvaart'>Rondvaart</a>
-            <a mat-button class='navbar-item' routerLink='/diensten/feesten'>Feesten en partijen</a>
-            <a mat-button class='navbar-item' routerLink='/diensten/sportvissen'>Sportvissen</a>
-            <a mat-button class='navbar-item' routerLink='/contact'>Contact</a>
-            <a mat-button class='navbar-item' routerLink='/login'>Inloggen</a>
-        </div>
-      </div>
-      <div class='navbar-end'>
-        <div fxShow="true" fxHide.gt-sm="true">
-          <button mat-icon-button (click)="sidenav.toggle()" class='custom-menu'>
-            <mat-icon>menu</mat-icon>
-          </button>
-        </div>  
-      </div>
-    </mat-toolbar>
-    <mat-sidenav-container fxFlexFill class="example-container">
-      <mat-sidenav color="primary" #sidenav (click)="sidenav.toggle()" fxLayout="column" mode="side" opened="false" fxHide.gt-sm="true">
-        <div fxLayout="column">
-            <a mat-button class='navbar-item has-text-left' routerLink=''>Home</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/overons'>Over ons</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/veerdienst'>Veerdienst</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/safari'>Zeehondensafari</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/rondvaart'>Rondvaart</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/feesten'>Feesten en partijen</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/diensten/sportvissen'>Sportvissen</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/contact'>Contact</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/table'>Table</a>
-            <a mat-button class='navbar-item has-text-left' routerLink='/login'>Inloggen</a>
-        </div>
-      </mat-sidenav>
-      <mat-sidenav-content fxFlexFill (click)="sidenav.close()">
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
+<mat-nav-list>
+  <a mat-list-item routerLink="">
+      <mat-icon class='aligned-with-text'>home</mat-icon> <span class="nav-caption">Home</span>
+  </a>
+  <a mat-list-item routerLink="/overons">
+      <mat-icon class='aligned-with-text'>grade</mat-icon> <span class="nav-caption"> Over ons</span>
+    </a>
+    <a mat-list-item routerLink="/diensten/veerdienst">
+    <mat-icon class='aligned-with-text'>directions_boat</mat-icon> <span class="nav-caption"> Veerdienst</span>
+    </a>
+    <a mat-list-item routerLink="/diensten/safari">
+      <mat-icon class='aligned-with-text'>waves</mat-icon> <span class="nav-caption"> Zeehondensafari</span>
+  </a>
+  <a mat-list-item routerLink="/diensten/rondvaart">
+    <mat-icon class='aligned-with-text'>directions_boat</mat-icon> <span class="nav-caption"> Rondvaart</span>
+  </a>
+  <a mat-list-item routerLink="/diensten/feesten">
+    <mat-icon class='aligned-with-text'>fastfood</mat-icon> <span class="nav-caption"> Feesten en partijen</span>
+  </a>
+  <a mat-list-item routerLink="/diensten/sportvissen">
+    <mat-icon class='aligned-with-text'>assignment_ind</mat-icon> <span class="nav-caption"> Sportvissen</span>
+  </a>
+  <a mat-list-item routerLink="/contact">
+      <mat-icon class='aligned-with-text'>phone</mat-icon><span class="nav-caption"> Contact</span>
+  </a>
+  <a mat-list-item routerLink="/table">
+    <mat-icon class='aligned-with-text'>table_chart</mat-icon><span class="nav-caption"> Table</span>
+  </a>  
+  <a mat-list-item routerLink="/login">
+    <mat-icon class='aligned-with-text'>lock_open</mat-icon><span class="nav-caption"> Inloggen</span>
+  </a>
+</mat-nav-list>

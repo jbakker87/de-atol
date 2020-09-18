@@ -1,11 +1,11 @@
-<section class="hero is-dark">
-  <div class="hero-body">
-    <div class="container has-text-centered">
+<section class="hero is-dark is-fullwidth">
+  <div class="hero-body has-text-centered">
+    <div class="container">
       <h1 class="title">
-        Zeehondensafari's
+          Zeehondensafari
       </h1>
-      <h2 class="content">
-        Op de brouwersplaat in de Westerschelde bevindt zich een groep zeehonden. Met laag tij kunnen we de zeehonden van heel dichtbij waarnemen. Tijdens de zeehondensafari van Rondvaartbedrijf De Atol nemen we de tijd om in alle rust deze prachtige dieren te bewonderen.
+      <h2 class="subtitle">
+          Lees hier alles  over onze populaire zeehonden safari.
       </h2>
     </div>
   </div>
@@ -16,27 +16,19 @@
     <div class="tile is-ancestor is-12">
       <div class="tile is-parent">
         <article class="tile is-child notification is-light box">
-          <p class="title">Informatie</p>
+          <div class='image'>
+            <img src='assets/images/zeehonden.jpg' (click)="showImage('assets/images/zeehonden_modal_image.jpg')" style='cursor: pointer;'>
+            <div class='help is-help contact_maps_location'>Klik op de afbeelding om de afbeelding te vergroten.</div>
+          </div>
+          <p class="subtitle">
+            <mat-icon>info</mat-icon><strong> Informatie</strong>
+          </p>
+          <p class="content">
+            Op de brouwersplaat in de Westerschelde bevindt zich een groep zeehonden. Met laag tij kunnen we de zeehonden van heel dichtbij waarnemen. Tijdens de zeehondensafari van Rondvaartbedrijf De Atol nemen we de tijd om in alle rust deze prachtige dieren te bewonderen.
+          </p>
           <p class="content">
             Ons avontuur begint in Perkpolder. Hier kunt u opstappen voor een tocht van +/- 2,5. U kunt heerlijk op het dek vertoeven. Ook kunt u zittend in de salon gezellig naar buiten kijken onder het genoeg van een hapje of een drankje.
           </p>
-            <p class="subtitle">
-              <strong> Prijzen</strong>
-            </p>
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-              <tr>
-                <th>Zeehondensafari</th>
-                <th>Prijs p.p.</th>
-              </tr>
-              <tr>
-                <td><mat-icon>person</mat-icon> Volwassenen</td>
-                <td>€ {{ adultPrice | number : '1.2-2' }}</td>
-              </tr>
-              <tr>
-                <td><mat-icon>child_care</mat-icon> Kinderen (3 t/m 11 jaar)</td>
-                <td>€ {{ childPrice | number : '1.2-2' }}</td>
-              </tr>
-            </table>
             <p class="subtitle">
               <mat-icon>directions_boat</mat-icon><strong> Opstaplocatie</strong>
             </p>
@@ -66,13 +58,11 @@
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-light box">
-          <p class="title">Beschikbare zeehondensafari's</p>
-          <div class='image'>
-            <img src='assets/images/zeehonden.jpg' (click)="showImage('assets/images/zeehonden_modal_image.jpg')">
-          </div>
-          <br>
+          <p class="title">
+            <mat-icon class='big-font'>event_available</mat-icon><strong> Beschikbare zeehondensafari's</strong>
+        </p>
           <p class='content has-text-danger'>Wij verzoeken u 15 minuten voor de afvaart aanwezig te zijn. U dient voor een tocht te reserveren.</p>
-          <table class='table is-fullwidth'>
+          <table class='table is-striped is-hoverable is-fullwidth'>
               <tr>
                   <th>Maand</th>
                   <th>Afvaart</th>
@@ -125,6 +115,23 @@
                   <td>Woensdag 23 september</td>
                   <td>13:15 uur</td>
               </tr>                                                                              
+            </table>
+            <p class="subtitle">
+              <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
+            </p>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <tr>
+                <th>Zeehondensafari</th>
+                <th>Prijs p.p.</th>
+              </tr>
+              <tr>
+                <td><mat-icon>person</mat-icon> Volwassenen</td>
+                <td>€ {{ adultPrice | number : '1.2-2' }}</td>
+              </tr>
+              <tr>
+                <td><mat-icon>child_care</mat-icon> Kinderen (3 t/m 11 jaar)</td>
+                <td>€ {{ childPrice | number : '1.2-2' }}</td>
+              </tr>
             </table>
           <div>
             <input type='submit' class="button is-warning" value='Reserveren' (click)="openZeehondenDialog()">

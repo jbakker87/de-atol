@@ -2,7 +2,7 @@
     <div *ngIf='msgIsShown' class="notification is-danger is-light">
         <button class="delete" (click)='toggleCorona()'></button>
         <p class='subtitle'>
-            Corona update
+            <mat-icon>error</mat-icon> Corona update
         </p>
         <p class="content">
             Let op! Mondkapje verplicht. Reserveren voor de veerdienst is niet nodig.
@@ -55,7 +55,7 @@
                 </div>
                 <div class="card-content">
                     <p class="title">Rondvaart</p>
-                    <p class="subtitle">Over bijvoorbeeld de Ooster - of Westerschelde.</p>
+                    <p class="subtitle">Over de Westerschelde.</p>
                     <nav class="buttons is-right">
                         <button class="button is-warning wide" routerLink='/reserveren' wide>Reserveren</button>
                     </nav>

@@ -16,5 +16,14 @@ export class SportvissenComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
+
+export interface PricesElements {
+  text: string;
+  price: number;
+}
+
+const priceData: PricesElements[] = [
+  { text: 'Basistarief 1é vaaruur', price: 325 },
+  { text: 'Extra volguren', price: 150 },
+];

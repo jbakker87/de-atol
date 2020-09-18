@@ -24,12 +24,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { ReserverenZeehondComponent } from './reserveren-zeehond/reserveren-zeehond.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { ContactComponent } from './contact/contact.component';
 import { VeerdienstComponent } from './diensten/veerdienst/veerdienst.component';
@@ -48,6 +49,10 @@ import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdien
 import { FetchComponent } from './fetch/fetch.component';
 import { TableMatComponent } from './table-mat/table-mat.component';
 import { Error404Component } from './error404/error404.component';
+import { HeaderComponent } from './header/header.component';
+import { SportvissenTariefComponent } from './tarieven/sportvissen-tarief/sportvissen-tarief.component';
+import { VeerdienstPerkpolderComponent } from './vaardagen/veerdienst-perkpolder/veerdienst-perkpolder.component';
+import { VeerdienstHansweertComponent } from './vaardagen/veerdienst-hansweert/veerdienst-hansweert.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +77,11 @@ import { Error404Component } from './error404/error404.component';
     VeerdienstTariefComponent,
     FetchComponent,
     TableMatComponent,
-    Error404Component
+    Error404Component,
+    HeaderComponent,
+    SportvissenTariefComponent,
+    VeerdienstPerkpolderComponent,
+    VeerdienstHansweertComponent
   ],
   imports: [
     BrowserModule,
@@ -99,6 +108,7 @@ import { Error404Component } from './error404/error404.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatMenuModule,
     MatCarouselModule.forRoot(),
   ],
   providers: [],
