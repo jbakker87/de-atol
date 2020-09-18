@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
 import { FetchComponent } from './fetch/fetch.component';
 import { TableMatComponent } from './table-mat/table-mat.component';
-
+import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
   {
@@ -71,7 +71,11 @@ const routes: Routes = [
   {
     path: 'cms',
     component: CmsComponent
-  }
+  },
+  {
+    path: '**',
+    component: Error404Component
+  },
 ];
 
 @NgModule({

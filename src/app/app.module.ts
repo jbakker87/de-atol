@@ -47,8 +47,7 @@ import { StandaardTariefComponent } from './tarieven/standaard-tarief/standaard-
 import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdienst-tarief.component';
 import { FetchComponent } from './fetch/fetch.component';
 import { TableMatComponent } from './table-mat/table-mat.component';
-
-
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +71,8 @@ import { TableMatComponent } from './table-mat/table-mat.component';
     StandaardTariefComponent,
     VeerdienstTariefComponent,
     FetchComponent,
-    TableMatComponent
+    TableMatComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
