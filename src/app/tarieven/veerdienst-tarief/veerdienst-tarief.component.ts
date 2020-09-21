@@ -28,5 +28,7 @@ export interface PricesElements {
 const priceData: PricesElements[] = [
   { text: 'Volwassenen', price: 7 },
   { text: 'Kinderen (3 t/m 11 jaar)	', price: 4 },
-  { text: 'Fietsen', price: 1 }
+  { text: 'Fietsen', price: 1 },
+  { text: 'Brommers', price: 3 },
+  { text: 'Kar', price: 1 }
 ];
