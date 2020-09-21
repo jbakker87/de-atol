@@ -18,9 +18,10 @@
                 <div class="tile is-parent is-vertical">
                     <div class="tile is-child">
                         <article class="tile is-child notification is-light box padding">
-                            <figure class='image contact_maps_location'>
-                                <img src='assets/images/sportvissen.jpg'>
-                            </figure>
+                            <div class='image'>
+                                <img src='assets/images/sportvissen.jpg' (click)="showImage('assets/images/sportvissen_banner.jpg')" style='cursor: pointer;'>
+                                <div class='help is-help contact_maps_location'>Klik op de afbeelding om de afbeelding te vergroten.</div>
+                            </div>
                             <p class="subtitle">
                                 <mat-icon>info</mat-icon><strong> Informatie</strong>
                             </p>

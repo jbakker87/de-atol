@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableMatComponent } from './table-mat.component';
+import { NadropdownComponent } from './nadropdown.component';
 
-describe('TableMatComponent', () => {
-  let component: TableMatComponent;
-  let fixture: ComponentFixture<TableMatComponent>;
+describe('NadropdownComponent', () => {
+  let component: NadropdownComponent;
+  let fixture: ComponentFixture<NadropdownComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableMatComponent ]
+      declarations: [ NadropdownComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TableMatComponent);
+    fixture = TestBed.createComponent(NadropdownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

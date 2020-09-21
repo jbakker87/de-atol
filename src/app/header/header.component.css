@@ -14,16 +14,7 @@ a:hover, a:active{
     margin: 0;
 }
 
-@media (max-width: 1100px) {
-    .pad {
-        color: black;
-        position: absolute;
-        margin-left: 15px;
-        display: none;
-      }
-  }
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .pad {
         color: black;
         position: absolute;

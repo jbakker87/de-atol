@@ -12,8 +12,8 @@ import { OveronsComponent } from './overons/overons.component';
 import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
 import { FetchComponent } from './fetch/fetch.component';
-import { TableMatComponent } from './table-mat/table-mat.component';
 import { Error404Component } from './error404/error404.component';
+import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
 
 const routes: Routes = [
   {
@@ -21,8 +21,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'table',
-    component: TableMatComponent
+    path: 'reserveringen',
+    component: ReserveringenlijstComponent
   },
   {
     path: 'fetch',

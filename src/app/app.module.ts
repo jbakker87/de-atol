@@ -47,12 +47,13 @@ import { ImageModalComponent } from './modals/image-modal/image-modal.component'
 import { StandaardTariefComponent } from './tarieven/standaard-tarief/standaard-tarief.component';
 import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdienst-tarief.component';
 import { FetchComponent } from './fetch/fetch.component';
-import { TableMatComponent } from './table-mat/table-mat.component';
 import { Error404Component } from './error404/error404.component';
 import { HeaderComponent } from './header/header.component';
 import { SportvissenTariefComponent } from './tarieven/sportvissen-tarief/sportvissen-tarief.component';
 import { VeerdienstPerkpolderComponent } from './vaardagen/veerdienst-perkpolder/veerdienst-perkpolder.component';
 import { VeerdienstHansweertComponent } from './vaardagen/veerdienst-hansweert/veerdienst-hansweert.component';
+import { NadropdownComponent } from './diensten/veerdienst/nadropdown/nadropdown.component';
+import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
 
 @NgModule({
   declarations: [
@@ -76,12 +77,13 @@ import { VeerdienstHansweertComponent } from './vaardagen/veerdienst-hansweert/v
     StandaardTariefComponent,
     VeerdienstTariefComponent,
     FetchComponent,
-    TableMatComponent,
     Error404Component,
     HeaderComponent,
     SportvissenTariefComponent,
     VeerdienstPerkpolderComponent,
-    VeerdienstHansweertComponent
+    VeerdienstHansweertComponent,
+    NadropdownComponent,
+    ReserveringenlijstComponent
   ],
   imports: [
     BrowserModule,
