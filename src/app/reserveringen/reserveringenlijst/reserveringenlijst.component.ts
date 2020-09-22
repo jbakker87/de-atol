@@ -1,12 +1,12 @@
-import { _CoalescedStyleScheduler } from '@angular/cdk/table';
-import { HttpErrorResponse } from '@angular/common/http';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Inject, ViewChild } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Reservation } from 'src/models/reservation';
 import { CrudService } from '../../../services/crud.service';
 import { ErrorHandlerService } from '../../../services/error-handler.service';
+import { ReserveringenDetailsComponent } from '../reserveringen-details/reserveringen-details.component';
 
 @Component({
   selector: 'app-reserveringenlijst',
@@ -21,7 +21,7 @@ export class ReserveringenlijstComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private crudSerivice: CrudService, private errorService: ErrorHandlerService) { }
+  constructor(private crudSerivice: CrudService, private errorService: ErrorHandlerService, public dialog: MatDialog) { }
 
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -32,6 +32,13 @@ export class ReserveringenlijstComponent implements AfterViewInit {
   onRowClicked(row: any): void {
     alert('Row clicked: ' + JSON.stringify(row));
     console.log('Row clicked:', row);
+  }
+
+  openDetailsDialog(reservation: Reservation): void {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '100%';
+    dialogConfig.data = reservation;
+    const dialogRef = this.dialog.open(ReserveringenDetailsComponent, dialogConfig);
   }
 
   public getAllReservations(): void {

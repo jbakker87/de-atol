@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   openZeehondenDialog(): void {
     const dialogRef = this.dialog.open(ReserverenZeehondComponent, {
       height: '700px',
-      width: '600px'
+      width: '100%'
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -31,5 +31,4 @@ export class HomeComponent implements OnInit {
       console.log(result);
     });
   }
-
 }

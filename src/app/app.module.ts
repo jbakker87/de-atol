@@ -55,6 +55,7 @@ import { VeerdienstPerkpolderComponent } from './vaardagen/veerdienst-perkpolder
 import { VeerdienstHansweertComponent } from './vaardagen/veerdienst-hansweert/veerdienst-hansweert.component';
 import { NadropdownComponent } from './diensten/veerdienst/nadropdown/nadropdown.component';
 import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
+import { ReserveringenDetailsComponent } from './reserveringen/reserveringen-details/reserveringen-details.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/
     VeerdienstPerkpolderComponent,
     VeerdienstHansweertComponent,
     NadropdownComponent,
-    ReserveringenlijstComponent
+    ReserveringenlijstComponent,
+    ReserveringenDetailsComponent
   ],
   imports: [
     BrowserModule,

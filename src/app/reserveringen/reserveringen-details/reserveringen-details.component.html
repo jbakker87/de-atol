@@ -1,0 +1,15 @@
+<p class="control">
+    <label class="label">Reservering op:</label>
+    <label class="input">{{data.datum_reservatie}}</label>
+    <label class="label">Reserveringsnummer: </label>
+    <label class="input">{{data.reservatieId}}</label>
+    <label class="label">Type reservering: </label>
+    <label class="input">{{data.tocht_type}}</label>
+    <label class="label">Aantal volwassenen: </label>
+    <label class="input">{{data.aantal_volwassenen}}</label>
+    <label class="label">Aantal kinderen: </label>
+    <label class="input">{{data.aantal_kinderen}}</label>
+    <label class="label">1e vaardatum: </label>
+    <label class="input">{{data.vaardatum1}}</label>
+</p>
+<button [mat-dialog-close]="true" class="button is-warning is-pulled-right top-pad">Sluiten</button>
