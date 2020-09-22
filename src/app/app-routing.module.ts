@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { CmsComponent } from './cms/cms.component';
 import { FetchComponent } from './fetch/fetch.component';
 import { Error404Component } from './error404/error404.component';
+import { Error500Component } from './error500/error500.component';
 import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
 
 const routes: Routes = [
@@ -73,8 +74,12 @@ const routes: Routes = [
     component: CmsComponent
   },
   {
-    path: '**',
+    path: '404',
     component: Error404Component
+  },
+  {
+    path: '500',
+    component: Error500Component
   },
 ];
 

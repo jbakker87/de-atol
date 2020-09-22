@@ -48,6 +48,7 @@ import { StandaardTariefComponent } from './tarieven/standaard-tarief/standaard-
 import { VeerdienstTariefComponent } from './tarieven/veerdienst-tarief/veerdienst-tarief.component';
 import { FetchComponent } from './fetch/fetch.component';
 import { Error404Component } from './error404/error404.component';
+import { Error500Component } from './error500/error500.component';
 import { HeaderComponent } from './header/header.component';
 import { SportvissenTariefComponent } from './tarieven/sportvissen-tarief/sportvissen-tarief.component';
 import { VeerdienstPerkpolderComponent } from './vaardagen/veerdienst-perkpolder/veerdienst-perkpolder.component';
@@ -78,6 +79,7 @@ import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/
     VeerdienstTariefComponent,
     FetchComponent,
     Error404Component,
+    Error500Component,
     HeaderComponent,
     SportvissenTariefComponent,
     VeerdienstPerkpolderComponent,
