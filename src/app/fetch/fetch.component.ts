@@ -3,6 +3,9 @@ import { HttpClient, JsonpInterceptor } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Passagier } from '../../models/passagier';
 import { Reservation } from '../../models/reservation';
+import { groupBy, mergeMap, toArray } from 'rxjs/operators';
+import { from } from 'rxjs';
+
 
 @Component({
   selector: 'app-fetch',
@@ -23,6 +26,7 @@ export class FetchComponent implements OnInit {
   constructor(public http: HttpClient) { }
 
   ngOnInit(): void {
+    this.fetchPeople();
   }
 
   fetchPeople(): void {
@@ -32,7 +36,6 @@ export class FetchComponent implements OnInit {
       result.data.forEach(p => {
       this.peoples.push(new Passagier(p));
       });
-      console.log(result);
     });
   }
 
@@ -43,7 +46,11 @@ export class FetchComponent implements OnInit {
       result.data.forEach(r => {
       this.reservations.push(new Reservation(r));
     });
-      console.log(result);
+      const source = from(this.reservations);
+      const example = source.pipe(
+      groupBy(r => r.vaardatum1),
+      mergeMap(group => group.pipe(toArray())));
+      const subscribe = example.subscribe(val => console.log(val));
     });
   }
 
