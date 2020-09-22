@@ -1,37 +1,37 @@
 <div class="container section">
   <p class="title">Reserveren zeehondensafari</p>
   <form [formGroup]="reserverenForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Naam</mat-label>
       <input matInput formControlName="naam">
     </mat-form-field>
 
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Adres</mat-label>
       <input matInput formControlName="adres">
     </mat-form-field>
 
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Postcode</mat-label>
       <input matInput formControlName="postcode">
     </mat-form-field>
 
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Woonplaats</mat-label>
       <input matInput formControlName="woonplaats">
     </mat-form-field>
 
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Telefoonnummer</mat-label>
       <input matInput formControlName="telnr">
     </mat-form-field>
 
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Emailadres</mat-label>
       <input matInput formControlName="email">
     </mat-form-field>
 
-    <mat-form-field appearance="legacy">
+    <mat-form-field appearance="outline">
       <mat-label>Datum</mat-label>
       <input 
         matInput 
@@ -46,7 +46,7 @@
     </mat-form-field>
 
     <div *ngIf="selectedDate">
-      <mat-form-field appearance="legacy">
+      <mat-form-field appearance="outline">
         <mat-label>Aantal personen</mat-label>
         <mat-select matInput formControlName="pax">
           <mat-option *ngFor="let item of options; let i = index;" [value]="i+1">{{i+1}}</mat-option>
