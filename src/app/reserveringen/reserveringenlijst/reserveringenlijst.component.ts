@@ -17,14 +17,6 @@ export class ReserveringenlijstComponent implements AfterViewInit {
   private reservations: Reservation[] = [];
   dataSource = new MatTableDataSource<Reservation>();
   displayedColumns: string[] = ['tocht_type', 'aantal_volwassenen', 'aantal_kinderen', 'vaardatum1', 'details', 'update', 'delete'];
-  public errorMessage = '';
-
-  localHostUrl = 'http://localhost:8888';
-  serverHost = 'beurs.regelpaneel.com:3306';
-  localHostPath = '/list.php';
-  listReservations = '/list_reservations.php';
-  store = '/store.php';
-
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
