@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ReserverenZeehondComponent } from '../reserveren-zeehond/reserveren-zeehond.component';
 
@@ -7,14 +7,9 @@ import { ReserverenZeehondComponent } from '../reserveren-zeehond/reserveren-zee
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
-
+export class HomeComponent {
   msgIsShown = true;
-
   constructor(public dialog: MatDialog) { }
-
-  ngOnInit(): void {
-  }
 
   toggleCorona(): void {
     this.msgIsShown = false;

@@ -23,7 +23,10 @@ const routes: Routes = [
   },
   {
     path: 'reserveringen',
-    component: ReserveringenlijstComponent
+    component: ReserveringenlijstComponent,
+    data : {
+      title: 'Lopende reserveringen.'
+    }
   },
   {
     path: 'fetch',
@@ -31,31 +34,52 @@ const routes: Routes = [
   },
   {
     path: 'diensten/veerdienst',
-    component: VeerdienstComponent
+    component: VeerdienstComponent,
+    data : {
+      title: 'Veerdienst'
+    }
   },
   {
     path: 'overons',
-    component: OveronsComponent
+    component: OveronsComponent,
+    data : {
+      title: 'Over ons'
+    }
   },
   {
     path: 'diensten/sportvissen',
-    component: SportvissenComponent
+    component: SportvissenComponent,
+    data : {
+      title: 'Sportvissen'
+    }
   },
   {
     path: 'diensten/feesten',
-    component: FeestenComponent
+    component: FeestenComponent,
+    data : {
+      title: 'Feesten en partijen'
+    }
   },
   {
     path: 'diensten/rondvaart',
-    component: RondvaartComponent
+    component: RondvaartComponent,
+    data : {
+      title: 'Rondvaart'
+    }
   },
   {
     path: 'diensten/safari',
-    component: SafariComponent
+    component: SafariComponent,
+    data : {
+      title: 'Zeehondensafari'
+    }
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data : {
+      title: 'Rondvaartbedrijf en veerdienst De-Atol. Voor sportvissen, veerdienst, feesten en partijen.'
+    }
   },
   {
     path: 'reserveren',
@@ -63,7 +87,10 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    data : {
+      title: 'Contact'
+    }
   },
   {
     path: 'login',
