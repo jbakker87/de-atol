@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const title = 'title';
-    const preTitle = 'De-Atol - ';
     const pageTitle = this.titleService.getTitle();
     this.router
       .events.pipe(
@@ -27,7 +26,7 @@ export class AppComponent implements OnInit {
           return pageTitle;
         })
       ).subscribe((ttl: string) => {
-        this.titleService.setTitle(preTitle + ttl);
+        this.titleService.setTitle(ttl);
       });
   }
 

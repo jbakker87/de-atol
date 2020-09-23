@@ -11,7 +11,7 @@ export class OveronsComponent implements OnInit {
   constructor(private meta: Meta) { }
 
   ngOnInit(): void {
-    this.meta.updateTag({ name: 'description', content: 'Mijn comfortabele boot is verwarmd en uitgerust met toiletvoorziening, bar en geluidsinstallatie. Daarnaast heeft het schip een groot dek, waar u tijdens zonnige dagen heerlijk kunt vertoeven.'});
+    this.meta.updateTag({ name: 'description', content: 'Tijdens de vaarten kunt u een drankje nemen en kan ik u het een en ander vertellen over hetgeen u onderweg te zien krijgt.'});
   }
 
 }

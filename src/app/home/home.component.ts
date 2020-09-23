@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.meta.updateTag({ name: 'description', content: 'De-Atol is hét rondvaartbedrijf dat opereert in Zeeuws-Vlaanderen. Wij verzorgen al meer dan een halve eeuw rondvaarten, bedrijfsevenementen, excursies en dagtochten op bijvoorbeeld de Ooster- of Westerschelde.'});
+    this.meta.updateTag({ name: 'description', content: 'De-Atol is hét rondvaartbedrijf dat opereert in Zeeuws-Vlaanderen. Wij verzorgen rondvaarten op de Oosterschelde.'});
   }
 
   openZeehondenDialog(): void {

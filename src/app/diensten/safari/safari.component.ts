@@ -17,7 +17,7 @@ export class SafariComponent implements OnInit {
   constructor(public dialog: MatDialog, private meta: Meta) { }
 
   ngOnInit(): void {
-    this.meta.updateTag({ name: 'description', content: 'Op de brouwersplaat in de Westerschelde bevindt zich een groep zeehonden. Met laag tij kunnen we de zeehonden van heel dichtbij waarnemen. Tijdens de zeehondensafari van Rondvaartbedrijf De Atol nemen we de tijd om in alle rust deze prachtige dieren te bewonderen.'});
+    this.meta.updateTag({ name: 'description', content: 'Op de brouwersplaat in de Westerschelde bevindt zich een groep zeehonden. Met laag tij kunnen we de zeehonden van heel dichtbij waarnemen.'});
   }
 
   openZeehondenDialog(): void {
