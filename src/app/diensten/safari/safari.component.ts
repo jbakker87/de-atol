@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Meta } from '@angular/platform-browser';
 import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.component';
 import { ReserverenZeehondComponent } from 'src/app/reserveren-zeehond/reserveren-zeehond.component';
 
@@ -13,9 +14,10 @@ export class SafariComponent implements OnInit {
   adultPrice = 17.50;
   childPrice = 12.50;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private meta: Meta) { }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Op de brouwersplaat in de Westerschelde bevindt zich een groep zeehonden. Met laag tij kunnen we de zeehonden van heel dichtbij waarnemen. Tijdens de zeehondensafari van Rondvaartbedrijf De Atol nemen we de tijd om in alle rust deze prachtige dieren te bewonderen.'});
   }
 
   openZeehondenDialog(): void {

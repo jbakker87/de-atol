@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Meta } from '@angular/platform-browser';
 import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.component';
 
 @Component({
@@ -14,9 +15,10 @@ export class SportvissenComponent implements OnInit {
   hengelPrice = 10;
   baitPrice = 10;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private meta: Meta) { }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'met rondvaartbedrijf De-Atol kom je in dieper water te vissen en maak je kans op wat grotere vis en grotere soorten zoals gul, wijting en platvis.'});
   }
 
   showImage(value): void {

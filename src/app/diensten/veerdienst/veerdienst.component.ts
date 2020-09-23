@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Meta } from '@angular/platform-browser';
 import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.component';
 
 @Component({
@@ -9,9 +10,10 @@ import { ImageModalComponent } from 'src/app/modals/image-modal/image-modal.comp
 })
 export class VeerdienstComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private meta: Meta) { }
 
   ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Elke zomer kunt u gebruik maken van onze veerdienst tussen Hansweert en Perkpolder.'});
   }
 
   showImage(value): void {

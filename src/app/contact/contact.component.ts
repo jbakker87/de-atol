@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { PersonalData } from '../../models/contact-request';
 import { HttpClient } from '@angular/common/http';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,7 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   showModal = false;
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private meta: Meta) {
       this.contactForm = this.createFormGroup();
   }
 
@@ -33,7 +34,9 @@ export class ContactComponent implements OnInit {
     return this.contactForm.get('email');
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.meta.updateTag({ name: 'description', content: 'Wilt u weten wat wij voor u kunnen betekenen? Kom met ons in contact.' });
+  }
 
   createFormGroup(): FormGroup {
     return new FormGroup({
