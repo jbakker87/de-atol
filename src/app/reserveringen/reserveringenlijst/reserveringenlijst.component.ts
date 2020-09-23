@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -16,7 +16,8 @@ import { ReserveringenDetailsComponent } from '../reserveringen-details/reserver
 export class ReserveringenlijstComponent implements AfterViewInit {
   private reservations: Reservation[] = [];
   dataSource = new MatTableDataSource<Reservation>();
-  displayedColumns: string[] = ['tocht_type', 'aantal_volwassenen', 'aantal_kinderen', 'vaardatum1', 'details', 'update', 'delete'];
+  // displayedColumns: string[] = ['tocht_type', 'aantal_volwassenen', 'aantal_kinderen', 'vaardatum1', 'details', 'update', 'delete'];
+  displayedColumns: string[] = ['tocht_type', 'aantal_volwassenen', 'aantal_kinderen', 'vaardatum1'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -26,7 +27,8 @@ export class ReserveringenlijstComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-    this.getAllReservations();
+
+    this.getGroupedReservations();
   }
 
   onRowClicked(row: any): void {
@@ -41,8 +43,8 @@ export class ReserveringenlijstComponent implements AfterViewInit {
     const dialogRef = this.dialog.open(ReserveringenDetailsComponent, dialogConfig);
   }
 
-  public getAllReservations(): void {
-    this.crudSerivice.getData().subscribe((response: any) => {
+  public getGroupedReservations(): void {
+    this.crudSerivice.getGroupedData().subscribe((response: any) => {
       response.data.forEach(r => {
         this.reservations.push(new Reservation(r));
         this.dataSource.data = this.reservations;

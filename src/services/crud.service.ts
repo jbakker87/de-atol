@@ -7,10 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class CrudService {
 
-  localHostUrl = 'http://localhost:8888';
+  localHostUrl = 'http://localhost:8888/';
   serverHost = 'beurs.regelpaneel.com:3306';
-  localHostPath = '/list.php';
-  listReservations = '/list_reservations.php';
+  localHostPath = 'list.php';
+  listReservations = 'list_reservations.php';
+  groupedReservations = 'grouped_reservations.php';
   store = '/store.php';
 
   constructor(private http: HttpClient) { }
@@ -19,9 +20,11 @@ export class CrudService {
     return this.http.get(this.localHostUrl + this.listReservations);
   }
 
+  public getGroupedData(): any {
+    return this.http.get(this.localHostUrl + this.groupedReservations);
+  }
+
   private createUrl(host: string, path: string): string {
     return `${this.localHostUrl}/${this.localHostPath}`;
   }
-
-
 }
