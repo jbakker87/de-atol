@@ -9,112 +9,123 @@
             Let op! Mondkapje verplicht. Aan boord zijn mondkapjes verkrijgbaar voor € 1,- per stuk. Reserveren voor de veerdienst is niet nodig.
         </p>
     </div>
-    <div class="tile is-ancestor">
-        <div class="tile is-parent is-vertical">
-            <div class="card tile is-child">
-                <div class="card-image">
-                    <figure class="image is 2by1">
-                        <img src='assets/images/zeehond_banner.jpg' alt='some seals on the seabed'>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <p class="title">Zeehondensafari</p>
-                    <p class="subtitle">Ga mee op avontuur.</p>
-                    <br>
-                    <nav class="buttons is-right">
-                        <button class="button is-warning wide" (click)="openZeehondenDialog()">Reserveren</button>
-                    </nav>
-                    <nav class="buttons is-right">                        
-                        <button class="button is-warning wide" routerLink='/diensten/safari'>Meer info</button>
-                    </nav>
-                </div>
-            </div>
-            <div class="card tile is-child">
-                <div class="card-image">
-                    <figure class="image is 2by1">
-                        <img src='assets/images/veerdienst_banner.jpg' alt='veerdienst image'>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <p class='title'>Veerdienst</p>
-                    <p class="subtitle">Dit jaar zijn er geen veerdiensten meer.</p><br>
-                    <nav class='buttons is-right'>
-                        <a class="button is-warning wide" disabled>Reserveren niet nodig!</a>
-                    </nav>
-                    <nav class='buttons is-right'>
-                        <a class="button is-warning wide" routerLink='/diensten/veerdienst'>Meer info</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="tile is-parent is-vertical">
-            <div class="card tile is-child">
-                <div class="card-image">
-                    <figure class="image is 2by1">
-                        <img src='assets/images/rondvaart_banner.jpg' alt='sailing with the Atol'>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <p class="title">Rondvaart</p>
-                    <p class="subtitle">Over de Westerschelde.</p>
-                    <nav class="buttons is-right">
-                        <button class="button is-warning wide" routerLink='/reserveren' wide>Reserveren</button>
-                    </nav>
-                    <nav class="buttons is-right">
+</div>
 
-                        <button class="button is-warning wide" routerLink='/diensten/rondvaart'>Meer info</button>
-                    </nav>
-                </div>
+<!-- FIRST ROW -->
+<div class="container section">
+    <div class="columns">
+        <div class="column column is-one-third flex-column shadow">
+            <div class="card-image">
+                <figure class="image is 2by1">
+                    <img src='assets/images/zeehond_banner.jpg' alt='some seals on the seabed'>
+                </figure>
             </div>
-            <div class="card tile is-child">
-                <div class="card-image">
-                    <figure class="image is 2by1">
-                        <img src='assets/images/sportvissen_banner.jpg' alt='some people fishing with the Atol'>
-                    </figure>
+            <div class="card-content cc-flex">
+                <div class="wrapper-flex mb-5">
+                    <h2 class="title">Zeehondensafari</h2>
+                    <p class="subtitle">Lees hier alles over onze zeehonden safari.</p>
                 </div>
-                <div class="card-content">
-                    <p class="title">Sportvissen</p>
-                    <p class="subtitle">Sportvissen op de Ooster- of Westerschelde.</p>
-                    <nav class="buttons is-right">
-                        <button class="button is-warning wide" routerLink='/reserveren'>Reserveren</button>
-                    </nav>
-                    <nav class="buttons is-right">                        
-                        <button class="button is-warning wide" routerLink='/diensten/sportvissen'>Meer info</button>
-                    </nav>
-                </div>
+                <nav class="buttons is-right">
+                    <button class="button is-warning wide" (click)="openZeehondenDialog()">Reserveren</button>
+                </nav>
+                <nav class="buttons is-right">                        
+                    <button class="button is-warning wide" routerLink='/diensten/safari'>Meer info</button>
+                </nav>
             </div>
         </div>
-        <div class="tile is-parent is-vertical">
-            <div class="card tile is-child">
-                <div class="card-image">
-                    <figure class="image is 2by1">
-                        <img src='assets/images/feesten_banner.jpg' alt='people partying with the Atol'>
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <p class="title">Feesten en partijen</p>
-                    <p class="subtitle">Partyboot max. 75 personen.</p><br>
-                    <nav class='buttons is-right'>
-                        <button class="button is-warning wide" routerLink='/reserveren'>Reserveren</button>
-                    </nav>
-                    <nav class='buttons is-right'>
-                        <button class="button is-warning wide" routerLink='/diensten/feesten'>Meer info</button>
-                    </nav>
-                </div>
+        <div class="column column is-one-third flex-column shadow">
+            <div class="card-image">
+                <figure class="image is 2by1">
+                    <img src='assets/images/veerdienst_banner.jpg' alt='veerdienst image'>
+                </figure>
             </div>
-            <div class="card tile is-child">
-                <div class="card-image">
-                    <figure class="image is 2by1">
-                        <img src='assets/images/contact_banner.jpg' alt='the owner on a picture'>
-                    </figure>
+            <div class="card-content cc-flex">
+                <div class="wrapper-flex mb-5">
+                    <h2 class='title'>Veerdienst</h2>
+                    <p class="subtitle">Dit jaar zijn er geen veerdiensten meer.</p>
                 </div>
-                <div class="card-content">
-                    <p class="title">Contact</p>
+                <nav class='buttons is-right'>
+                    <a class="button is-warning wide" disabled>Reserveren niet nodig!</a>
+                </nav>
+                <nav class='buttons is-right'>
+                    <a class="button is-warning wide" routerLink='/diensten/veerdienst'>Meer info</a>
+                </nav>
+            </div>
+        </div>
+        <div class="column column is-one-third flex-column shadow">
+            <div class="card-image">
+                <figure class="image is 2by1">
+                    <img src='assets/images/rondvaart_banner.jpg' alt='sailing with the Atol'>
+                </figure>
+            </div>
+            <div class="card-content cc-flex">
+                <div class="wrapper-flex mb-5">
+                    <h2 class="title">Rondvaart</h2>
+                    <p class="subtitle">Lees hier alles over een rondvaart met de-Atol.</p>
+                </div>
+                <nav class="buttons is-right">
+                    <button class="button is-warning wide" routerLink='/reserveren' wide>Reserveren</button>
+                </nav>
+                <nav class="buttons is-right">
+                    <button class="button is-warning wide" routerLink='/diensten/rondvaart'>Meer info</button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- SECOND ROW -->
+    <div class="columns">
+        <div class="column column is-one-third flex-column shadow">
+            <div class="card-image">
+                <figure class="image is 2by1">
+                    <img src='assets/images/sportvissen_banner.jpg' alt='some people fishing with the Atol'>
+                </figure>
+            </div>
+            <div class="card-content cc-flex">
+                <div class="wrapper-flex mb-5">
+                    <h2 class="title">Sportvissen</h2>
+                    <p class="subtitle">Sportvissen op de Ooster- of Westerschelde.</p>
+                </div>
+                <nav class="buttons is-right">
+                    <button class="button is-warning wide" routerLink='/reserveren'>Reserveren</button>
+                </nav>
+                <nav class="buttons is-right">                        
+                    <button class="button is-warning wide" routerLink='/diensten/sportvissen'>Meer info</button>
+                </nav>
+            </div>
+        </div>
+        <div class="column column is-one-third flex-column shadow">
+            <div class="card-image">
+                <figure class="image is 2by1">
+                    <img src='assets/images/feesten_banner.jpg' alt='people partying with the Atol'>
+                </figure>
+            </div>
+            <div class="card-content cc-flex">
+                <div class="wrapper-flex mb-5">
+                    <h2 class="title">Feesten en partijen</h2>
+                    <p class="subtitle">Partyboot max. 75 personen.</p>
+                </div>
+                <nav class='buttons is-right'>
+                    <button class="button is-warning wide" routerLink='/reserveren'>Reserveren</button>
+                </nav>
+                <nav class='buttons is-right'>
+                    <button class="button is-warning wide" routerLink='/diensten/feesten'>Meer info</button>
+                </nav>
+            </div>
+        </div>
+        <div class="column column is-one-third flex-column shadow">
+            <div class="card-image">
+                <figure class="image is 2by1">
+                    <img src='assets/images/contact_banner.jpg' alt='the owner on a picture'>
+                </figure>
+            </div>
+            <div class="card-content cc-flex">
+                <div class="wrapper-flex mb-5">
+                    <h2 class="title">Contact</h2>
                     <p class="subtitle">Hoe kom ik in contact met Rondvaartbedrijf de-Atol?</p>
-                    <nav class="buttons is-right">
-                        <button class="button is-warning wide" routerLink='/contact'>Meer info</button>
-                    </nav>
                 </div>
+                <nav class="buttons is-right">
+                    <button class="button is-warning wide" routerLink='/contact'>Meer info</button>
+                </nav>
             </div>
         </div>
     </div>
