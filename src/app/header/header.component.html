@@ -1,5 +1,5 @@
 <mat-toolbar  class='custom-toolbar'>
-    <div fxHide.gt-xs>
+    <div fxHide.gt-md>
         <button mat-icon-button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
         </button>
@@ -8,7 +8,7 @@
         <img src='../../assets/images/navbar_logo.png' class='navbar-brand-logo'>
         <a routerlink=''class="pad subtitle">De Atol</a>
       </a>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.sm fxHide.xs>
         <ul fxLayout fxLayoutGap="15px" class="subtitle">
             <li>
                 <a routerLink="">Home</a>
