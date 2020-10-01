@@ -21,17 +21,17 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   },
-  {
-    path: 'reserveringen',
-    component: ReserveringenlijstComponent,
-    data : {
-      title: 'Lopende reserveringen.'
-    }
-  },
-  {
-    path: 'fetch',
-    component: FetchComponent
-  },
+  // {
+  //   path: 'reserveringen',
+  //   component: ReserveringenlijstComponent,
+  //   data : {
+  //     title: 'Lopende reserveringen.'
+  //   }
+  // },
+  // {
+  //   path: 'fetch',
+  //   component: FetchComponent
+  // },
   {
     path: 'diensten/veerdienst',
     component: VeerdienstComponent,
@@ -92,14 +92,14 @@ const routes: Routes = [
       title: 'Contact'
     }
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'cms',
-    component: CmsComponent
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent
+  // },
+  // {
+  //   path: 'cms',
+  //   component: CmsComponent
+  // },
   {
     path: '404',
     component: Error404Component

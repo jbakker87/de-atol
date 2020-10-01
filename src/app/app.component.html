@@ -1,8 +1,9 @@
-<mat-sidenav #sidenav role="navigation" (click)="sidenav.toggle()">
+<mat-sidenav #sidenav role="navigation" (click)="sidenav.toggle()" [autoFocus]="false">
     <app-navbar (sidenavClose)="sidenav.close()"></app-navbar>
 </mat-sidenav>
 <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
 <main (click)="sidenav.close()">
+    <br><br>
     <router-outlet></router-outlet>
 </main>
     <mat-sidenav-container></mat-sidenav-container>

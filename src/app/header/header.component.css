@@ -26,3 +26,8 @@ a:hover, a:active{
     height:30px;
     text-align: center ;
   }
+
+  .custom-toolbar {
+      position: fixed;
+      z-index:2;
+  }
