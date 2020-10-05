@@ -10,7 +10,7 @@ export class SafariNadropdownComponent implements OnInit {
   isDroppedDown = false;
 
   msgs = [
-    {value: 'steak-0', viewValue: 'Momenteel zijn er geen zeehonden tochten.'}
+    {value: 'steak-0', viewValue: 'Momenteel zijn er geen safari\'s.'}
   ];
 
   constructor() { }

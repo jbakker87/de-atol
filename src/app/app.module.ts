@@ -53,13 +53,13 @@ import { HeaderComponent } from './header/header.component';
 import { SportvissenTariefComponent } from './tarieven/sportvissen-tarief/sportvissen-tarief.component';
 import { VeerdienstPerkpolderComponent } from './vaardagen/veerdienst-perkpolder/veerdienst-perkpolder.component';
 import { VeerdienstHansweertComponent } from './vaardagen/veerdienst-hansweert/veerdienst-hansweert.component';
-import { NadropdownComponent } from './diensten/veerdienst/nadropdown/nadropdown.component';
 import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
 import { ReserveringenDetailsComponent } from './reserveringen/reserveringen-details/reserveringen-details.component';
 import { InformatieComponent } from './informatie/informatie.component';
 import { SafariNadropdownComponent } from './diensten/safari/safari-nadropdown/safari-nadropdown.component';
 import { SafariScheduleComponent } from './diensten/safari/safari-schedule/safari-schedule.component';
 import { SafariTariefComponent } from './tarieven/safari-tarief/safari-tarief.component';
+import { VeerdienstNadropdownComponent } from './diensten/veerdienst/veerdienst-nadropdown/veerdienst-nadropdown.component';
 
 @NgModule({
   declarations: [
@@ -89,13 +89,13 @@ import { SafariTariefComponent } from './tarieven/safari-tarief/safari-tarief.co
     SportvissenTariefComponent,
     VeerdienstPerkpolderComponent,
     VeerdienstHansweertComponent,
-    NadropdownComponent,
     ReserveringenlijstComponent,
     ReserveringenDetailsComponent,
     InformatieComponent,
     SafariNadropdownComponent,
     SafariScheduleComponent,
-    SafariTariefComponent
+    SafariTariefComponent,
+    VeerdienstNadropdownComponent
   ],
   imports: [
     BrowserModule,

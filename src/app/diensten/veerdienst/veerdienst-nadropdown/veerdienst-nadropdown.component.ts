@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-nadropdown',
-  templateUrl: './nadropdown.component.html',
-  styleUrls: ['./nadropdown.component.css']
+  selector: 'app-veerdienst-ndraopdown',
+  templateUrl: './veerdienst-nadropdown.component.html',
+  styleUrls: ['./veerdienst-nadropdown.component.css']
 })
-export class NadropdownComponent implements OnInit {
+export class VeerdienstNadropdownComponent implements OnInit {
 
   isDroppedDown = false;
 
