@@ -1,4 +1,4 @@
-<mat-sidenav #sidenav role="navigation" (click)="sidenav.toggle()" fixedInViewport="true">
+<mat-sidenav #sidenav role="navigation" (click)="sidenav.toggle()" fixedInViewport="true" [autoFocus]="false">
     <app-navbar (sidenavClose)="sidenav.close()"></app-navbar>
 </mat-sidenav>
 <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
