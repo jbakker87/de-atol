@@ -46,3 +46,17 @@
         font-size: 18px;
     }
 }
+
+.simple {
+    height: 100%; 
+    width: 100%; 
+    vertical-align: middle; 
+}
+
+.class {
+    padding: 40px 40px 40px 40px;
+}
+
+.container-padding {
+    padding: 0px 24px 24px 24px;
+}
