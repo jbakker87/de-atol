@@ -1,0 +1,10 @@
+.big-font {
+    top: 5px;
+    font-size: 28px;
+    position: relative;
+    margin-right: 5px;
+}
+
+.top-pad {
+    padding-top: 20px;
+}

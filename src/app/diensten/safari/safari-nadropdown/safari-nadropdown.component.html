@@ -1,0 +1,8 @@
+<mat-form-field appearance="outline" class="contact-formfield-fullwidth">
+    <mat-label>Beschikbare tochten</mat-label>
+    <mat-select>
+        <mat-option *ngFor="let msg of msgs" [value]="msg.value">
+        {{msg.viewValue}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

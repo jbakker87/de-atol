@@ -57,6 +57,9 @@ import { NadropdownComponent } from './diensten/veerdienst/nadropdown/nadropdown
 import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
 import { ReserveringenDetailsComponent } from './reserveringen/reserveringen-details/reserveringen-details.component';
 import { InformatieComponent } from './informatie/informatie.component';
+import { SafariNadropdownComponent } from './diensten/safari/safari-nadropdown/safari-nadropdown.component';
+import { SafariScheduleComponent } from './diensten/safari/safari-schedule/safari-schedule.component';
+import { SafariTariefComponent } from './tarieven/safari-tarief/safari-tarief.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +92,10 @@ import { InformatieComponent } from './informatie/informatie.component';
     NadropdownComponent,
     ReserveringenlijstComponent,
     ReserveringenDetailsComponent,
-    InformatieComponent
+    InformatieComponent,
+    SafariNadropdownComponent,
+    SafariScheduleComponent,
+    SafariTariefComponent
   ],
   imports: [
     BrowserModule,

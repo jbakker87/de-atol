@@ -1,0 +1,17 @@
+.aligned-with-text {
+    position: absolute;
+    top: 5px;
+}
+
+.contact-formfield-fullwidth {
+    width: 100%;
+}
+
+.big-font {
+    position: relative;
+    top: 5px;
+}
+
+.top-pad {
+    padding-top: 20px;
+}
