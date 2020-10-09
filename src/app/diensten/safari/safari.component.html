@@ -37,7 +37,21 @@
                             <div class="contact_maps_location">
                                 <input type='submit' class="button is-warning" value='Direct reserveren?' (click)="openZeehondenDialog()">
                             </div> 
-                            <p class="subtitle">
+                            <p class="title top-pad">
+                                <mat-icon class='big-font'>event_available</mat-icon><strong> Beschikbare zeehondensafari's</strong>
+                            </p>
+                            
+                            <!-- Schedule table component -->
+                            <!-- <app-safari-schedule></app-safari-schedule> -->
+
+                            <!-- Not available dropdown component -->
+                            <app-safari-nadropdown></app-safari-nadropdown>
+                            
+                            <p class="subtitle margin-to-table">
+                              <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
+                            </p>
+                            <app-safari-tarief></app-safari-tarief>
+                            <p class="subtitle top-pad">
                                 <mat-icon>directions_boat</mat-icon><strong> Opstaplocatie</strong>
                             </p>
                             <p class="content">
@@ -62,17 +76,6 @@
                                     </figure>
                                 </div>                        
                             </div>
-                            <p class="title top-pad">
-                                <mat-icon class='big-font'>event_available</mat-icon><strong> Beschikbare zeehondensafari's</strong>
-                            </p>
-                            <!-- Schedule table component -->
-
-                            <!-- Not available dropdown component -->
-                            <app-safari-nadropdown></app-safari-nadropdown>
-                            <p class="subtitle">
-                              <mat-icon>euro_symbol</mat-icon><strong> Prijzen</strong>
-                            </p>
-                            <app-safari-tarief></app-safari-tarief>
                             <div class="padding-to-prices">
                                 <input type='submit' class="button is-warning" value='Reserveren' (click)="openZeehondenDialog()">
                             </div>               

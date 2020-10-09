@@ -4,7 +4,9 @@
 <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
 <main (click)="sidenav.close()">
     <br><br>
-    <router-outlet></router-outlet>
+    <router-outlet>
+        <div class="hero"></div>
+    </router-outlet>
 </main>
     <mat-sidenav-container></mat-sidenav-container>
 <app-footer></app-footer>

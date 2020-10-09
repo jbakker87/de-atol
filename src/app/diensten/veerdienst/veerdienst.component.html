@@ -10,7 +10,23 @@
     </div>
   </div>
 </section>
-<div class='container section'>
+
+<div class="container section container-padding">
+  <div *ngIf='msgIsShown' class="notification is-danger is-light">
+      <button class="delete" (click)='toggleReservation()'></button>
+      <p class='subtitle'>
+          <mat-icon>error</mat-icon> Reserveren
+      </p>
+      <p class="content">
+          Reserveren voor de veerdienst is niet nodig.
+      </p>
+  </div>
+</div>
+<div class="has-text-centered">
+  <button class="button is-warning button-margin" (click)="hansweert.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Hansweert</button>
+  <button class="button is-warning button-margin" (click)="perkpolder.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Perkpolder</button>
+</div>
+<div class='container section no-padding-on-top'>
   <div class="columns is-centered">
     <div class="tile is-ancestor is-12">
       <div class="tile">
@@ -24,7 +40,7 @@
                 (click)="showImage('assets/images/perkpolder_modal_image.jpg')" 
                 style='cursor: pointer;'
                 alt='the location of the Atol in Perkpolder'>
-                <div class='help is-help'>Klik op de afbeelding om de afbeelding te vergroten.</div>
+                <div class='help is-help'  #perkpolder>Klik op de afbeelding om de afbeelding te vergroten.</div>
               </div><br>
               <app-veerdienst-ndraopdown></app-veerdienst-ndraopdown>
               <!-- <app-veerdienst-perkpolder></app-veerdienst-perkpolder> -->
@@ -61,7 +77,7 @@
                 (click)="showImage('assets/images/hansweert_modal_image.jpg')" 
                 style='cursor: pointer;'
                 alt='the location of the Atol in Hansweert'>
-                <div class='help is-help'>Klik op de afbeelding om de afbeelding te vergroten.</div>
+                <div class='help is-help' #hansweert>Klik op de afbeelding om de afbeelding te vergroten.</div>
               </div><br>
               <app-veerdienst-ndraopdown></app-veerdienst-ndraopdown>
               <!-- <app-veerdienst-hansweert></app-veerdienst-hansweert> -->

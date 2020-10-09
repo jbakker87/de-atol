@@ -4,5 +4,15 @@
 }
 
 .padding {
-    padding: 1.25rem 2.5rem 2.5rem 1.5rem;
+    padding: 20px 20px 40px 20px;
+}
+
+.table-div {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+}
+
+.padding-to-prices {
+    padding-bottom: 32px!important;
 }

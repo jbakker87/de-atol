@@ -1,0 +1,11 @@
+.container-padding {
+    padding: 20px 24px 10px 24px;
+}
+
+.no-padding-on-top {
+    padding-top: 10px!important;
+}
+
+.button-margin {
+    margin: 10px;
+}
