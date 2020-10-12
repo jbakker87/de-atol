@@ -19,6 +19,14 @@
     position: relative;
 }
 
+.logo-style-thumbnail {
+    width: 40px;
+    height: 40px;
+    top: 5px;
+    right: 5px;
+    position: relative;
+}
+
 .mat-header-cell {
     flex-direction: flex;
     justify-content: center;
