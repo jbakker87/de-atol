@@ -36,35 +36,31 @@
                             </p>
                             <div class="contact_maps_location">
                                 <input type='submit' class="button is-warning" value='Direct reserveren?' (click)="openZeehondenDialog()">
-                            </div> 
-                            <p class="title top-pad">
-                                <img src="../../../assets/logos/tasklist_icon_dotted.png" class="logo-style"><strong> Beschikbare zeehondensafari's</strong>
-                            </p>
+                            </div>
+
+                            <!-- THE AVAILABLE SAFARI'S TITLE -->
+                            <app-available-safari></app-available-safari>
                             
-                            <!-- Schedule table component -->
+                            <!-- UNCOMMENT THE BELOW SCHEDULE COMPONENT TO ACTIVATE THE SCHEDULE -->
                             <!-- <app-safari-schedule></app-safari-schedule> -->
 
-                            <!-- Not available dropdown component -->
+                            <!-- THE APP-SAFARI-NADROPDOWN SHOWS AN DROPDOWN SAYING THAT THERE ARE NO SAFARI'S AVAILABLE -->
                             <app-safari-nadropdown></app-safari-nadropdown>
+                            
+                            <!-- PRICES COMPONENT FOR SAFARI'S -->
                             <app-safari-tarief></app-safari-tarief>
-                            <p class="subtitle top-pad">
-                                <img src="../../../assets/logos/ship_icon_dotted.png" class="logo-style"><strong> Opstaplocatie</strong>
-                            </p>
-                            <p class="content">
-                                Perkpolderhaven 1 <br>
-                                4588 RB Walsoorden <br>
-                                We zijn te bereiken via de oude N60 (N689) of via Noordstraat en dan rechts de Kalverdijk op.
-                            </p>
-                            <p class="subtitle">
-                                <img src="../../../assets/logos/gps_icon_dotted.png" class="logo-style"><strong> GPS</strong>
-                            </p>
-                            <p class="subtitle">
-                                51°23'54.3"N 4°01'00.0"E
-                            </p>
+                            
+                            <!-- DOCK LOCATION COMPONENT FOR SAFARI -->
+                            <app-opstap-perkpolder></app-opstap-perkpolder>
+
+                            <!-- GPS LOCATION COMPONENT FOR SAFARI -->
+                            <app-gps-perkpolder></app-gps-perkpolder>
+
+                            <!-- MAP LOCATION COMPONENT FOR SAFARI -->
+                            <app-map></app-map>
+
+                            <br>
                             <!-- 	Google maps iFrame Perkpolder -->
-                            <p class="subtitle">
-                                <img src="../../../assets/logos/marker_icon_dotted.png" class="logo-style"><strong> Kaart</strong>
-                            </p>
                             <div class="card">
                                 <div class="card-image">
                                     <figure class="image is-16by9">

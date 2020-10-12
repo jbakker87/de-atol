@@ -55,11 +55,20 @@ import { VeerdienstPerkpolderComponent } from './vaardagen/veerdienst-perkpolder
 import { VeerdienstHansweertComponent } from './vaardagen/veerdienst-hansweert/veerdienst-hansweert.component';
 import { ReserveringenlijstComponent } from './reserveringen/reserveringenlijst/reserveringenlijst.component';
 import { ReserveringenDetailsComponent } from './reserveringen/reserveringen-details/reserveringen-details.component';
-import { InformatieComponent } from './informatie/informatie.component';
 import { SafariNadropdownComponent } from './diensten/safari/safari-nadropdown/safari-nadropdown.component';
 import { SafariScheduleComponent } from './diensten/safari/safari-schedule/safari-schedule.component';
 import { SafariTariefComponent } from './tarieven/safari-tarief/safari-tarief.component';
 import { VeerdienstNadropdownComponent } from './diensten/veerdienst/veerdienst-nadropdown/veerdienst-nadropdown.component';
+import { MapComponent } from './components/titles/map/map.component';
+import { GpsHansweertComponent } from './components/titles/gps/gps-hansweert/gps-hansweert.component';
+import { GpsPerkpolderComponent } from './components/titles/gps/gps-perkpolder/gps-perkpolder.component';
+import { OpstapHansweertComponent } from './components/titles/opstaplocatie/opstap-hansweert/opstap-hansweert.component';
+import { OpstapPerkpolderComponent } from './components/titles/opstaplocatie/opstap-perkpolder/opstap-perkpolder.component';
+import { AvailableSafariComponent } from './components/titles/available/available-safari/available-safari.component';
+import { AvailableVeerdienstComponent } from './components/titles/available/available-veerdienst/available-veerdienst.component';
+import { PracticalInformationComponent } from './components/titles/information/practical-information/practical-information.component';
+import { ExpectationsComponent } from './components/titles/expectations/expectations.component';
+import { SimpleInformationComponent } from './components/titles/information/simple-information/simple-information.component';
 
 @NgModule({
   declarations: [
@@ -91,11 +100,20 @@ import { VeerdienstNadropdownComponent } from './diensten/veerdienst/veerdienst-
     VeerdienstHansweertComponent,
     ReserveringenlijstComponent,
     ReserveringenDetailsComponent,
-    InformatieComponent,
     SafariNadropdownComponent,
     SafariScheduleComponent,
     SafariTariefComponent,
-    VeerdienstNadropdownComponent
+    VeerdienstNadropdownComponent,
+    MapComponent,
+    GpsHansweertComponent,
+    GpsPerkpolderComponent,
+    OpstapHansweertComponent,
+    OpstapPerkpolderComponent,
+    AvailableSafariComponent,
+    AvailableVeerdienstComponent,
+    PracticalInformationComponent,
+    ExpectationsComponent,
+    SimpleInformationComponent
   ],
   imports: [
     BrowserModule,

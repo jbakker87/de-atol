@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InformatieComponent } from './informatie.component';
+import { AvailableSafariComponent } from './available-safari.component';
 
-describe('InformatieComponent', () => {
-  let component: InformatieComponent;
-  let fixture: ComponentFixture<InformatieComponent>;
+describe('AvailableSafariComponent', () => {
+  let component: AvailableSafariComponent;
+  let fixture: ComponentFixture<AvailableSafariComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InformatieComponent ]
+      declarations: [ AvailableSafariComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InformatieComponent);
+    fixture = TestBed.createComponent(AvailableSafariComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
