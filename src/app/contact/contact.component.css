@@ -6,10 +6,6 @@
     margin-left: 20px;
 }
 
-.contact_maps_location {
-    padding-bottom: 20px;
-}
-
 .contact-formfield-fullwidth {
     width: 100%;
 }
@@ -17,16 +13,4 @@
 .contact-flex {
     display: flex;
     flex-direction: column;
-}
-
-@media only screen and (max-width: 1024px) {
-    h1 {
-        font-size: 26px;
-    }
-    h2 {
-        font-size: 26px;
-    }
-    p {
-        font-size: 20px;
-    }
 }

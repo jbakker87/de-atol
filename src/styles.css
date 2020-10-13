@@ -82,7 +82,7 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     h1 {
         font-size: 11px;
     }
-    p {
+    p, .content {
         font-size: 14px;
     }
     a.google-maps-link {
@@ -144,7 +144,7 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     h2 {
         font-size: 12px;
     }
-    p {
+    p, .content {
         font-size: 14px;
     }
     a.google-maps-link {
@@ -213,6 +213,9 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     .title {
         font-size: 24px;
     }
+    p, .content {
+        font-size: 14px;
+    }
     .subtitle {
         font-size: 14px;
     }
@@ -238,5 +241,8 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     }
     .subtitle {
         font-size: 22px;
+    }
+    p, .content {
+        font-size: 14px;
     }
 }
