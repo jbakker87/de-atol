@@ -12,6 +12,17 @@
     padding: 20px 40px 40px 40px;
 }
 
+.button-on-bottom {
+    position: absolute;
+    bottom: 25px;
+}
+
+.table-div {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+}
+
 .logo-style {
     width: 40px;
     height: 40px;
@@ -25,6 +36,11 @@
     top: 5px;
     right: 5px;
     position: relative;
+}
+
+.button-on-bottom {
+    position: relative;
+    bottom: 25px;
 }
 
 .mat-header-cell {
@@ -52,6 +68,12 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     }
     p {
         font-size: 14px;
+    }
+    a.google-maps-link {
+        font-size: 14px!important;
+    }
+    a {
+        font-size: 14px!important;
     }
     .subtitle {
         font-size: 14px!important;
@@ -104,7 +126,16 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     p {
         font-size: 14px;
     }
+    a.google-maps-link {
+        font-size: 14px!important;
+    }
+    a {
+        font-size: 14px!important;
+    }
     .subtitle {
+        font-size: 14px!important;
+    }
+    .content {
         font-size: 14px!important;
     }
     .title {
