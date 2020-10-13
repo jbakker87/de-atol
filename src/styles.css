@@ -176,7 +176,7 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
     }
 
     th.mat-header-cell {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
