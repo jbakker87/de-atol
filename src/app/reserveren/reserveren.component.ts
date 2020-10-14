@@ -16,6 +16,9 @@ export class ReserverenComponent implements OnInit {
   reservationForm: FormGroup;
   showModal = false;
 
+  minDate: Date;
+  maxDate: Date;
+
   types: TripType[] = [
     {value: 'Rondvaart', viewValue: 'Rondvaart'},
     {value: 'Sportvissen', viewValue: 'Sportvissen'},
@@ -25,6 +28,10 @@ export class ReserverenComponent implements OnInit {
 
   constructor(public http: HttpClient) {
     this.reservationForm = this.createFormGroup();
+    // Set the minimum to January 1st 20 years in the past and December 31st a year in the future.
+    const currentYear = new Date().getFullYear();
+    this.minDate = new Date(currentYear - 0, 10, 10);
+    this.maxDate = new Date(currentYear + 1, 11, 31);
   }
 
   get name(): AbstractControl {
@@ -68,7 +75,8 @@ export class ReserverenComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
+    
+  } 
 
   createFormGroup(): FormGroup {
     return new FormGroup({

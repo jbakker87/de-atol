@@ -94,9 +94,9 @@
                                 <div class="field">
                                     <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>1e datum vaartocht:</mat-label>
-                                        <input  matInput formControlName="date1" [matDatepicker]="datePick1" required>
+                                        <input  matInput formControlName="date1" [min]="minDate" [max]="maxDate" [matDatepicker]="datePick1" required>
                                         <mat-datepicker-toggle matSuffix [for]="datePick1"></mat-datepicker-toggle>
-                                        <mat-datepicker #datePick1></mat-datepicker>
+                                        <mat-datepicker touchUi #datePick1></mat-datepicker>
                                     </mat-form-field>
                                     <div *ngIf="date1.invalid && (date1.dirty || date1.touched)" class="help is-danger">
                                         <div *ngIf="date1.errors.required">
@@ -110,9 +110,9 @@
                                 <div class="field">
                                     <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>2e datum vaartocht:</mat-label>
-                                        <input  matInput formControlName="date2" [matDatepicker]="datePick2">
+                                        <input  matInput formControlName="date2" [min]="minDate" [max]="maxDate" [matDatepicker]="datePick2">
                                         <mat-datepicker-toggle matSuffix [for]="datePick2"></mat-datepicker-toggle>
-                                        <mat-datepicker #datePick2></mat-datepicker>
+                                        <mat-datepicker touchUi #datePick2></mat-datepicker>
                                     </mat-form-field>
                                 </div>
                             
@@ -121,9 +121,9 @@
                                 <div class="field">
                                     <mat-form-field appearance="outline" class='contact-formfield-halfwidth'>
                                         <mat-label>3e datum vaartocht:</mat-label>
-                                        <input  matInput formControlName="date3" [matDatepicker]="datePick3">
+                                        <input  matInput formControlName="date3" [min]="minDate" [max]="maxDate" [matDatepicker]="datePick3">
                                         <mat-datepicker-toggle matSuffix [for]="datePick3"></mat-datepicker-toggle>
-                                        <mat-datepicker #datePick3></mat-datepicker>
+                                        <mat-datepicker touchUi #datePick3></mat-datepicker>
                                     </mat-form-field>
                                 </div>
                             

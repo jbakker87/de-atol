@@ -13,11 +13,6 @@ th.mat-header-cell {
     padding-top: 15px!important;
 }
 
-.big-font {
-    font-size: 16px;
-    padding-bottom: 10px;
-}
-
 th.mat-sort-header-sorted {
     color: black;
 }
