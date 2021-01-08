@@ -2,7 +2,7 @@ export interface ReservationData {
     name: string;
     phone: string;
     adults: number;
-    child: number;
+    childs: number;
     email: string;
     date1: Date;
     date2: Date;

@@ -1,9 +1,10 @@
-<div class="container section">
+<div class="container section pb-4 pt-5">
     <h1 class="title has-text-centered has-text-light">Welkom op de geheel vernieuwde website van Rondvaartbedrijf De-Atol</h1>
-    <div *ngIf='msgIsShown' class="notification is-danger is-light simple">
+    <div *ngIf='msgIsShown' class="notification is-danger simple">
         <button class="delete" (click)='toggleCorona()'></button>
         <p class='subtitle'>
-            <mat-icon style='vertical-align: bottom;'>error</mat-icon><strong style="color: #CC0F35;"> Corona update </strong>
+            Corona update
+            <mat-icon style='vertical-align: bottom;'>error</mat-icon>
         </p>
         <p class="content">
             Let op! Mondkapje verplicht. Aan boord zijn mondkapjes verkrijgbaar voor € 1,- per stuk. Reserveren voor de veerdienst is niet nodig.
@@ -26,7 +27,9 @@
                     <p class="subtitle">Lees hier alles over onze zeehonden safari.</p>
                 </div>
                 <nav class='buttons is-right'>
-                    <button class="button is-warning wide button-shadow" (click)="openZeehondenDialog()">Reserveren</button>
+                    <!-- <button class="button is-warning wide button-shadow" (click)="openZeehondenDialog()">Reserveren</button> -->
+                    <button class="button is-warning wide button-shadow" routerLink='/reserveren'>Reserveren</button>
+
                 </nav>
                 <nav class='buttons is-right'>
                     <button class="button is-warning wide button-shadow" routerLink='/diensten/safari'>Meer info</button>
