@@ -1,4 +1,7 @@
-<app-contact-confirm *ngIf="showModal"></app-contact-confirm>
+<div class="notification is-success has-text-centered mt-5 mx-2" *ngIf='showModal'>
+  <button class="delete" (click)="closeModal()"></button>
+  <strong>Bedankt! Uw bericht is verzonden.</strong>
+</div>
 <section class="hero is-dark is-fullwidth">
   <div class="hero-body has-text-centered">
     <div class="container">
@@ -11,109 +14,135 @@
     </div>
   </div>
 </section>
+
 <div class='container section'>
   <div class="columns is-centered">
-    <div class="tile is-ancestor is-12">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-white box">
-          <h2 class="title">Rondvaartbedrijf <br>De Atol</h2>
-          <p class="subtitle">Voor veel vaar plezier</p>
-          <p class="content" style="margin-bottom: 0px!important;">
-            Factuuradres:<br>
-            t.a.v. Nils de Brouwer<br>
-            Kerkhoflaan 11<br>
-            4537 PM TERNEUZEN<br>
-          </p>
-          <app-map></app-map>
-          <iframe 
-          class='contact_maps_location added-padding-to-top' 
-          loading='lazy' 
-          width="100%" 
-          height="auto" 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7138.20456916837!2d4.0270314797524405!3d51.403213941594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU0LjQiTiA0wrAwMScwMC4xIkU!5e0!3m2!1snl!2snl!4v1597529230464!5m2!1snl!2snl" 
-          frameborder="0" 
-          allowfullscreen>
-          </iframe>
-          <div class="contact-flex">
-            <div>
-              <img src="../../../assets/logos/phone_icon_dotted.png" class="logo-style-thumbnail"> 
-                <a href="tel:+31651200389">+31(0)651200389</a> of
-                <a href="tel:+31641218109"> +31(0)641218109</a>
-            </div>
-            <div>
-              <img src="../../../assets/logos/mail_icon_dotted.png" class="logo-style-thumbnail">
-              <a href="mailto:info@de-atol.nl">info@de-atol.nl</a>
-            </div>
-            <div>
-              <img src="../../../assets/logos/facebook_icon_dotted.png" class="logo-style-thumbnail">
-              <a href="https://www.facebook.com/RondvaartbedrijfDeAtol" target="_blank">De Atol</a>
-            </div>
-            <div>
-              <a href='https://www.google.com/search?q=rondvaartbedrijf+de+atol&rlz=1C1GCEU_nlNL916NL916&oq=rond&aqs=chrome.0.35i39j69i57j35i39j0i433l2j69i60l2j69i61.2431j0j9&sourceid=chrome&ie=UTF-8#lrd=0x47c47c70ffc8e1a1:0xed1c10fcf75fa910,1,,,' target="_blank">
-                <img src="../../../assets/images/google_rating.png" class="google-rating-banner">
-              </a>
-            </div>
+    <div class="tile is-ancestor">
+      <div class="tile">
+        <!-- Contact info -->
+        <div class="tile is-parent is-vertical">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-light box padding">
+              <h2 class="title">Rondvaartbedrijf <br>De Atol</h2>
+              <p class="subtitle">Voor veel vaar plezier</p>
+              <p class="content">
+                Factuuradres:<br>
+                t.a.v. Nils de Brouwer<br>
+                Kerkhoflaan 11<br>
+                4537 PM TERNEUZEN<br>
+              </p>
+              <p class="subtitle">
+                <img src="../../../assets/logos/marker_icon_dotted.png" class="logo-style"><strong> Kaart</strong>
+              </p>
+              <iframe 
+              class='contact_maps_location' 
+              loading='lazy' 
+              width="100%" 
+              height="auto" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7138.20456916837!2d4.0270314797524405!3d51.403213941594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDIzJzU0LjQiTiA0wrAwMScwMC4xIkU!5e0!3m2!1snl!2snl!4v1597529230464!5m2!1snl!2snl" 
+              frameborder="0" 
+              allowfullscreen>
+              </iframe>
+              <div class="content">
+                <p>
+                  <mat-icon class='pad'>call</mat-icon>
+                  <a href="tel:+31651200389">+31(0)651200389</a> of
+                  <a href="tel:+31641218109"> +31(0)641218109</a>
+                </p>
+                <p><mat-icon class="pad">facebook</mat-icon>
+                  <a href="https://www.facebook.com/RondvaartbedrijfDeAtol" target="_blank">De Atol</a>
+                </p>
+                <div style="float: left;" class="mr-1">
+                  <img src="../../assets/logos/google_icon.png" width="24" height="24" style="display: inline;">
+                </div>
+                <div class="tiny-keo-container mt-0 pb-2" itemscope="" itemtype="https://www.schema.org/Organization">
+                  <meta itemprop="name" content="Rondvaartbedrijf de-Atol">
+                  <meta itemprop="email" content="contact@de-atol.nl">
+                  <meta itemprop="url" content="www.de-atol.nl">
+                  <meta itemprop="image" content="https://www.de-atol.nl/assets/images/perkpolder_modal_image.jpg">
+                  <meta itemprop="telephone" content="+31(0)651200389">
+                  <div style="float: left; padding-top: 1px;">
+                    <div class="keo-stars" style="float:left;clear:left;margin-right: 5px;text-align: left;background: url('https://www.klantervaringen.nl/modules/ratings/images/icons/star-off.png') repeat-x left top;width:90px;height:21px;position:relative;">
+                      <div class="yellow-stars" 
+                        style="background: url('https://www.klantervaringen.nl/modules/ratings/images/icons/star-on.png') repeat-x left top; width:82px;  height:21px; float:left;">
+                      </div>							
+                    </div>
+                  </div>
+                  <div class="keo-data" style="line-height: 22px; font-family: 'Raleway',sans-serif; float:left">
+                    <div class="keo-data-container" itemprop="aggregateRating" itemscope="" itemtype="https://www.schema.org/AggregateRating">
+                      <span class="keo-score" style="box-sizing:content-box; -moz-sizing:content-box; -webkit-box-sizing:content-box;" itemprop="ratingValue">4.6 </span>
+                      <span class="best-seperator">/ </span>
+                      <span class="best-rating" itemprop="bestRating">5</span>
+                      <span class="data-seperator"> | </span>
+                      <span class="ratingCount" itemprop="ratingCount"> 8  </span> <a href="https://www.google.com/search?q=rondvaartbedrijf+de+atol&rlz=1C1GCEU_nlNL916NL916&oq=rond&aqs=chrome.0.35i39j69i57j35i39j0i433l2j69i60l2j69i61.2431j0j9&sourceid=chrome&ie=UTF-8#lrd=0x47c47c70ffc8e1a1:0xed1c10fcf75fa910,1,,," target="_blank"><span class="based-on">waarderingen</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>       
+            </article>
           </div>
-        </article>
-      </div>
-      <!-- CONTACT FORM -->
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-white box">
-          <h2 class="title">
-            <img src="../../../assets/logos/contact_icon_dotted.png" class="logo-style"><strong> Contact</strong>
-          </h2>
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-              <div class="field">
-                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                  <mat-label>Naam</mat-label>
-                  <input matInput formControlName="name" required>
-                </mat-form-field>
-                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
-                  <div *ngIf="name.errors.required">
-                    Naam is verplicht
+        </div>
+        <!-- Contact form -->
+        <div class="tile is-parent is-vertical">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-light box padding">
+              <p class="title">
+                <img src="../../../assets/logos/contact_icon_dotted.png" class="logo-style"><strong> Contact</strong>
+              </p>
+              <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                  <div class="field">
+                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                      <mat-label>Naam</mat-label>
+                      <input matInput formControlName="name" required>
+                    </mat-form-field>
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="help is-danger">
+                      <div *ngIf="name.errors.required">
+                        Naam is verplicht
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="field">
-                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                  <mat-label>Email</mat-label>
-                  <input matInput formControlName="email" required>
-                </mat-form-field>
-                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
-                  <div *ngIf="email.errors.required">
-                    Email is verplicht
+                  <div class="field">
+                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                      <mat-label>Email</mat-label>
+                      <input matInput formControlName="email" required>
+                    </mat-form-field>
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="help is-danger">
+                      <div *ngIf="email.errors.required">
+                        Email is verplicht
+                      </div>
+                      <div *ngIf="email.errors.email">
+                        Geef een geldig emailadres op
+                      </div>
+                    </div>
                   </div>
-                  <div *ngIf="email.errors.email">
-                    Geef een geldig emailadres op
+                  <div class="field">
+                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                      <mat-label>Telefoonnummer</mat-label>
+                      <input matInput formControlName="phone">
+                    </mat-form-field>
                   </div>
-                </div>
-              </div>
-              <div class="field">
-                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                  <mat-label>Telefoonnummer</mat-label>
-                  <input matInput formControlName="phone">
-                </mat-form-field>
-              </div>
-              <div class="field">
-                <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
-                  <mat-label>Bericht</mat-label>
-                  <textarea matInput formControlName="msg" rows='10' formControlName="msg" required style='resize: none;'></textarea>
-                </mat-form-field>
-                <div *ngIf="msg.invalid && ( msg.dirty || msg.touched )" class="help is-danger">
-                  <div *ngIf="msg.errors.required">
-                    Bericht is verplicht
+                  <div class="field">
+                    <mat-form-field appearance="outline" class='contact-formfield-fullwidth'>
+                      <mat-label>Bericht</mat-label>
+                      <textarea matInput formControlName="msg" rows='10' formControlName="msg" required style='resize: none;'></textarea>
+                    </mat-form-field>
+                    <div *ngIf="msg.invalid && ( msg.dirty || msg.touched )" class="help is-danger">
+                      <div *ngIf="msg.errors.required">
+                        Bericht is verplicht
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="container">
-                <div *ngIf="contactForm.invalid" class="help is-help">
-                  * U dient de verplichte velden in te vullen.
-                </div>
-                <br> 
-                <button type="reset" (click)='onSubmit()' [disabled]="!contactForm.valid" class='button is-warning button-shadow'>Verzenden</button>
-              </div>
-          </form>
-        </article>
+                  <div class="container">
+                    <div *ngIf="contactForm.invalid" class="help is-help">
+                      * U dient de verplichte velden in te vullen.
+                    </div>
+                    <br> 
+                    <button type="reset" (click)='onSubmit()' [disabled]="!contactForm.valid" class='button is-warning'>Verzenden</button>
+                  </div>
+              </form>
+            </article>
+          </div>
+        </div>                
       </div>
     </div>
   </div>

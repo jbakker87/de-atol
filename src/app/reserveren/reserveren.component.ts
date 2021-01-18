@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, AbstractControl, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, AbstractControl, FormControl, Validators, FormGroupDirective } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ReservationData } from '../../models/reservation-request';
 import { formatDate } from '@angular/common';
@@ -13,6 +13,8 @@ import { TripType } from '../reserveren/triptype';
 })
 export class ReserverenComponent implements OnInit {
 
+  @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
+
   reservationForm: FormGroup;
   showModal = false;
 
@@ -23,6 +25,8 @@ export class ReserverenComponent implements OnInit {
     {value: 'Asverstrooiing', viewValue: 'Asverstrooiing'},
     {value: 'Scheidingsfeest', viewValue: 'Scheidingsfeest'}
   ];
+
+
 
   constructor(public http: HttpClient) {
     this.reservationForm = this.createFormGroup();
@@ -107,7 +111,7 @@ export class ReserverenComponent implements OnInit {
       type: this.type.value,
       msg: this.msg.value
     };
-    console.log(reservation);
+    //console.log(reservation);
     this.http.post('https://www.de-atol.nl/httpdocs/mail_send.php', (reservation)).subscribe(
       (response) => {console.log(response)},
       (error) => {console.log(error)}
@@ -119,12 +123,20 @@ export class ReserverenComponent implements OnInit {
   }
   
   resetForm(): void {
-    // this.reservationForm.clearValidators();
-    this.reservationForm.reset();
+    if (this.reservationForm.valid) {
+      //submit
+      setTimeout(() => 
+      this.formGroupDirective.resetForm(), 0)
+    }
+
   }
 
   openModal(): void {
     this.showModal = true;
+  }
+
+  closeModal(): void {
+    this.showModal = false;
   }
 
   scrollToTop(): void {

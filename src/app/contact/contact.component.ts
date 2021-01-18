@@ -55,11 +55,11 @@ export class ContactComponent implements OnInit {
       msg: this.msg.value
     };
 
-    console.log(user);
-    // this.http.post('https://beta.de-atol.nl/httpdocs/' + 'mail_send.php', (user)).subscribe(
-    //   (response) => {console.log(response)},
-    //   (error) => {console.log(error)}
-    // );
+    //console.log(user);
+    this.http.post('https://www.de-atol.nl/httpdocs/mail_send.php', (user)).subscribe(
+      (response) => {console.log(response)},
+      (error) => {console.log(error)}
+    );
 
     this.openModal();
     this.scrollToTop();
@@ -72,6 +72,10 @@ export class ContactComponent implements OnInit {
 
   openModal(): void {
     this.showModal = true;
+  }
+
+  closeModal(): void {
+    this.showModal = false;
   }
 
   scrollToTop(): void {

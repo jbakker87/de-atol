@@ -1,4 +1,7 @@
-<app-contact-confirm *ngIf="showModal"></app-contact-confirm>
+<div class="notification is-success has-text-centered mt-5 mx-2" *ngIf='showModal'>
+  <button class="delete" (click)="closeModal()"></button>
+  <strong>Bedankt! Uw bericht is verzonden.</strong>
+</div>
 <section class="hero is-dark">
   <div class="hero-body">
     <div class="container has-text-centered">
@@ -14,7 +17,7 @@
 <div class="container section">
     <div class="tile is-parent">
         <article class="tile is-child notification is-white box">
-        <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()" #formReservation>
     
         <!-- NAME INPUT -->
     

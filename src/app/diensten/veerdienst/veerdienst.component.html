@@ -11,17 +11,18 @@
   </div>
 </section>
 
-<div class="container section container-padding">
-  <div *ngIf='msgIsShown' class="notification is-danger is-light">
+<div class="container section pb-4 pt-5">
+  <div *ngIf='msgIsShown' class="notification is-danger simple">
       <button class="delete" (click)='toggleReservation()'></button>
       <p class='subtitle'>
-        <mat-icon style='vertical-align: bottom;'>error</mat-icon><strong style="color: #CC0F35;"> Reserveren </strong>
+        <mat-icon style='vertical-align: bottom;'>error</mat-icon> Reserveren
       </p>
       <p class="content">
           Reserveren voor de veerdienst is niet nodig.
       </p>
   </div>
 </div>
+
 <div class="has-text-centered">
   <button class="button is-warning button-margin" (click)="hansweert.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Hansweert</button>
   <button class="button is-warning button-margin" (click)="perkpolder.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Perkpolder</button>
