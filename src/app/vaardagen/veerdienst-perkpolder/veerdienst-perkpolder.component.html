@@ -7,9 +7,9 @@
       <table mat-table [dataSource]="scheduleSource" class='table is-striped is-hoverable'>
     
         <!-- Type Column -->
-        <ng-container matColumnDef="text">
+        <ng-container matColumnDef="date">
           <th mat-header-cell *matHeaderCellDef> Vaardagen </th>
-          <td mat-cell *matCellDef="let element"> {{element.text}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.date | date: 'dd/MM/yyyy'}} </td>
         </ng-container>
     
         <!-- Price Column -->
@@ -35,3 +35,4 @@
       </table>
     </div>
   </div>  
+  <mat-paginator #paginator [pageSize]="4" [pageSizeOptions]="[4, 8, 12, 16]" showFirstLastButtons></mat-paginator>

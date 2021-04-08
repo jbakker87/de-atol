@@ -24,8 +24,8 @@
 </div>
 
 <div class="has-text-centered">
-  <button class="button is-warning button-margin" (click)="hansweert.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Hansweert</button>
-  <button class="button is-warning button-margin" (click)="perkpolder.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Perkpolder</button>
+  <button class="button is-warning button-margin" (click)="hansweert.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Perkpolder</button>
+  <button class="button is-warning button-margin" (click)="perkpolder.scrollIntoView({ behavior: 'smooth', block: 'center' })">Breng me naar Hansweert</button>
 </div>
 <div class='container section no-padding-on-top'>
   <div class="columns is-centered">
@@ -45,8 +45,8 @@
               alt='the location of the Atol in Perkpolder'>
               <div class='help is-help'  #perkpolder>Klik op de afbeelding om de afbeelding te vergroten.</div>
             </div><br>
-            <app-veerdienst-ndraopdown></app-veerdienst-ndraopdown>
-            <!-- <app-veerdienst-perkpolder></app-veerdienst-perkpolder> -->
+            <!-- <app-veerdienst-ndraopdown></app-veerdienst-ndraopdown> -->
+            <app-veerdienst-perkpolder></app-veerdienst-perkpolder>
             <app-veerdienst-tarief></app-veerdienst-tarief>
             <app-practical-information></app-practical-information>
             <app-opstap-perkpolder></app-opstap-perkpolder>
@@ -70,8 +70,8 @@
                 alt='the location of the Atol in Hansweert'>
                 <div class='help is-help' #hansweert>Klik op de afbeelding om de afbeelding te vergroten.</div>
               </div><br>
-              <app-veerdienst-ndraopdown></app-veerdienst-ndraopdown>
-              <!-- <app-veerdienst-hansweert></app-veerdienst-hansweert> -->
+              <!-- <app-veerdienst-ndraopdown></app-veerdienst-ndraopdown> -->
+              <app-veerdienst-hansweert></app-veerdienst-hansweert>
               <app-veerdienst-tarief></app-veerdienst-tarief>
               <app-practical-information></app-practical-information>
               <app-opstap-hansweert></app-opstap-hansweert>
