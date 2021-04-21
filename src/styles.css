@@ -143,6 +143,12 @@ th.mat-header-cell {
     }
 }
 
+@media only screen and (width: 360px) {
+    h2, .title {
+        font-size: 24px!important;
+    }
+}
+
 @media only screen and (width: 375px) {
     h1 {
         font-size: 38px;
@@ -181,10 +187,10 @@ th.mat-header-cell {
 
 @media only screen and (width: 414px) {
     h2 {
-        font-size: 24px;
+        font-size: 23px;
     }
     .title {
-        font-size: 24px;
+        font-size: 23px;
     }
     p, .content {
         font-size: 14px;
