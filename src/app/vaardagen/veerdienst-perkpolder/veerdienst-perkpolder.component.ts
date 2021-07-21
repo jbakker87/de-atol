@@ -13,14 +13,8 @@ export class VeerdienstPerkpolderComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-
-  constructor() {
-    // Assign the data to the data source for the table to render
-  }
-
   ngAfterViewInit() {
     this.scheduleSource.paginator = this.paginator;
-
   }
 }
 
@@ -32,22 +26,11 @@ export interface PerkpolderData {
 }
 
 const schedulePerkpolderData: PerkpolderData[] = [
-  { date: new Date(2021, 6, 4), time1: '09:00', time2: '11:00', time3: '16:15' }, // zondag
-  { date: new Date(2021, 6, 5), time1: '09:00', time2: '11:00', time3: '16:15' }, // maandag
-  { date: new Date(2021, 6, 7), time1: '09:00', time2: '11:00', time3: '16:15' }, // woensdag
-  { date: new Date(2021, 6, 9), time1: '09:00', time2: '11:00', time3: '16:15' }, // vrijdag
-  { date: new Date(2021, 6, 11), time1: '09:00', time2: '11:00', time3: '16:15' }, // zondag
-  { date: new Date(2021, 6, 12), time1: '09:00', time2: '11:00', time3: '16:15' },
-  { date: new Date(2021, 6, 14), time1: '09:00', time2: '11:00', time3: '16:15' },
-  { date: new Date(2021, 6, 16), time1: '09:00', time2: '11:00', time3: '16:15' },
-  { date: new Date(2021, 6, 18), time1: '09:00', time2: '11:00', time3: '16:15' }, // zondag
-  { date: new Date(2021, 6, 19), time1: '09:00', time2: '11:00', time3: '16:15' },
   { date: new Date(2021, 6, 21), time1: '09:00', time2: '11:00', time3: '16:15' },
-  { date: new Date(2021, 6, 4), time1: '09:00', time2: '11:00', time3: '16:15' },
+  { date: new Date(2021, 6, 23), time1: '09:00', time2: '11:00', time3: '16:15' },
   { date: new Date(2021, 6, 25), time1: '09:00', time2: '11:00', time3: '16:15' }, // zondag
   { date: new Date(2021, 6, 26), time1: '09:00', time2: '11:00', time3: '16:15' },
   { date: new Date(2021, 6, 28), time1: '09:00', time2: '11:00', time3: '16:15' },
-  { date: new Date(2021, 6, 4), time1: '09:00', time2: '11:00', time3: '16:15' },
   { date: new Date(2021, 7, 1), time1: '09:00', time2: '11:00', time3: '16:15' }, // zondag
   { date: new Date(2021, 7, 2), time1: '09:00', time2: '11:00', time3: '16:15' },
   { date: new Date(2021, 7, 4), time1: '09:00', time2: '11:00', time3: '16:15' }, 
@@ -65,5 +48,4 @@ const schedulePerkpolderData: PerkpolderData[] = [
   { date: new Date(2021, 7, 25), time1: '09:00', time2: '11:00', time3: '16:15' }, 
   { date: new Date(2021, 7, 27), time1: '09:00', time2: '11:00', time3: '16:15' }, 
   { date: new Date(2021, 7, 29), time1: '09:00', time2: '11:00', time3: '16:15' }, // zondag
-  { date: new Date(2021, 7, 30), time1: '09:00', time2: '11:00', time3: '16:15' },
 ];

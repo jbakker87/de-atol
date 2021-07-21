@@ -13,11 +13,6 @@ export class VeerdienstHansweertComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-
-  constructor() {
-    // Assign the data to the data source for the table to render
-  }
-
   ngAfterViewInit() {
     this.scheduleHansweertSource.paginator = this.paginator;
   }
@@ -31,22 +26,11 @@ export interface HansweertData {
 }
 
 const scheduleHansweertData: HansweertData[] = [
-  { date: new Date(2021, 6, 4),  time1: '10:00', time2: '12:00', time3: '17:00' }, // zondag
-  { date: new Date(2021, 6, 5),  time1: '10:00', time2: '12:00', time3: '17:00' }, // maandag
-  { date: new Date(2021, 6, 7),  time1: '10:00', time2: '12:00', time3: '17:00' }, // woensdag
-  { date: new Date(2021, 6, 9),  time1: '10:00', time2: '12:00', time3: '17:00' }, // vrijdag
-  { date: new Date(2021, 6, 11), time1: '10:00', time2: '12:00', time3: '17:00' }, // zondag
-  { date: new Date(2021, 6, 12), time1: '10:00', time2: '12:00', time3: '17:00' },
-  { date: new Date(2021, 6, 14), time1: '10:00', time2: '12:00', time3: '17:00' },
-  { date: new Date(2021, 6, 16), time1: '10:00', time2: '12:00', time3: '17:00' },
-  { date: new Date(2021, 6, 18), time1: '10:00', time2: '12:00', time3: '17:00' }, // zondag
-  { date: new Date(2021, 6, 19), time1: '10:00', time2: '12:00', time3: '17:00' },
-  { date: new Date(2021, 6, 21), time1: '10:00', time2: '12:00', time3: '17:00' },
-  { date: new Date(2021, 6, 4),  time1: '10:00', time2: '12:00', time3: '17:00' },
+  { date: new Date(2021, 6, 21), time1: '10:00', time2: '12:00', time3: '17:00' },  
+  { date: new Date(2021, 6, 23), time1: '10:00', time2: '12:00', time3: '17:00' },
   { date: new Date(2021, 6, 25), time1: '10:00', time2: '12:00', time3: '17:00' }, // zondag
   { date: new Date(2021, 6, 26), time1: '10:00', time2: '12:00', time3: '17:00' },
   { date: new Date(2021, 6, 28), time1: '10:00', time2: '12:00', time3: '17:00' },
-  { date: new Date(2021, 6, 4),  time1: '10:00', time2: '12:00', time3: '17:00' },
   { date: new Date(2021, 7, 1),  time1: '10:00', time2: '12:00', time3: '17:00' }, // zondag
   { date: new Date(2021, 7, 2),  time1: '10:00', time2: '12:00', time3: '17:00' },
   { date: new Date(2021, 7, 4),  time1: '10:00', time2: '12:00', time3: '17:00' }, 
@@ -64,7 +48,6 @@ const scheduleHansweertData: HansweertData[] = [
   { date: new Date(2021, 7, 25), time1: '10:00', time2: '12:00', time3: '17:00' }, 
   { date: new Date(2021, 7, 27), time1: '10:00', time2: '12:00', time3: '17:00' }, 
   { date: new Date(2021, 7, 29), time1: '10:00', time2: '12:00', time3: '17:00' }, // zondag
-  { date: new Date(2021, 7, 30), time1: '10:00', time2: '12:00', time3: '17:00' },
   // { text: 'Zondag', time1: '11:00', time2: '12:00', time3: '17:00' },
   // { text: 'Maandag', time1: '11:00', time2: '11:00', time3: '17:00' },17:00
   // { text: 'Woensdag', time1: '11:00', time2: '12:00', time3: '17:00' }17:00
